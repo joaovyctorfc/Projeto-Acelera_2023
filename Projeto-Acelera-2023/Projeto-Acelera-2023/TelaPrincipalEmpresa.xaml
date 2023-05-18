@@ -1,0 +1,17 @@
+﻿<Window x:Class="Projeto_Acelera_2023.TelaPrincipalEmpresa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto_Acelera_2023"
+        mc:Ignorable="d"
+        Title="TelaPrincipalEmpresa" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="botaoCriarVaga" Content="Criar Vaga" HorizontalAlignment="Left" Margin="108,200,0,0" VerticalAlignment="Top" Width="99"/>
+        <Button x:Name="botaoSair" Content="Sair" HorizontalAlignment="Left" Margin="119,325,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="botaoPerfil" Content="Perfil" HorizontalAlignment="Left" Margin="108,81,0,0" VerticalAlignment="Top" Width="99" Click="botaoPerfil_Click"/>
+        <Button x:Name="botaoVagas" Content="Vagas" HorizontalAlignment="Left" Margin="108,145,0,0" VerticalAlignment="Top" Width="99"/>
+        <Button x:Name="botaoVagasAnalise" Content="Vagas em Análise" HorizontalAlignment="Left" Margin="108,248,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagasAnalise_Click"/>
+
+    </Grid>
+</Window>

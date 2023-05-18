@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto-Acelera-2023", "Projeto-Acelera-2023\Projeto-Acelera-2023.csproj", "{600EAD43-5D4B-4F94-BD46-5A7BE03B1F7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{600EAD43-5D4B-4F94-BD46-5A7BE03B1F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{600EAD43-5D4B-4F94-BD46-5A7BE03B1F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{600EAD43-5D4B-4F94-BD46-5A7BE03B1F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{600EAD43-5D4B-4F94-BD46-5A7BE03B1F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3F31920-6944-4529-8131-DF5891EC7B68}
+	EndGlobalSection
+EndGlobal

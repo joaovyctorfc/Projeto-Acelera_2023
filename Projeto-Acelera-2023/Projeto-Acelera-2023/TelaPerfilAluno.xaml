@@ -1,0 +1,27 @@
+﻿<Window x:Class="Projeto_Acelera_2023.TelaPerfilAluno"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto_Acelera_2023"
+        mc:Ignorable="d"
+        Title="TelaPerfilAluno" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="botaoVagasAnalise" Content="Vagas em Análise" HorizontalAlignment="Left" Margin="55,238,0,0" VerticalAlignment="Top" Width="99"/>
+        <Button x:Name="botaoSair" Content="Sair" HorizontalAlignment="Left" Margin="66,348,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="botaoPerfil" Content="Perfil" HorizontalAlignment="Left" Margin="55,104,0,0" VerticalAlignment="Top" Width="99" Click="botaoPerfil_Click"/>
+        <Button x:Name="botaoVagas" Content="Vagas" HorizontalAlignment="Left" Margin="55,168,0,0" VerticalAlignment="Top" Width="99"/>
+        <Button x:Name="btnEdit" Content="Editar" HorizontalAlignment="Left" Margin="383,333,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="campoCurso" HorizontalAlignment="Left" Margin="357,238,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="campoSemestre" HorizontalAlignment="Left" Margin="357,285,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="campoSemestre_SelectionChanged"/>
+        <TextBox x:Name="campoTelefone" HorizontalAlignment="Left" Height="23" Margin="357,201,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoEmail" HorizontalAlignment="Left" Height="23" Margin="357,154,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoNome" HorizontalAlignment="Left" Height="23" Margin="357,110,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Nome&#xD;&#xA;" HorizontalAlignment="Left" Margin="275,110,0,0" VerticalAlignment="Top"/>
+        <Label Content="Semestre" HorizontalAlignment="Left" Margin="275,285,0,0" VerticalAlignment="Top"/>
+        <Label Content="Curso&#xD;&#xA;" HorizontalAlignment="Left" Margin="275,240,0,0" VerticalAlignment="Top" Height="27"/>
+        <Label Content="Telefone&#xD;&#xA;" HorizontalAlignment="Left" Margin="262,201,0,0" VerticalAlignment="Top" Height="23"/>
+        <Label Content="E-mail&#xD;&#xA;" HorizontalAlignment="Left" Margin="275,154,0,0" VerticalAlignment="Top" Height="23"/>
+
+    </Grid>
+</Window>

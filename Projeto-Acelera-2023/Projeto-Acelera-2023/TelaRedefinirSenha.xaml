@@ -1,0 +1,31 @@
+﻿<Window x:Class="Projeto_Acelera_2023.TelaRedefinirSenha"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto_Acelera_2023"
+        mc:Ignorable="d"
+        Title="TelaRedefinirSenha" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="botaoRedefinir" Content="Redefinir" HorizontalAlignment="Left" Margin="333,297,0,0" VerticalAlignment="Top" Width="75" Click="botaoRedefinir_Click"/>
+        <Button x:Name="botaoEnviarCodigo" Content="Enviar" HorizontalAlignment="Left" Margin="458,181,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="botaoEnviarCodigo_Click"/>
+        <TextBox x:Name="campoEmail" HorizontalAlignment="Left" Height="23" Margin="312,120,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoCodigo" HorizontalAlignment="Left" Height="23" Margin="312,181,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoSenha" HorizontalAlignment="Left" Height="23" Margin="312,238,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Margin="238,120,0,0" VerticalAlignment="Top"/>
+        <Label Content="Código" HorizontalAlignment="Left" Margin="232,243,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nova Senha" HorizontalAlignment="Left" Margin="208,186,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="linkCadastrar" HorizontalAlignment="Left" Margin="419,339,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Foreground="#FF0A15F5">
+                <Hyperlink Click="linkCadastrar_Click">
+        Não possui conta? Cria conta
+    </Hyperlink>
+        </TextBlock>
+        <TextBlock x:Name="linkLogin" HorizontalAlignment="Left" Margin="232,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5">
+                <Hyperlink Click="linkLogin_Click">
+        Ir para a tela de Login
+    </Hyperlink>
+        </TextBlock>
+                   
+
+    </Grid>
+</Window>
