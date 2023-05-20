@@ -22,18 +22,13 @@ namespace Projeto_Acelera_2023
         public TelaCadastroVagas(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
         {
             InitializeComponent();
-          //  campoArea.DropDownStyle = ComboBoxStyle.DropDownList;
-           // campoFormato.DropDownStyle = ComboBoxStyle.DropDownList;
+
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
+
+
         }
         public SalvarVagas SalvarVagas = new SalvarVagas();
-
-        private void botaoCadastrarVaga_Click(object sender, EventArgs e)
-        {
-            CadastrarVaga();
-        }
-
         public void CadastrarVaga()
         {
 
@@ -69,21 +64,45 @@ namespace Projeto_Acelera_2023
         {
 
         }
-        private void campoArea_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void campoNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void campoSalario_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarVaga();
+        }
+
+        private void botaoPerfil_Click(object sender, RoutedEventArgs e)
+        {
+            var Perfil = new TelaPerfilEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            Perfil.Show();
+            this.Hide();
+        }
+
+        private void botaoVagas_Click_1(object sender, RoutedEventArgs e)
+        {
+            var TelaVagas = new TelaVagasEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaVagas.Show();
+            this.Hide();
+        }
+
+        private void botaoCriarVaga_Click_1(object sender, RoutedEventArgs e)
+        {
+            var TelaCadastroVagas = new TelaCadastroVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaCadastroVagas.Show();
+            this.Hide();
+        }
+
+        private void botaoSair_Click(object sender, RoutedEventArgs e)
+        {
+            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            telaLogin.Show();
+            this.Hide();
+        }
+
+
+        private void botaoVagasAnalise_Click_1(object sender, RoutedEventArgs e)
         {
 
         }

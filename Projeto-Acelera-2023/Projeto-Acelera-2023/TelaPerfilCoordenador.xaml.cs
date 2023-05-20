@@ -35,9 +35,7 @@ namespace Projeto_Acelera_2023
 
         private void botaoSair_Click(object sender, EventArgs e)
         {
-            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            telaLogin.Show();
-            this.Hide();
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -107,6 +105,25 @@ namespace Projeto_Acelera_2023
         {
             var Vagas = new TelaVagasCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
             Vagas.Show();
+            this.Hide();
+        }
+
+        private void botaoVagas_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void botaoVagasAnalise_Click_1(object sender, RoutedEventArgs e)
+        {
+            var Vagas = new TelaVagasCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            Vagas.Show();
+            this.Hide();
+        }
+
+        private void botaoSair_Click_1(object sender, RoutedEventArgs e)
+        {
+            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            telaLogin.Show();
             this.Hide();
         }
     }

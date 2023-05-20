@@ -23,39 +23,37 @@ namespace Projeto_Acelera_2023
             SalvarVagas.ListaVagas = listaVagas;
         }
 
-        private void botaoCriarVaga_Click(object sender, EventArgs e)
-        {
-            var TelaCadastroVagas = new TelaCadastroVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaCadastroVagas.Show();
-            this.Hide();
-        }
+        public SalvarDados SalvarDados = new SalvarDados();
+        public SalvarVagas SalvarVagas = new SalvarVagas();
+        public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
 
-        private void botaoPerfil_Click(object sender, EventArgs e)
+
+        private void botaoPerfil_Click(object sender, RoutedEventArgs e)
         {
             var TelaPerfilEmpresa = new TelaPerfilEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
             TelaPerfilEmpresa.Show();
             this.Hide();
         }
 
-        private void botaoVagas_Click(object sender, EventArgs e)
+        private void botaoVagas_Click_1(object sender, RoutedEventArgs e)
         {
             var TelaVagasEmpresa = new TelaVagasEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
             TelaVagasEmpresa.Show();
             this.Hide();
         }
-        public SalvarDados SalvarDados = new SalvarDados();
-        public SalvarVagas SalvarVagas = new SalvarVagas();
-        public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
-        private void botaoSair_Click(object sender, EventArgs e)
+
+        private void botaoCriarVaga_Click_1(object sender, RoutedEventArgs e)
+        {
+            var TelaCadastroVagas = new TelaCadastroVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaCadastroVagas.Show();
+            this.Hide();
+        }
+
+        private void botaoSair_Click_1(object sender, RoutedEventArgs e)
         {
             var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
             Login.Show();
             this.Hide();
-        }
-
-        private void botaoVagasAnalise_Click(object sender, EventArgs e)
-        {
- 
         }
 
         private void botaoVagasAnalise_Click(object sender, RoutedEventArgs e)

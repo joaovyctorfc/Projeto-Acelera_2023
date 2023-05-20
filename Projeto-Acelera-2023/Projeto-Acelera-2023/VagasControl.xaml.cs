@@ -27,6 +27,8 @@ namespace Projeto_Acelera_2023
             InitializeComponent();
             this.vaga = vaga;
             var usuarioLogado = SalvarDados.AlunoLogado;
+            AtualizarCampos();
+
             var candidato = new Candidatos
             {
                 Nome = usuarioLogado.Nome,
@@ -38,31 +40,17 @@ namespace Projeto_Acelera_2023
             listaCandidatos.Add(candidato);
         }
 
-        public void SetVaga(Vaga vaga)
+        private void AtualizarCampos()
         {
             labelNome.Content = vaga.Nome;
             labelDescricao.Content = vaga.Descricao;
             labelSalario.Content = vaga.Salario;
+            labelArea.Content = vaga.Area;
+            labelFormato.Content = vaga.Formato;
         }
-
-        private void label1_Click(object sender, RoutedEventArgs e)
-        {
-            // Implemente o código necessário
-        }
-
-        private void botaoConfirmar_Click(object sender, RoutedEventArgs e)
-        {
-            // Implemente o código necessário
-        }
-
-        private void VagasControl_Load(object sender, RoutedEventArgs e)
-        {
-            // Implemente o código necessário
-        }
-
         private void botaoCandidatar_Click(object sender, RoutedEventArgs e)
         {
-            // Implemente o código necessário
+
         }
     }
 }

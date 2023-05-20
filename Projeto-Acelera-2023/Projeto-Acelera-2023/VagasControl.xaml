@@ -4,12 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Projeto_Acelera_2023"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#FF82A9C9" Margin="0,0,32,174">
-        <Button x:Name="botaoCandidatar" Content="Candidatar" HorizontalAlignment="Left" Margin="573,146,0,0" VerticalAlignment="Top" Width="75" Click="botaoCandidatar_Click"/>
-        <Label x:Name="labelDescricao" Content="Label" HorizontalAlignment="Left" Margin="248,131,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelSalario" Content="Label" HorizontalAlignment="Left" Margin="248,193,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelNome" Content="Label" HorizontalAlignment="Left" Margin="248,60,0,0" VerticalAlignment="Top"/>
+             mc:Ignorable="d" Height="183.196" Width="551.64">
+    <Grid Background="#FF82A9C9" Margin="0,0,0,10">
+        <Button x:Name="botaoCandidatar" Content="Candidatar" HorizontalAlignment="Left" Margin="449,91,0,0" VerticalAlignment="Top" Width="75" Click="botaoCandidatar_Click"/>
+        <Label x:Name="labelDescricao" Content="Label" HorizontalAlignment="Left" Margin="47,128,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelSalario" Content="Label" HorizontalAlignment="Left" Margin="214,34,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelNome" Content="Label" HorizontalAlignment="Left" Margin="47,26,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelFormato" Content="Label" HorizontalAlignment="Left" Margin="47,85,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelArea" Content="Label" HorizontalAlignment="Left" Margin="214,93,0,0" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

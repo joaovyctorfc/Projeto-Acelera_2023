@@ -23,27 +23,34 @@ namespace Projeto_Acelera_2023
             SalvarVagas.ListaVagas = listaVagas;
         }
 
-        private void botaoPerfil_Click(object sender, EventArgs e)
+        public SalvarDados SalvarDados = new SalvarDados();
+        public SalvarVagas SalvarVagas = new SalvarVagas();
+        public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
+       
+        private void botaoPerfil_Click(object sender, RoutedEventArgs e)
         {
             var TelaPerfil = new TelaPerfilAluno(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
             TelaPerfil.Show();
             this.Hide();
         }
-        public SalvarDados SalvarDados = new SalvarDados();
-        public SalvarVagas SalvarVagas = new SalvarVagas();
-        public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
-        private void botaoSair_Click(object sender, EventArgs e)
+
+        private void botaoVagas_Click_1(object sender, RoutedEventArgs e)
+        {
+            var TelaVagas = new TelaVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaVagas.Show();
+            this.Hide();
+        }
+
+        private void botaoSair_Click_1(object sender, RoutedEventArgs e)
         {
             var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
             Login.Show();
             this.Hide();
         }
 
-        private void botaoVagas_Click(object sender, EventArgs e)
+        private void botaoVagasAnalise_Click(object sender, RoutedEventArgs e)
         {
-            var TelaVagas = new TelaVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaVagas.Show();
-            this.Hide();
+
         }
     }
 }

@@ -14,13 +14,27 @@
         <DataGrid x:Name="tabelaCoordenador" AutoGenerateColumns="False" Margin="270,22,129,10" SelectionChanged="tabelaCoordenador_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
-                <DataGridTextColumn Header="Área" Binding="{Binding Idade}" />
+                <DataGridTextColumn Header="Área" Binding="{Binding Area}" />
                 <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" />
                 <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" />
                 <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" />
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
-                <DataGridTextColumn x:Name="colunaAprovar" Header="Aprovar" Binding="{Binding colunaAprovar}" />
-                <DataGridTextColumn x:Name="colunaReprovar" Header="Reprovar" Binding="{Binding colunaReprovar}" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Aprovacao}" />
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Aprovar" Click="Aprovar_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Reprovar" Click="Reprovar_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 

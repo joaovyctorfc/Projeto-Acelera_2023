@@ -149,6 +149,35 @@ namespace Projeto_Acelera_2023
         {
 
         }
+
+        private void botaoVagas_Click_1(object sender, RoutedEventArgs e)
+        {
+            var TelaVagas = new TelaVagasEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaVagas.Show();
+            this.Hide();
+        }
+
+        private void botaoPerfil_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void botaoCriarVaga_Click_1(object sender, RoutedEventArgs e)
+        {
+            var TelaCadastroVagas = new TelaCadastroVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaCadastroVagas.Show();
+            this.Hide();
+        }
+
+        private void botaoVagasAnalise_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 

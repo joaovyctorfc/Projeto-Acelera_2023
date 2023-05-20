@@ -63,6 +63,9 @@ namespace Projeto_Acelera_2023
 
                     SalvarDados.ListaUsuarios.Add(usuario);
                     MessageBox.Show("Usuário salvo com sucesso!");
+                    var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                    Login.Show();
+                    this.Hide();
                 }
             }
         }

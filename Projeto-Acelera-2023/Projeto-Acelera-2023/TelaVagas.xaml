@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="TelaVagas" Height="450" Width="800">
     <Grid>
-        <Button x:Name="botaoVagasAnalise" Content="Vagas em Análise" HorizontalAlignment="Left" Margin="48,223,0,0" VerticalAlignment="Top" Width="98"/>
+        <Button x:Name="botaoVagasAnalise" Content="Vagas em Análise" HorizontalAlignment="Left" Margin="48,223,0,0" VerticalAlignment="Top" Width="98" Click="botaoVagasAnalise_Click"/>
         <Button x:Name="botaoSair" Content="Sair" HorizontalAlignment="Left" Margin="58,333,0,0" VerticalAlignment="Top" Width="76" Click="botaoSair_Click"/>
         <Button x:Name="botaoPerfil" Content="Perfil" HorizontalAlignment="Left" Margin="48,89,0,0" VerticalAlignment="Top" Width="98" Click="botaoPerfil_Click"/>
         <Button x:Name="botaoVagas" Content="Vagas" HorizontalAlignment="Left" Margin="48,153,0,0" VerticalAlignment="Top" Width="98"/>
-        <ScrollViewer x:Name="campoVagas" HorizontalAlignment="Left" Height="342" Margin="295,45,0,0" VerticalAlignment="Top" Width="426"/>
+        <Grid x:Name="tabelaVagas" HorizontalAlignment="Left" Height="399" Margin="234,10,0,0" VerticalAlignment="Top" Width="548"/>
 
 
     </Grid>

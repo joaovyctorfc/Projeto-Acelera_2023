@@ -19,8 +19,8 @@ namespace Projeto_Acelera_2023
         public TelaPerfilAluno(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
         {
             InitializeComponent();
-           // campoCurso.DropDownStyle = ComboBoxStyle.DropDownList;
-          //  campoSemestre.DropDownStyle = ComboBoxStyle.DropDownList;
+            // campoCurso.DropDownStyle = ComboBoxStyle.DropDownList;
+            //  campoSemestre.DropDownStyle = ComboBoxStyle.DropDownList;
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
 
@@ -64,31 +64,7 @@ namespace Projeto_Acelera_2023
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (SalvarDados.AlunoLogado != null)
-            {
-                var usuarioLogado = SalvarDados.AlunoLogado;
 
-                usuarioLogado.Nome = campoNome.Text;
-                usuarioLogado.Curso = campoCurso.Text;
-                usuarioLogado.Semestre = campoSemestre.Text;
-                usuarioLogado.Telefone = campoTelefone.Text;
-
-                foreach (var usuario in SalvarDados.ListaUsuarios)
-                {
-                    if (usuario.Email == usuarioLogado.Email)
-                    {
-                        // atualiza as propriedades do usuário
-                        usuario.Nome = usuarioLogado.Nome;
-                        usuario.Curso = usuarioLogado.Curso;
-                        usuario.Semestre = usuarioLogado.Semestre;
-                        usuario.Telefone = usuarioLogado.Telefone;
-
-                        // exibe uma mensagem confirmando a atualização
-                        MessageBox.Show("Dados atualizados com sucesso!");
-                        break;
-                    }
-                }
-            }
 
         }
         public SalvarDados SalvarDados = new SalvarDados();
@@ -152,6 +128,57 @@ namespace Projeto_Acelera_2023
         {
 
         }
-    }
 
+        private void botaoVagasAnalise_Click_1(object sender, RoutedEventArgs e)
+        {
+            var TelaPrincipalAluno = new TelaPrincipalAluno(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaPrincipalAluno.Show();
+            this.Hide();
+        }
+
+        private void botaoSair_Click_1(object sender, RoutedEventArgs e)
+        {
+            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            telaLogin.Show();
+            this.Hide();
+        }
+
+        private void botaoVagas_Click_1(object sender, RoutedEventArgs e)
+        {
+            var TelaVagas = new TelaVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaVagas.Show();
+            this.Hide();
+        }
+
+        private void btnEdit_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (SalvarDados.AlunoLogado != null)
+            {
+                var usuarioLogado = SalvarDados.AlunoLogado;
+
+                usuarioLogado.Nome = campoNome.Text;
+                usuarioLogado.Curso = campoCurso.Text;
+                usuarioLogado.Semestre = campoSemestre.Text;
+                usuarioLogado.Telefone = campoTelefone.Text;
+
+                foreach (var usuario in SalvarDados.ListaUsuarios)
+                {
+                    if (usuario.Email == usuarioLogado.Email)
+                    {
+                        // atualiza as propriedades do usuário
+                        usuario.Nome = usuarioLogado.Nome;
+                        usuario.Curso = usuarioLogado.Curso;
+                        usuario.Semestre = usuarioLogado.Semestre;
+                        usuario.Telefone = usuarioLogado.Telefone;
+
+                        // exibe uma mensagem confirmando a atualização
+                        MessageBox.Show("Dados atualizados com sucesso!");
+                        break;
+                    }
+                }
+            }
+        }
+    }
 }
+
+

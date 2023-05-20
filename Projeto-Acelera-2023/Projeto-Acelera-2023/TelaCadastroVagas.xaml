@@ -7,19 +7,32 @@
         mc:Ignorable="d"
         Title="TelaCadastroVagas" Height="450" Width="800">
     <Grid>
-        <Button x:Name="botaoCadastrarVaga" Content="Cadastrar Vaga" HorizontalAlignment="Left" Margin="340,317,0,0" VerticalAlignment="Top" Width="102" Click="Button_Click"/>
-        <Button x:Name="botaoTelaVagas" Content="Ver Vagas" HorizontalAlignment="Left" Margin="340,355,0,0" VerticalAlignment="Top" Width="102" Click="Button_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="331,94,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="campoNome" HorizontalAlignment="Left" Height="23" Margin="331,94,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="campoSalario" HorizontalAlignment="Left" Height="23" Margin="331,183,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" TextChanged="campoSalario_TextChanged"/>
-        <TextBox x:Name="campoDescricao" HorizontalAlignment="Left" Height="23" Margin="331,142,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="campoArea" HorizontalAlignment="Left" Margin="331,227,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="campoFormato" HorizontalAlignment="Left" Margin="331,266,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Nome" HorizontalAlignment="Left" Margin="240,91,0,0" VerticalAlignment="Top"/>
-        <Label Content="Área" HorizontalAlignment="Left" Margin="240,227,0,0" VerticalAlignment="Top"/>
-        <Label Content="Salário" HorizontalAlignment="Left" Margin="240,180,0,0" VerticalAlignment="Top"/>
-        <Label Content="Descrição" HorizontalAlignment="Left" Margin="240,139,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,1.885"/>
-        <Label Content="Formato" HorizontalAlignment="Left" Margin="240,266,0,0" VerticalAlignment="Top"/>
+
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="424,79,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoNome" HorizontalAlignment="Left" Height="23" Margin="424,79,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoSalario" HorizontalAlignment="Left" Height="23" Margin="424,168,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" TextChanged="campoSalario_TextChanged"/>
+        <TextBox x:Name="campoDescricao" HorizontalAlignment="Left" Height="23" Margin="424,127,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="campoArea" HorizontalAlignment="Left" Margin="424,212,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>ADS</ComboBoxItem>
+            <ComboBoxItem>Gestão</ComboBoxItem>
+            <ComboBoxItem>Eventos</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="campoFormato" HorizontalAlignment="Left" Margin="424,251,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>Presencial</ComboBoxItem>
+            <ComboBoxItem>Híbrido</ComboBoxItem>
+            <ComboBoxItem>Home Office</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="333,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="Área" HorizontalAlignment="Left" Margin="333,212,0,0" VerticalAlignment="Top"/>
+        <Label Content="Salário" HorizontalAlignment="Left" Margin="333,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="Descrição" HorizontalAlignment="Left" Margin="333,124,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,1.885"/>
+        <Label Content="Formato" HorizontalAlignment="Left" Margin="333,251,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="botaoCadastrarVaga" Content="Cadastrar" HorizontalAlignment="Left" Margin="447,320,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="botaoCriarVaga" Content="Criar Vaga" HorizontalAlignment="Left" Margin="69,203,0,0" VerticalAlignment="Top" Width="99" Click="botaoCriarVaga_Click_1"/>
+        <Button x:Name="botaoSair" Content="Sair" HorizontalAlignment="Left" Margin="80,328,0,0" VerticalAlignment="Top" Width="75" Click="botaoSair_Click"/>
+        <Button x:Name="botaoPerfil" Content="Perfil" HorizontalAlignment="Left" Margin="69,84,0,0" VerticalAlignment="Top" Width="99" Click="botaoPerfil_Click"/>
+        <Button x:Name="botaoVagas" Content="Vagas" HorizontalAlignment="Left" Margin="69,148,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagas_Click_1"/>
+        <Button x:Name="botaoVagasAnalise" Content="Vagas em Análise" HorizontalAlignment="Left" Margin="69,251,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagasAnalise_Click_1"/>
 
     </Grid>
 </Window>

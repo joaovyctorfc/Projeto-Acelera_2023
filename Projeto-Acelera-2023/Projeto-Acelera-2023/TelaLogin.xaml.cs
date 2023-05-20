@@ -32,12 +32,6 @@ namespace Projeto_Acelera_2023
         {
 
         }
-        private void linkRedefinir_LinkClicked(object sender, MouseButtonEventArgs e)
-        {
-            var TelaRedefinirSenha = new TelaRedefinirSenha(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaRedefinirSenha.Show();
-            this.Hide();
-        }
 
         private void linkCadastrar_Click(object sender, RoutedEventArgs e)
         {

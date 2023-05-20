@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="TelaPerfilAluno" Height="450" Width="800">
     <Grid>
-        <Button x:Name="botaoVagasAnalise" Content="Vagas em Análise" HorizontalAlignment="Left" Margin="55,238,0,0" VerticalAlignment="Top" Width="99"/>
-        <Button x:Name="botaoSair" Content="Sair" HorizontalAlignment="Left" Margin="66,348,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="botaoVagasAnalise" Content="Vagas em Análise" HorizontalAlignment="Left" Margin="55,238,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagasAnalise_Click_1"/>
+        <Button x:Name="botaoSair" Content="Sair" HorizontalAlignment="Left" Margin="66,348,0,0" VerticalAlignment="Top" Width="75" Click="botaoSair_Click_1"/>
         <Button x:Name="botaoPerfil" Content="Perfil" HorizontalAlignment="Left" Margin="55,104,0,0" VerticalAlignment="Top" Width="99" Click="botaoPerfil_Click"/>
-        <Button x:Name="botaoVagas" Content="Vagas" HorizontalAlignment="Left" Margin="55,168,0,0" VerticalAlignment="Top" Width="99"/>
-        <Button x:Name="btnEdit" Content="Editar" HorizontalAlignment="Left" Margin="383,333,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="botaoVagas" Content="Vagas" HorizontalAlignment="Left" Margin="55,168,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagas_Click_1"/>
+        <Button x:Name="btnEdit" Content="Editar" HorizontalAlignment="Left" Margin="383,333,0,0" VerticalAlignment="Top" Width="75" Click="btnEdit_Click_1"/>
         <ComboBox x:Name="campoCurso" HorizontalAlignment="Left" Margin="357,238,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="campoSemestre" HorizontalAlignment="Left" Margin="357,285,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="campoSemestre_SelectionChanged"/>
         <TextBox x:Name="campoTelefone" HorizontalAlignment="Left" Height="23" Margin="357,201,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>

@@ -23,13 +23,6 @@ namespace Projeto_Acelera_2023
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
-        private void botaoLogin_Click(object sender, EventArgs e)
-        {
-            var TelaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaLogin.Show();
-            this.Hide();
-        }
-
 
         private void botaoLogin_Click(object sender, RoutedEventArgs e)
         {

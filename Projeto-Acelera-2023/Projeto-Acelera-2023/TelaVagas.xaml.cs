@@ -31,11 +31,11 @@ namespace Projeto_Acelera_2023
                 if (vaga.Aprovacao.Equals("Aprovado"))
                 {
                     var vagaControl = new VagasControl(vaga, SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-                    vagaControl.SetVaga(vaga);
-                  //  campoVagas.Controls.Add(vagaControl);
+                    tabelaVagas.Children.Add(vagaControl);
                 }
             }
         }
+
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
@@ -64,6 +64,11 @@ namespace Projeto_Acelera_2023
             var Vagas = new TelaVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
             Vagas.Show();
             this.Hide();
+        }
+
+        private void botaoVagasAnalise_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

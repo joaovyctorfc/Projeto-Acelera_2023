@@ -12,7 +12,12 @@
         <TextBox x:Name="campoConfirmarSenha" HorizontalAlignment="Left" Height="23" Margin="342,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="campoEmail" HorizontalAlignment="Left" Height="23" Margin="342,112,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="campoNome" HorizontalAlignment="Left" Height="23" Margin="342,70,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="campoCargo" HorizontalAlignment="Left" Margin="342,250,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="campoCargo_SelectionChanged"/>
+        <ComboBox x:Name="campoCargo" HorizontalAlignment="Left" Margin="342,250,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="campoCargo_SelectionChanged">
+            <ComboBoxItem></ComboBoxItem>
+            <ComboBoxItem>Aluno</ComboBoxItem>
+            <ComboBoxItem>Empresa</ComboBoxItem>
+            <ComboBoxItem>Coordenador</ComboBoxItem>
+        </ComboBox>
         <Label Content="Nome" HorizontalAlignment="Left" Margin="225,70,0,0" VerticalAlignment="Top"/>
         <Label Content="Senha" HorizontalAlignment="Left" Margin="230,158,0,0" VerticalAlignment="Top"/>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="230,117,0,0" VerticalAlignment="Top"/>

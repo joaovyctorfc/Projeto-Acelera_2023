@@ -95,6 +95,27 @@ namespace Projeto_Acelera_2023
             this.Hide();
         }
 
+        private void Aprovar_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is Vaga vaga)
+            {
+                vaga.Aprovacao = "Aprovado";
+                tabelaCoordenador.Items.Refresh();
+            }
+        }
+
+        private void Reprovar_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is Vaga vaga)
+            {
+                vaga.Aprovacao = "Reprovado";
+                tabelaCoordenador.Items.Refresh();
+
+              
+            }
+        }
+
+
     }
 }
 

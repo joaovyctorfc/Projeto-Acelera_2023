@@ -28,48 +28,29 @@ namespace Projeto_Acelera_2023
 
             AdicionarDadosTabela();
         }
-
-        private void tabelaEmpresa_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            var cell = GetCell(e.OriginalSource as DependencyObject);
-            if (cell != null && cell.Column.Header.ToString() == "colunaTabela" && cell.DataContext is Vaga vaga)
-            {
-                // Lógica para lidar com o evento de clique na célula
-            }
-        }
-
-        private DataGridCell GetCell(DependencyObject depObj)
-        {
-            // Encontra a célula do DataGrid a partir do elemento de origem
-            while (depObj != null && !(depObj is DataGridCell))
-            {
-                depObj = VisualTreeHelper.GetParent(depObj);
-            }
-
-            return depObj as DataGridCell;
-        }
-
-        // panel2.Visibility = Visibility.Visible;
-        //panel2.SetValue(Panel.ZIndexProperty, 1);
-
         private void AdicionarDadosTabela()
         {
-            tabelaEmpresa.AutoGenerateColumns = false;
-            tabelaEmpresa.Items.Clear();
+            tabelaEmpresa.ItemsSource = SalvarVagas.ListaVagas;
+        }
 
-            foreach (var vaga in SalvarVagas.ListaVagas)
-            {
-                DataGridTemplateColumn buttonColumn = new DataGridTemplateColumn();
-                buttonColumn.Header = "+";
+            private void botaoPerfil_Click(object sender, RoutedEventArgs e)
+        {
+            var Perfil = new TelaPerfilEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            Perfil.Show();
+            this.Hide();
+        }
+        private void botaoVagas_Click_1(object sender, RoutedEventArgs e)
+        {
+            var Vagas = new TelaVagasEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            Vagas.Show();
+            this.Hide();
+        }
 
-                FrameworkElementFactory buttonFactory = new FrameworkElementFactory(typeof(Button));
-                buttonFactory.SetValue(Button.ContentProperty, "+");
-
-                buttonColumn.CellTemplate = new DataTemplate() { VisualTree = buttonFactory };
-                tabelaEmpresa.Columns.Add(buttonColumn);
-
-                tabelaEmpresa.Items.Add(vaga);
-            }
+        private void botaoCriarVaga_Click_1(object sender, RoutedEventArgs e)
+        {
+            var CriarVagas = new TelaCadastroVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            CriarVagas.Show();
+            this.Hide();
         }
 
         private void botaoSair_Click(object sender, RoutedEventArgs e)
@@ -79,34 +60,14 @@ namespace Projeto_Acelera_2023
             this.Hide();
         }
 
-        private void botaoPerfil_Click(object sender, RoutedEventArgs e)
+        private void tabelaEmpresa_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var Perfil = new TelaPerfilEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Perfil.Show();
-            this.Hide();
+
         }
 
-        private void botaoVagas_Click(object sender, RoutedEventArgs e)
+        private void botaoAtualizar_Click(object sender, RoutedEventArgs e)
         {
-            var Vagas = new TelaVagasEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Vagas.Show();
-            this.Hide();
+            tabelaEmpresa.Items.Refresh();
         }
-
-        private void botaoCriarVaga_Click(object sender, RoutedEventArgs e)
-        {
-            var CriarVagas = new TelaCadastroVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            CriarVagas.Show();
-            this.Hide();
-        }
-
-        private void botaoSair_Click_1(object sender, RoutedEventArgs e)
-        {
-            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Login.Show();
-            this.Hide();
-        }
-
-   
     }
 }
