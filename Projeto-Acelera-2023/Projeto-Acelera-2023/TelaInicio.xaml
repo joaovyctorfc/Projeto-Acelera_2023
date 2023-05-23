@@ -7,7 +7,41 @@
         mc:Ignorable="d"
         Title="TelaInicio" Height="450" Width="800">
     <Grid>
-        <Button x:Name="botaoLogin" Content="Login" HorizontalAlignment="Left" Margin="232,190,0,0" VerticalAlignment="Top" Width="93" Height="64" Click="botaoLogin_Click"/>
-        <Button x:Name="botaoCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="496,190,0,0" VerticalAlignment="Top" Width="93" Height="64" Click="botaoCadastrar_Click_1"/>
+        <Button x:Name="botaoLogin" Content="Login" HorizontalAlignment="Left" Margin="282,223,0,0" VerticalAlignment="Top" Width="221" Height="64" Click="botaoLogin_Click" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+            <Button.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="botaoCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="282,321,0,0" VerticalAlignment="Top" Width="221" Height="64" Click="botaoCadastrar_Click_1" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+            <Button.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>
