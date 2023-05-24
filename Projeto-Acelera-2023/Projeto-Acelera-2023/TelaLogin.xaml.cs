@@ -28,6 +28,10 @@ namespace Projeto_Acelera_2023
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
 
+        private void campoEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void linkCadastrar_Click(object sender, RoutedEventArgs e)
         {
@@ -93,28 +97,5 @@ namespace Projeto_Acelera_2023
                 }
             }
         }
-
-        //_____________________________Front_____________________________//
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            
-            WindowState = WindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-
-
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-                DragMove();
-
-        }
-
-
     }
 }

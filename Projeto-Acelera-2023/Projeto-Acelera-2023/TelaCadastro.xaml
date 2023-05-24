@@ -6,14 +6,8 @@
         xmlns:local="clr-namespace:Projeto_Acelera_2023"
         mc:Ignorable="d"
         Title="TelaCadastro" Height="450" Width="800">
-
-
-
-    <Grid  Background="Transparent">
-
-
-        <Button x:Name="botaoCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="323,308,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click"
-                Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+    <Grid RenderTransformOrigin="0.558,0.51" Background="Black">
+        <Button x:Name="botaoCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="323,308,0,0" VerticalAlignment="Top" Width="153" Click="Button_Click" Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White">
             <Button.Resources>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -31,8 +25,8 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <TextBox x:Name="campoSenha" 
-                             FontSize="13"
+        <TextBox x:Name="campoSenha" HorizontalAlignment="Left" Height="23" Margin="342,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoConfirmarSenha"                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            
                              Foreground="White"
@@ -41,73 +35,11 @@
                              BorderThickness="0,0,0,2"
                              Height="28"
                              VerticalContentAlignment="Center"
-                             Margin="342,153,317,253"
-                             Padding="20,0,0,0" 
-                             RenderTransformOrigin="0.5,0.5">
-
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.696"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-
-        <TextBox x:Name="campoConfirmarSenha"
-                             FontSize="13"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"                            
-                             Foreground="White"
-                             CaretBrush="LightGray"
-                             BorderBrush="DarkGray"
-                             BorderThickness="0,0,0,2"
-                             Height="28"
-                             VerticalContentAlignment="Center"
-                             Margin="342,198,317,208"
-                             Padding="20,0,0,0" 
-                             RenderTransformOrigin="0.558,0.51"/>
-
-        <TextBox x:Name="campoEmail" 
-                             HorizontalAlignment="Left" 
-                             Height="28" 
-                             Margin="342,112,0,0" 
-                             TextWrapping="Wrap"  
-                             VerticalAlignment="Top" 
-                             Width="141"
-                                            
-                             FontSize="13"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"                            
-                             Foreground="White"
-                             CaretBrush="LightGray"
-                             BorderBrush="DarkGray"
-                             BorderThickness="0,0,0,2"
-                             VerticalContentAlignment="Center"
-                             Padding="20,0,0,0" 
-                             RenderTransformOrigin="0.558,0.51"/>
-
-        <TextBox x:Name="campoNome" 
-                             HorizontalAlignment="Left" 
-                             Height="23" 
-                             Margin="342,70,0,0" 
-                             TextWrapping="Wrap"  
-                             VerticalAlignment="Top" 
-                             Width="141"
-                             FontSize="13"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"                            
-                             Foreground="White"
-                             CaretBrush="LightGray"
-                             BorderBrush="DarkGray"
-                             BorderThickness="0,0,0,2"
-                             VerticalContentAlignment="Center"
-                             Padding="20,0,0,0" 
-                             RenderTransformOrigin="0.558,0.51"/>
-
-
-        <ComboBox x:Name="campoCargo" HorizontalAlignment="Left" Margin="342,250,0,0" VerticalAlignment="Top" Width="141" SelectionChanged="campoCargo_SelectionChanged">
+                             Margin="342,199,317.333,193.667"
+                             Padding="20,0,0,0"/>
+        <TextBox x:Name="campoEmail" HorizontalAlignment="Left" Height="23" Margin="342,112,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoNome" HorizontalAlignment="Left" Height="23" Margin="342,70,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="campoCargo" HorizontalAlignment="Left" Margin="342,250,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="campoCargo_SelectionChanged">
             <ComboBoxItem></ComboBoxItem>
             <ComboBoxItem>Aluno</ComboBoxItem>
             <ComboBoxItem>Empresa</ComboBoxItem>
@@ -117,7 +49,6 @@
         <Label Content="Senha" HorizontalAlignment="Left" Margin="230,158,0,0" VerticalAlignment="Top"/>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="230,117,0,0" VerticalAlignment="Top"/>
         <Label Content="Confirmar Senha" HorizontalAlignment="Left" Margin="170,200,0,0" VerticalAlignment="Top"/>
-
         <Label Content="Cargo" HorizontalAlignment="Left" Margin="226,246,0,0" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="342,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
                 <Hyperlink Click="linkLogin_Click">

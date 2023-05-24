@@ -31,34 +31,11 @@ namespace Projeto_Acelera_2023
             this.Hide();
         }
 
-        private void botaoCadastrar_Click(object sender, RoutedEventArgs e)
+        private void botaoCadastrar_Click_1(object sender, RoutedEventArgs e)
         {
             var TelaCadastro = new TelaCadastro(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
             TelaCadastro.Show();
             this.Hide();
         }
-
-
-        //_________________Front___________________//
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            WindowState = WindowState.Minimized;
-
-            var TelaCadastro = new TelaCadastro(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaCadastro.Show();
-            this.Hide();
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-                DragMove();
-        }
-
     }
 }
