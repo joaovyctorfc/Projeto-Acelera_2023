@@ -47,6 +47,11 @@ namespace Projeto_Acelera_2023
             Login.Show();
             this.Hide();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 

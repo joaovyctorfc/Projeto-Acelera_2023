@@ -5,23 +5,186 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projeto_Acelera_2023"
         mc:Ignorable="d"
-        Title="TelaLogin" Height="450" Width="800">
-    <Grid>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="250,144,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="250,192,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="botaoLogin" Content="Login" HorizontalAlignment="Left" Margin="394,259,0,0" VerticalAlignment="Top" Width="75" Click="botaoLogin_Click"/>
-        <TextBlock x:Name="linkRedefinir" HorizontalAlignment="Left" Margin="428,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5">
-                <Hyperlink Click="linkRedefinir_Click">
-        Esqueceu sua Senha?
-    </Hyperlink>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="317,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5">
-                <Hyperlink Click="linkCadastrar_Click">
-        Cadastrar-se
-    </Hyperlink>
-        </TextBlock>
-        <TextBox x:Name="campoEmail" HorizontalAlignment="Left" Height="23" Margin="366,148,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="campoSenha" HorizontalAlignment="Left" Height="23" Margin="369,192,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        Title="TelaLogin" Height="450" Width="750"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent" 
+        AllowsTransparency="True" 
+        MouseDown="Window_MouseDown">
 
-    </Grid>
+
+
+
+
+
+    <Border CornerRadius="12">
+
+        <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95">
+
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FF3578D2" Offset="0"/>
+                    <GradientStop Color="#FF67DA34" Offset="0.75"/>
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#FF138E9E" Offset="0"/>
+                    <GradientStop Color="#FF3D4F86" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="LOGIN"
+                               Foreground="DarkGray"
+                               FontSize="10"
+                               FontFamily="Montserrat"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+
+                    <Button x:Name="btnMinimize"                           
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                            Click="btnMinimize_Click" Height="30" VerticalAlignment="Top">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#28AEED"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#278BEF"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <Button x:Name="btnClose"                          
+                            BorderThickness="0"
+                            Content="X"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2" Height="30" 
+                            VerticalAlignment="Top" 
+                            Click="btnClose_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#FFFF001D"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#C62DAE"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+                </Grid>
+
+
+                <Label Content="Login" HorizontalAlignment="Left" Margin="250,122,0,0" VerticalAlignment="Top" Height="25" Grid.Row="1"/>
+                <Label Content="Senha" HorizontalAlignment="Left" Margin="250,176,0,0" VerticalAlignment="Top" Height="31" Grid.Row="1"/>
+                <Button x:Name="botaoLogin" Content="Login" HorizontalAlignment="Left" Margin="351,262,0,0" VerticalAlignment="Top" Width="139" Click="botaoLogin_Click"
+                Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White" Grid.Row="1">
+                    <Button.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="10">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+
+                <TextBlock x:Name="linkRedefinir" HorizontalAlignment="Left" Margin="440,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" Grid.Row="1">
+                <Hyperlink Click="linkRedefinir_Click">
+        Esqueceu sua Senha?                    
+    </Hyperlink>
+                </TextBlock>
+                
+                
+                <TextBlock HorizontalAlignment="Left" Margin="317,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" Grid.Row="1">
+                <Hyperlink Click="linkCadastrar_Click">
+        Cadastrar-se                    
+    </Hyperlink>
+                </TextBlock>
+
+                <TextBox x:Name="campoEmail" 
+                         HorizontalAlignment="Left"
+                         Height="23" 
+                         Margin="366,124,0,0"
+                         TextWrapping="Wrap"  
+                         VerticalAlignment="Top" 
+                         Width="120" 
+                         Grid.Row="1" />
+
+                <TextBox x:Name="campoSenha" HorizontalAlignment="Left" Height="23" Margin="369,180,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+
+
+            </Grid>
+        </Border>
+    </Border>
 </Window>

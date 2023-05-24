@@ -27,12 +27,121 @@
         <Label Content="Salário" HorizontalAlignment="Left" Margin="333,165,0,0" VerticalAlignment="Top"/>
         <Label Content="Descrição" HorizontalAlignment="Left" Margin="333,124,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,1.885"/>
         <Label Content="Formato" HorizontalAlignment="Left" Margin="333,251,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="botaoCadastrarVaga" Content="Cadastrar" HorizontalAlignment="Left" Margin="447,320,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button x:Name="botaoCriarVaga" Content="Criar Vaga" HorizontalAlignment="Left" Margin="69,203,0,0" VerticalAlignment="Top" Width="99" Click="botaoCriarVaga_Click_1"/>
-        <Button x:Name="botaoSair" Content="Sair" HorizontalAlignment="Left" Margin="80,328,0,0" VerticalAlignment="Top" Width="75" Click="botaoSair_Click"/>
-        <Button x:Name="botaoPerfil" Content="Perfil" HorizontalAlignment="Left" Margin="69,84,0,0" VerticalAlignment="Top" Width="99" Click="botaoPerfil_Click"/>
-        <Button x:Name="botaoVagas" Content="Vagas" HorizontalAlignment="Left" Margin="69,148,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagas_Click_1"/>
-        <Button x:Name="botaoVagasAnalise" Content="Vagas em Análise" HorizontalAlignment="Left" Margin="69,251,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagasAnalise_Click_1"/>
-
+        
+        <Button x:Name="botaoCadastrarVaga" Content="Cadastrar" HorizontalAlignment="Left" Margin="447,320,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"
+        Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+        <Button.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Button.Resources>
+        </Button>
+        <Button x:Name="botaoCriarVaga" Content="Criar Vaga" HorizontalAlignment="Left" Margin="69,203,0,0" VerticalAlignment="Top" Width="99" Click="botaoCriarVaga_Click_1"
+        Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+            <Button.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="botaoSair" Content="Sair" HorizontalAlignment="Left" Margin="80,328,0,0" VerticalAlignment="Top" Width="75" Click="botaoSair_Click"
+        Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+        <Button.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Button.Resources>
+        </Button>
+        <Button x:Name="botaoPerfil" Content="Perfil" HorizontalAlignment="Left" Margin="69,84,0,0" VerticalAlignment="Top" Width="99" Click="botaoPerfil_Click"
+        Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+        <Button.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Button.Resources>
+        </Button>
+        <Button x:Name="botaoVagas" Content="Vagas" HorizontalAlignment="Left" Margin="69,148,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagas_Click_1"
+        Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+        <Button.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Button.Resources>
+        </Button>
+        <Button x:Name="botaoVagasAnalise" Content="Vagas em Análise" HorizontalAlignment="Left" Margin="69,251,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagasAnalise_Click_1"
+                Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+            <Button.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+    
     </Grid>
 </Window>
