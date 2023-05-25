@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="TelaInicio" Height="450" Width="800">
     <Grid>
-        <Button x:Name="botaoLogin" Content="Login" HorizontalAlignment="Left" Margin="282,223,0,0" VerticalAlignment="Top" Width="221" Height="64" Click="botaoLogin_Click" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+        <Button x:Name="botaoLogin" Content="Login" HorizontalAlignment="Left" Margin="290,211,0,0" VerticalAlignment="Top" Width="221" Height="64" Click="botaoLogin_Click" Background="#FF018CFF" Foreground="White" BorderBrush="White" FontSize="18" FontFamily="Yu Gothic UI Semibold">
             <Button.Resources>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -25,7 +25,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="botaoCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="282,321,0,0" VerticalAlignment="Top" Width="221" Height="64" Click="botaoCadastrar_Click_1" Background="#FF018CFF" Foreground="White" BorderBrush="White">
+        <Button x:Name="botaoCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="290,309,0,0" VerticalAlignment="Top" Width="221" Height="64" Click="botaoCadastrar_Click_1" Background="#FF018CFF" Foreground="White" BorderBrush="White" FontSize="18" FontFamily="Yu Gothic UI Semibold">
             <Button.Resources>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -43,5 +43,8 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Label Content="Connect" HorizontalAlignment="Left" Margin="280,21,0,0" VerticalAlignment="Top" FontSize="50" FontFamily="Dubai Medium" Background="{x:Null}" Foreground="#FF0152FF"/>
+        <Label Content="Fatec" HorizontalAlignment="Left" Margin="390,72,0,0" VerticalAlignment="Top" FontSize="50" FontFamily="Dubai Medium" Foreground="#FF878787"/>
+        <Label Content="Faculdade de Tecnologia" HorizontalAlignment="Left" Margin="390,136,0,0" VerticalAlignment="Top" FontFamily="Dubai Medium" Foreground="#FF878787"/>
     </Grid>
 </Window>

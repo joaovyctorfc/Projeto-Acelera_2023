@@ -27,6 +27,11 @@ namespace Projeto_Acelera_2023
             //campoCargo.DropDownStyle = ComboBoxStyle.DropDownList;
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
+            campoNome.VerticalContentAlignment = VerticalAlignment.Center;
+            campoEmail.VerticalContentAlignment = VerticalAlignment.Center;
+            campoSenha.VerticalContentAlignment = VerticalAlignment.Center;
+            campoConfirmarSenha.VerticalContentAlignment = VerticalAlignment.Center;
+            campoCargo.VerticalContentAlignment = VerticalAlignment.Center;
         }
 
         private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
@@ -88,6 +93,11 @@ namespace Projeto_Acelera_2023
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Cadastro();
+        }
+        
+        private void campoNome_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+           
         }
     }
 }

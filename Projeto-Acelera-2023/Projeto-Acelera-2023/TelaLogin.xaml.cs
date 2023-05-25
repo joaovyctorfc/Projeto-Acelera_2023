@@ -22,6 +22,8 @@ namespace Projeto_Acelera_2023
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
+            campoEmail.VerticalContentAlignment = VerticalAlignment.Center;
+            campoSenha.VerticalContentAlignment = VerticalAlignment.Center;
         }
 
         public SalvarDados SalvarDados = new SalvarDados();
@@ -96,6 +98,11 @@ namespace Projeto_Acelera_2023
                     MessageBox.Show("Login ou senha errado");
                 }
             }
+        }
+
+        private void campoEmail_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
