@@ -7,10 +7,49 @@
         mc:Ignorable="d"
         Title="TelaPrincipalCoordenador" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
-        <Button x:Name="botaoVagasAnalise" Content="Análise de Vagas" HorizontalAlignment="Left" Margin="125,217,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagasAnalise_Click_1"/>
-        <Button x:Name="botaoSair" Content="Sair" HorizontalAlignment="Left" Margin="136,327,0,0" VerticalAlignment="Top" Width="75" Click="botaoSair_Click"/>
-        <Button x:Name="botaoPerfil" Content="Perfil" HorizontalAlignment="Left" Margin="125,83,0,0" VerticalAlignment="Top" Width="99" Click="botaoPerfil_Click"/>
-        <Button x:Name="botaoVagas" Content="Vagas Abertas" HorizontalAlignment="Left" Margin="125,147,0,0" VerticalAlignment="Top" Width="99"/>
+        <Grid x:Name="sidePanel" HorizontalAlignment="Left" Width="150" Background="#FF0088FF" >
+            <StackPanel>
+                <Grid Height="140" Background="#FF0088FF">
+                    <Button x:Name="ButtonMenu" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Background="Transparent" BorderBrush="Transparent" Click="Button_Click" FontFamily="Yu Gothic UI Semibold" FontSize="18" FontWeight="Bold">
+                        <Image Source="icons/Menu.png"/>
+                    </Button>
+                </Grid>
+                <ListView FontFamily="Century Gothic" FontSize="18" BorderBrush="Transparent" Background="Transparent">
+                    <ListViewItem Height="30" Selected="ListViewItem_Selected_1">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="icons/Perfil.png" VerticalAlignment="Center"/>
+                            <TextBlock Text="Perfil" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30" Selected="ListViewItem_Selected_2">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="icons/Vagas.png" VerticalAlignment="Center"/>
+                            <TextBlock Text="Vagas" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30" Selected="ListViewItem_Selected_3">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="icons/CriarVaga.png" VerticalAlignment="Center"/>
+                            <TextBlock Text="Criar Vaga" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30" Selected="ListViewItem_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="icons/Analise.png" VerticalAlignment="Center"/>
+                            <TextBlock Text=" Análise" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30" Selected="ListViewItem_Selected_4">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="icons/Sair.png" VerticalAlignment="Center"/>
+                            <TextBlock Text="Sair" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+
+        </Grid>
+        <WrapPanel HorizontalAlignment="Left" Height="450" Margin="150,0,0,0" VerticalAlignment="Top" Width="650"/>
 
     </Grid>
 </Window>

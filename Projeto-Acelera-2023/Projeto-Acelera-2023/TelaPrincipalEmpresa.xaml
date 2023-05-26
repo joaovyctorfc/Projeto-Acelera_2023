@@ -15,19 +15,19 @@
                     </Button>
                 </Grid>
                 <ListView FontFamily="Century Gothic" FontSize="18" BorderBrush="Transparent" Background="Transparent">
-                    <ListViewItem Height="30">
+                    <ListViewItem Height="30" Selected="ListViewItem_Selected_1">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="icons/Perfil.png" VerticalAlignment="Center"/>
                             <TextBlock Text="Perfil" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="30">
+                    <ListViewItem Height="30" Selected="ListViewItem_Selected_2">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="icons/Vagas.png" VerticalAlignment="Center"/>
                             <TextBlock Text="Vagas" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="30">
+                    <ListViewItem Height="30" Selected="ListViewItem_Selected_3">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="icons/CriarVaga.png" VerticalAlignment="Center"/>
                             <TextBlock Text="Criar Vaga" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
@@ -39,7 +39,7 @@
                             <TextBlock Text=" Análise" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="30">
+                    <ListViewItem Height="30" Selected="ListViewItem_Selected_4">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="icons/Sair.png" VerticalAlignment="Center"/>
                             <TextBlock Text="Sair" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
@@ -49,11 +49,7 @@
             </StackPanel>
 
         </Grid>
-        <Button x:Name="botaoCriarVaga" Content="Criar Vaga" HorizontalAlignment="Left" Margin="516,215,0,0" VerticalAlignment="Top" Width="99" Click="botaoCriarVaga_Click_1"/>
-        <Button x:Name="botaoSair" Content="Sair" HorizontalAlignment="Left" Margin="527,340,0,0" VerticalAlignment="Top" Width="75" Click="botaoSair_Click_1"/>
-        <Button x:Name="botaoPerfil" Content="Perfil" HorizontalAlignment="Left" Margin="516,96,0,0" VerticalAlignment="Top" Width="99" Click="botaoPerfil_Click"/>
-        <Button x:Name="botaoVagas" Content="Vagas" HorizontalAlignment="Left" Margin="516,160,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagas_Click_1"/>
-        <Button x:Name="botaoVagasAnalise" Content="Vagas em Análise" HorizontalAlignment="Left" Margin="516,263,0,0" VerticalAlignment="Top" Width="99" Click="botaoVagasAnalise_Click"/>
+        <WrapPanel HorizontalAlignment="Left" Height="450" Margin="150,0,0,0" VerticalAlignment="Top" Width="650"/>
 
     </Grid>
 </Window>

@@ -60,39 +60,11 @@ namespace Projeto_Acelera_2023
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
 
 
-        private void botaoPerfil_Click(object sender, RoutedEventArgs e)
-        {
-            var TelaPerfilEmpresa = new TelaPerfilEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaPerfilEmpresa.Show();
-            this.Hide();
-        }
 
-        private void botaoVagas_Click_1(object sender, RoutedEventArgs e)
-        {
-            var TelaVagasEmpresa = new TelaVagasEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaVagasEmpresa.Show();
-            this.Hide();
-        }
 
-        private void botaoCriarVaga_Click_1(object sender, RoutedEventArgs e)
-        {
-            var TelaCadastroVagas = new TelaCadastroVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaCadastroVagas.Show();
-            this.Hide();
-        }
 
-        private void botaoSair_Click_1(object sender, RoutedEventArgs e)
-        {
-            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Login.Show();
-            this.Hide();
-        }
 
-        private void botaoVagasAnalise_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+    
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
 
@@ -114,6 +86,34 @@ namespace Projeto_Acelera_2023
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             timer.Start();
+        }
+
+        private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+            var TelaPerfilEmpresa = new TelaPerfilEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaPerfilEmpresa.Show();
+            this.Hide();
+        }
+
+        private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
+        {
+            var TelaVagasEmpresa = new TelaVagasEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaVagasEmpresa.Show();
+            this.Hide();
+        }
+
+        private void ListViewItem_Selected_3(object sender, RoutedEventArgs e)
+        {
+            var TelaCadastroVagas = new TelaCadastroVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaCadastroVagas.Show();
+            this.Hide();
+        }
+
+        private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
+        {
+            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            Login.Show();
+            this.Hide();
         }
     }
 }
