@@ -11,16 +11,48 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Projeto_Acelera_2023
 {
     public partial class TelaPrincipalEmpresa : Window
     {
+        DispatcherTimer timer;
+        double panelWidth;
+        bool hidden;
         public TelaPrincipalEmpresa(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
         {
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
+            timer.Tick += Timer_Tick;
+
+            panelWidth = sidePanel.Width;
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+           if(hidden)
+            {
+                sidePanel.Width += 1;
+                if(sidePanel.Width >= panelWidth)
+                {
+                    timer.Stop();
+                    hidden = false;
+                }
+            }
+            else
+            {
+                sidePanel.Width -= 1;
+                if (sidePanel.Width <= 40)
+                {
+                    timer.Stop();
+                    hidden = true;
+                }
+
+            }
         }
 
         public SalvarDados SalvarDados = new SalvarDados();
@@ -59,6 +91,29 @@ namespace Projeto_Acelera_2023
         private void botaoVagasAnalise_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Panel_Header(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void PanelHeader_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Start();
         }
     }
 }

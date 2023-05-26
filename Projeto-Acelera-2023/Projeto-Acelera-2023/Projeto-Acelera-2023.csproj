@@ -195,5 +195,15 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\Analise.png" />
+    <Resource Include="icons\CriarVaga.png" />
+    <Resource Include="icons\Perfil.png" />
+    <Resource Include="icons\Sair.png" />
+    <Resource Include="icons\Vagas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\Menu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
