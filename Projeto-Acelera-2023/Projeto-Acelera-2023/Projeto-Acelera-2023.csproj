@@ -64,8 +64,8 @@
     <Compile Include="TelaCadastro.xaml.cs">
       <DependentUpon>TelaCadastro.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TelaCadastroVagas.xaml.cs">
-      <DependentUpon>TelaCadastroVagas.xaml</DependentUpon>
+    <Compile Include="TelaCadastroVagasUC.xaml.cs">
+      <DependentUpon>TelaCadastroVagasUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="TelaInicio.xaml.cs">
       <DependentUpon>TelaInicio.xaml</DependentUpon>
@@ -73,14 +73,14 @@
     <Compile Include="TelaLogin.xaml.cs">
       <DependentUpon>TelaLogin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TelaPerfilAluno.xaml.cs">
-      <DependentUpon>TelaPerfilAluno.xaml</DependentUpon>
+    <Compile Include="TelaPerfilAlunoUC.xaml.cs">
+      <DependentUpon>TelaPerfilAlunoUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TelaPerfilCoordenador.xaml.cs">
-      <DependentUpon>TelaPerfilCoordenador.xaml</DependentUpon>
+    <Compile Include="TelaPerfilCoordenadorUC.xaml.cs">
+      <DependentUpon>TelaPerfilCoordenadorUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TelaPerfilEmpresa.xaml.cs">
-      <DependentUpon>TelaPerfilEmpresa.xaml</DependentUpon>
+    <Compile Include="TelaPerfilEmpresaUC.xaml.cs">
+      <DependentUpon>TelaPerfilEmpresaUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="TelaPrincipalAluno.xaml.cs">
       <DependentUpon>TelaPrincipalAluno.xaml</DependentUpon>
@@ -94,14 +94,14 @@
     <Compile Include="TelaRedefinirSenha.xaml.cs">
       <DependentUpon>TelaRedefinirSenha.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TelaVagas.xaml.cs">
-      <DependentUpon>TelaVagas.xaml</DependentUpon>
+    <Compile Include="TelaVagasAlunoUC.xaml.cs">
+      <DependentUpon>TelaVagasAlunoUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TelaVagasCoordenador.xaml.cs">
-      <DependentUpon>TelaVagasCoordenador.xaml</DependentUpon>
+    <Compile Include="TelaVagasCoordenadorUC.xaml.cs">
+      <DependentUpon>TelaVagasCoordenadorUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TelaVagasEmpresa.xaml.cs">
-      <DependentUpon>TelaVagasEmpresa.xaml</DependentUpon>
+    <Compile Include="TelaVagasEmpresaUC.xaml.cs">
+      <DependentUpon>TelaVagasEmpresaUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="VagasControl.xaml.cs">
       <DependentUpon>VagasControl.xaml</DependentUpon>
@@ -138,7 +138,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TelaCadastroVagas.xaml">
+    <Page Include="TelaCadastroVagasUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,15 +150,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TelaPerfilAluno.xaml">
+    <Page Include="TelaPerfilAlunoUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TelaPerfilCoordenador.xaml">
+    <Page Include="TelaPerfilCoordenadorUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TelaPerfilEmpresa.xaml">
+    <Page Include="TelaPerfilEmpresaUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,15 +178,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TelaVagas.xaml">
+    <Page Include="TelaVagasAlunoUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TelaVagasCoordenador.xaml">
+    <Page Include="TelaVagasCoordenadorUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TelaVagasEmpresa.xaml">
+    <Page Include="TelaVagasEmpresaUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -18,6 +18,8 @@ namespace Projeto_Acelera_2023
     public partial class TelaPrincipalCoordenador : Window
     {
         DispatcherTimer timer;
+        double panelWidth;
+        bool hidden;
         public TelaPrincipalCoordenador(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
         {
             InitializeComponent();
@@ -26,36 +28,75 @@ namespace Projeto_Acelera_2023
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
             timer.Tick += Timer_Tick;
+
+            panelWidth = sidePanel.Width;
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (hidden)
+            {
+                sidePanel.Width += 1;
+                if (sidePanel.Width >= panelWidth)
+                {
+                    timer.Stop();
+                    hidden = false;
+                }
+            }
+            else
+            {
+                sidePanel.Width -= 1;
+                if (sidePanel.Width <= 40)
+                {
+                    timer.Stop();
+                    hidden = true;
+                }
+
+            }
         }
 
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
 
-        private void botaoPerfil_Click(object sender, RoutedEventArgs e)
+
+        private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
         {
-            var TelaPerfil = new TelaPerfilCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaPerfil.Show();
-            this.Hide();
+            painelTelas.Children.Clear();
+            TelaPerfilCoordenadorUC Perfil = new TelaPerfilCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            painelTelas.Children.Add(Perfil);
         }
 
-        private void botaoVagasAnalise_Click_1(object sender, RoutedEventArgs e)
+        private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
         {
-            var Vagas = new TelaVagasCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Vagas.Show();
-            this.Hide();
+
         }
 
-        private void botaoSair_Click(object sender, RoutedEventArgs e)
+        private void ListViewItem_Selected_3(object sender, RoutedEventArgs e)
         {
-            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Login.Show();
+            painelTelas.Children.Clear();
+            TelaVagasCoordenadorUC Vagas = new TelaVagasCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            painelTelas.Children.Add(Vagas);
+        }
+
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
+        {
+            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            telaLogin.Show();
             this.Hide();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Start();
+        }
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

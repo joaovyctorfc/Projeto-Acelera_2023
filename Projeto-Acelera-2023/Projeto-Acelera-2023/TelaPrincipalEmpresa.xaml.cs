@@ -90,23 +90,23 @@ namespace Projeto_Acelera_2023
 
         private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
         {
-            var TelaPerfilEmpresa = new TelaPerfilEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaPerfilEmpresa.Show();
-            this.Hide();
+            painelTelas.Children.Clear();
+            TelaPerfilEmpresaUC Perfil = new TelaPerfilEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            painelTelas.Children.Add(Perfil);
         }
 
         private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
         {
-            var TelaVagasEmpresa = new TelaVagasEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaVagasEmpresa.Show();
-            this.Hide();
+            painelTelas.Children.Clear();
+            TelaVagasEmpresaUC Vagas = new TelaVagasEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            painelTelas.Children.Add(Vagas);
         }
 
         private void ListViewItem_Selected_3(object sender, RoutedEventArgs e)
         {
-            var TelaCadastroVagas = new TelaCadastroVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaCadastroVagas.Show();
-            this.Hide();
+            painelTelas.Children.Clear();
+            TelaCadastroVagasUC CadastroVagas = new TelaCadastroVagasUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            painelTelas.Children.Add(CadastroVagas);
         }
 
         private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
@@ -114,6 +114,11 @@ namespace Projeto_Acelera_2023
             var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
             Login.Show();
             this.Hide();
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\
+C:\Users\aluno\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\
 Projeto_Acelera_2023
 none
 false
 DEBUG;TRACE
-C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\App.xaml
-151651770773
+C:\Users\aluno\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\App.xaml
+15-204473192
 
-211429910753
+21-1409996384
 14-1004149723
-TelaCadastro.xaml;TelaCadastroVagas.xaml;TelaInicio.xaml;TelaLogin.xaml;TelaPerfilAluno.xaml;TelaPerfilCoordenador.xaml;TelaPerfilEmpresa.xaml;TelaPrincipalAluno.xaml;TelaPrincipalCoordenador.xaml;TelaPrincipalEmpresa.xaml;TelaRedefinirSenha.xaml;TelaVagas.xaml;TelaVagasCoordenador.xaml;TelaVagasEmpresa.xaml;VagasControl.xaml;
+TelaCadastro.xaml;TelaCadastroVagasUC.xaml;TelaInicio.xaml;TelaLogin.xaml;TelaPerfilAlunoUC.xaml;TelaPerfilCoordenadorUC.xaml;TelaPerfilEmpresaUC.xaml;TelaPrincipalAluno.xaml;TelaPrincipalCoordenador.xaml;TelaPrincipalEmpresa.xaml;TelaRedefinirSenha.xaml;TelaVagasAlunoUC.xaml;TelaVagasCoordenadorUC.xaml;TelaVagasEmpresaUC.xaml;VagasControl.xaml;
 
 True
 

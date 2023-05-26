@@ -10,16 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Projeto_Acelera_2023
 {
-    public partial class TelaPerfilCoordenador : Window
+
+    public partial class TelaPerfilCoordenadorUC : UserControl
     {
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
-        public TelaPerfilCoordenador(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaPerfilCoordenadorUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
         {
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
@@ -32,12 +34,6 @@ namespace Projeto_Acelera_2023
                 campoTelefone.AppendText(usuarioLogado.Telefone);
             }
         }
-
-        private void botaoSair_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (SalvarDados.CoordenadorLogado != null)
@@ -94,37 +90,9 @@ namespace Projeto_Acelera_2023
             return text; // Retorna o texto original se não for possível formatar
         }
 
-        private void botaoPerfil_Click(object sender, EventArgs e)
-        {
-            var Perfil = new TelaPerfilCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Perfil.Show();
-            this.Hide();
-        }
-
-        private void botaoVagasAnalise_Click(object sender, EventArgs e)
-        {
-            var Vagas = new TelaVagasCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Vagas.Show();
-            this.Hide();
-        }
-
-        private void botaoVagas_Click(object sender, RoutedEventArgs e)
+        private void CampoTelefone_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
-        }
-
-        private void botaoVagasAnalise_Click_1(object sender, RoutedEventArgs e)
-        {
-            var Vagas = new TelaVagasCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Vagas.Show();
-            this.Hide();
-        }
-
-        private void botaoSair_Click_1(object sender, RoutedEventArgs e)
-        {
-            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            telaLogin.Show();
-            this.Hide();
         }
     }
 }

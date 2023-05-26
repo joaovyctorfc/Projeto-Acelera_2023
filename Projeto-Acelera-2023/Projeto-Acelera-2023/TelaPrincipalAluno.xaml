@@ -14,7 +14,7 @@
                         <Image Source="icons/Menu.png"/>
                     </Button>
                 </Grid>
-                <ListView FontFamily="Century Gothic" FontSize="18" BorderBrush="Transparent" Background="Transparent" Height="259">
+                <ListView FontFamily="Century Gothic" FontSize="18" BorderBrush="Transparent" Background="Transparent" Height="335" SelectionChanged="ListView_SelectionChanged">
                     <ListViewItem Height="30" Selected="ListViewItem_Selected_1">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="icons/Perfil.png" VerticalAlignment="Center"/>
@@ -27,12 +27,6 @@
                             <TextBlock Text="Vagas" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="30" Selected="ListViewItem_Selected_3">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="icons/CriarVaga.png" VerticalAlignment="Center"/>
-                            <TextBlock Text="Criar Vaga" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
                     <ListViewItem Height="30" Selected="ListViewItem_Selected">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="icons/Analise.png" VerticalAlignment="Center"/>
@@ -42,7 +36,7 @@
                 </ListView>
             </StackPanel>
             <Grid Background="#FF0088FF" Margin="0,382,0,10">
-                <ListViewItem Height="30" Selected="ListViewItem_Selected_4" Margin="31,18,-17,10">
+                <ListViewItem Height="30" Selected="ListViewItem_Selected_4" Margin="0,18,0,10">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="icons/Sair.png" VerticalAlignment="Center"/>
                         <TextBlock Text="Sair" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
@@ -51,7 +45,7 @@
             </Grid>
 
         </Grid>
-        <WrapPanel HorizontalAlignment="Left" Height="450" Margin="150,0,0,0" VerticalAlignment="Top" Width="650"/>
+        <WrapPanel x:Name="painelTelas" HorizontalAlignment="Left" Height="450" Margin="150,0,0,0" VerticalAlignment="Top"  Width="650"/>
 
     </Grid>
 </Window>

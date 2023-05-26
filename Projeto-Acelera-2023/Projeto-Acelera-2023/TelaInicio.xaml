@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projeto_Acelera_2023"
         mc:Ignorable="d"
-        Title="TelaInicio" Height="450" Width="800">
+        Title="TelaInicio" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="botaoLogin" Content="Login" HorizontalAlignment="Left" Margin="290,211,0,0" VerticalAlignment="Top" Width="221" Height="64" Click="botaoLogin_Click" Background="#FF018CFF" Foreground="White" BorderBrush="White" FontSize="18" FontFamily="Yu Gothic UI Semibold">
             <Button.Resources>

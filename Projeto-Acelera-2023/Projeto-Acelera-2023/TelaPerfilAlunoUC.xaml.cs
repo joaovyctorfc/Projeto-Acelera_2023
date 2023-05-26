@@ -10,13 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Projeto_Acelera_2023
 {
-    public partial class TelaPerfilAluno : Window
+    /// <summary>
+    /// Interação lógica para TelaPerfilAlunoUC.xam
+    /// </summary>
+    public partial class TelaPerfilAlunoUC : UserControl
     {
-        public TelaPerfilAluno(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaPerfilAlunoUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
         {
             InitializeComponent();
             // campoCurso.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -73,27 +77,6 @@ namespace Projeto_Acelera_2023
 
         }
 
-        private void botaoVagasAnalise_Click(object sender, EventArgs e)
-        {
-            var TelaPrincipalAluno = new TelaPrincipalAluno(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaPrincipalAluno.Show();
-            this.Hide();
-        }
-
-        private void botaoSair_Click(object sender, EventArgs e)
-        {
-            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            telaLogin.Show();
-            this.Hide();
-        }
-
-        private void BotaoVagas_Click(object sender, EventArgs e)
-        {
-            var TelaVagas = new TelaVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaVagas.Show();
-            this.Hide();
-        }
-
         private void campoTelefone_TextChanged(object sender, EventArgs e)
         {
             var formattedText = FormatarTelefone(campoTelefone.Text);
@@ -117,39 +100,12 @@ namespace Projeto_Acelera_2023
             return text; // Retorna o texto original se não for possível formatar
         }
 
-        private void botaoPerfil_Click(object sender, EventArgs e)
-        {
-            var Perfil = new TelaPerfilAluno(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Perfil.Show();
-            this.Hide();
-        }
+
 
         private void campoSemestre_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
-
-        private void botaoVagasAnalise_Click_1(object sender, RoutedEventArgs e)
-        {
-            var TelaPrincipalAluno = new TelaPrincipalAluno(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaPrincipalAluno.Show();
-            this.Hide();
-        }
-
-        private void botaoSair_Click_1(object sender, RoutedEventArgs e)
-        {
-            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            telaLogin.Show();
-            this.Hide();
-        }
-
-        private void botaoVagas_Click_1(object sender, RoutedEventArgs e)
-        {
-            var TelaVagas = new TelaVagas(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaVagas.Show();
-            this.Hide();
-        }
-
         private void btnEdit_Click_1(object sender, RoutedEventArgs e)
         {
             if (SalvarDados.AlunoLogado != null)
@@ -178,7 +134,11 @@ namespace Projeto_Acelera_2023
                 }
             }
         }
+
+        private void botaoPerfil_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
-
 
