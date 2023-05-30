@@ -483,7 +483,7 @@
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                    <GradientStop Color="Gainsboro" Offset="1"/>
+                    <GradientStop Color="#FFACACAC" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
             <ComboBoxItem/>
