@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid x:Name="tabelaCoordenador" AutoGenerateColumns="False" Margin="235,37,172,26" SelectionChanged="tabelaCoordenador_SelectionChanged">
+        <DataGrid x:Name="tabelaCoordenador" AutoGenerateColumns="False" Margin="10,0,10,10" SelectionChanged="tabelaCoordenador_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
                 <DataGridTextColumn Header="Área" Binding="{Binding Area}" />

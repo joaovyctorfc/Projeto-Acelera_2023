@@ -49,9 +49,104 @@
                 </MultiTrigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="campoSenha" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" CornerRadius="6" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="botaoLogin" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
     <Grid>
-        <TextBox x:Name="campoEmail" TabIndex="1" HorizontalAlignment="Left" Height="29" Margin="289,163,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
         <ComboBox x:Name="campoCurso" TabIndex="3" HorizontalAlignment="Left"  Height="29" Margin="289,250,0,0" VerticalAlignment="Top" Width="147" FontFamily="Yu Gothic UI Semibold">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
@@ -83,27 +178,11 @@
         <Label Content="Telefone" HorizontalAlignment="Left" Margin="198,204,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="198,163,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,1.885" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Semestre" HorizontalAlignment="Left" Margin="198,295,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoTelefone" TabIndex="2" HorizontalAlignment="Left" Height="29" Margin="289,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoNome" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,115,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
-        <Button x:Name="btnEdit" TabIndex="5" Content="Editar" Margin="289,353,0,0" VerticalAlignment="Top" Width="147"  Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White" HorizontalAlignment="Left" FontFamily="Yu Gothic UI Semibold">
-            <Button.Resources>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border Background="{TemplateBinding Background}"
-                                    BorderBrush="{TemplateBinding BorderBrush}"
-                                    BorderThickness="{TemplateBinding BorderThickness}"
-                                    CornerRadius="10">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Button.Resources>
-        </Button>
         <Label Content="Perfil&#xD;&#xA;" HorizontalAlignment="Left" Margin="320,34,0,0" VerticalAlignment="Top" Width="87" Height="54" FontSize="30" Foreground="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoNome" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,115,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoEmail" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,163,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoTelefone" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <Button x:Name="btnEdit"  TabIndex="3"  Click="btnEdit_Click" Content="Editar" HorizontalAlignment="Left" Margin="289,354,0,0" VerticalAlignment="Top" Width="148" Height="40" Style="{DynamicResource botaoLogin}" BorderBrush="{x:Null}" Foreground="White" Background="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
 
     </Grid>
 </UserControl>

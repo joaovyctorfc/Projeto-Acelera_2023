@@ -94,6 +94,11 @@ namespace Projeto_Acelera_2023
         {
 
         }
+
+        private void Campo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
 
