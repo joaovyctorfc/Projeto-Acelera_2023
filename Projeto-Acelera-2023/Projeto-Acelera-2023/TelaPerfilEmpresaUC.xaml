@@ -51,14 +51,14 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <TextBox x:Name="campoEmail" HorizontalAlignment="Left" Height="29" Margin="289,163,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoEmail" TabIndex="1" HorizontalAlignment="Left" Height="29" Margin="289,163,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Nome da Empresa
 " HorizontalAlignment="Left" Margin="141,117,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Telefone" HorizontalAlignment="Left" Margin="198,204,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="198,163,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,1.885" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoTelefone" HorizontalAlignment="Left" Height="29" Margin="289,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoNome" HorizontalAlignment="Left" Height="29" Margin="289,117,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
-        <Button x:Name="btnEdit" TabIndex="5" Content="Editar" Margin="289,301,0,0" VerticalAlignment="Top" Width="147" Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White" HorizontalAlignment="Left" FontFamily="Yu Gothic UI Semibold">
+        <TextBox x:Name="campoTelefone" TabIndex="2" HorizontalAlignment="Left" Height="29" Margin="289,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoNome" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,117,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <Button x:Name="btnEdit" TabIndex="4" Content="Editar" Margin="289,301,0,0" VerticalAlignment="Top" Width="147" Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White" HorizontalAlignment="Left" FontFamily="Yu Gothic UI Semibold">
             <Button.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Template">
@@ -78,7 +78,7 @@
         </Button>
         <Label Content="Perfil&#xA;" HorizontalAlignment="Left" Margin="320,34,0,0" VerticalAlignment="Top" Width="87" Height="54" FontSize="30" Foreground="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Endereço" HorizontalAlignment="Left" Margin="198,245,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoEndereco" HorizontalAlignment="Left" Height="29" Margin="289,245,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoEndereco" HorizontalAlignment="Left" TabIndex="3" Height="29" Margin="289,245,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
 
     </Grid>
 </UserControl>

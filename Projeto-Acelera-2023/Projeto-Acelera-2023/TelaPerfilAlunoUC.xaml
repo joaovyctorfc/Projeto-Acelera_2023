@@ -51,8 +51,8 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <TextBox x:Name="campoEmail" HorizontalAlignment="Left" Height="29" Margin="289,163,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
-        <ComboBox x:Name="campoCurso" HorizontalAlignment="Left"  Height="29" Margin="289,250,0,0" VerticalAlignment="Top" Width="147" FontFamily="Yu Gothic UI Semibold">
+        <TextBox x:Name="campoEmail" TabIndex="1" HorizontalAlignment="Left" Height="29" Margin="289,163,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <ComboBox x:Name="campoCurso" TabIndex="3" HorizontalAlignment="Left"  Height="29" Margin="289,250,0,0" VerticalAlignment="Top" Width="147" FontFamily="Yu Gothic UI Semibold">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -63,16 +63,19 @@
             <ComboBoxItem Content="Gestão"/>
             <ComboBoxItem Content="Eventos"/>
         </ComboBox>
-        <ComboBox x:Name="campoSemestre" HorizontalAlignment="Left"  Height="29" Margin="289,295,0,0" VerticalAlignment="Top" Width="147" FontFamily="Yu Gothic UI Semibold">
+        <ComboBox x:Name="campoSemestre" HorizontalAlignment="Left" TabIndex="4" Height="29" Margin="289,295,0,0" VerticalAlignment="Top" Width="147" FontFamily="Yu Gothic UI Semibold">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F0F0" Offset="0"/>
                     <GradientStop Color="#FFACACAC" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
-            <ComboBoxItem Content="Presencial"/>
-            <ComboBoxItem Content="Híbrido"/>
-            <ComboBoxItem Content="Home Office"/>
+            <ComboBoxItem Content="1º"/>
+            <ComboBoxItem Content="2º"/>
+            <ComboBoxItem Content="3º"/>
+            <ComboBoxItem Content="4º"/>
+            <ComboBoxItem Content="5º"/>
+            <ComboBoxItem Content="6º"/>
         </ComboBox>
         <Label Content="Nome" HorizontalAlignment="Left" Margin="198,115,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Curso
@@ -80,8 +83,8 @@
         <Label Content="Telefone" HorizontalAlignment="Left" Margin="198,204,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="198,163,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,1.885" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Semestre" HorizontalAlignment="Left" Margin="198,295,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoTelefone" HorizontalAlignment="Left" Height="29" Margin="289,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoNome" HorizontalAlignment="Left" Height="29" Margin="289,115,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoTelefone" TabIndex="2" HorizontalAlignment="Left" Height="29" Margin="289,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoNome" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,115,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Style="{DynamicResource campo2}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
         <Button x:Name="btnEdit" TabIndex="5" Content="Editar" Margin="289,353,0,0" VerticalAlignment="Top" Width="147"  Height="40" Background="#FF018CFF" Foreground="White" BorderBrush="White" HorizontalAlignment="Left" FontFamily="Yu Gothic UI Semibold">
             <Button.Resources>
                 <Style TargetType="{x:Type Button}">
