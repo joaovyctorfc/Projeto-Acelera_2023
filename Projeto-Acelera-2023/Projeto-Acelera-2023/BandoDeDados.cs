@@ -31,7 +31,7 @@ namespace Projeto_Acelera_2023
             var usuarioPreRegistrado = new Usuario
             {
                 Nome = "João",
-                Email = "vanderjr29@gmail.com",
+                Email = "teste@gmail.com",
                 Senha = "123",
                 ConfirmaSenha = "123",
                 Cargo = "Coordenador",
@@ -45,7 +45,7 @@ namespace Projeto_Acelera_2023
             var usuarioPreRegistrado2 = new Usuario
             {
                 Nome = "teste",
-                Email = "vanderjr29@gmail.com",
+                Email = "teste@gmail.com",
                 Senha = "123",
                 ConfirmaSenha = "1234",
                 Telefone = "none",
@@ -57,7 +57,7 @@ namespace Projeto_Acelera_2023
             var usuarioPreRegistrado3 = new Usuario
             {
                 Nome = "Pedro",
-                Email = "vanderjr29@gmail.com",
+                Email = "teste@gmail.com",
                 Senha = "123",
                 ConfirmaSenha = "123",
                 Cargo = "Aluno",
