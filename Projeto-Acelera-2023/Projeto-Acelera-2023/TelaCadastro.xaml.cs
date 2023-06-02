@@ -27,6 +27,7 @@ namespace Projeto_Acelera_2023
             //campoCargo.DropDownStyle = ComboBoxStyle.DropDownList;
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
+            SalvarCandidatos.ListaCandidatos = listaCandidatos;
             campoNome.VerticalContentAlignment = VerticalAlignment.Center;
             campoEmail.VerticalContentAlignment = VerticalAlignment.Center;
             campoSenha.VerticalContentAlignment = VerticalAlignment.Center;

@@ -18,7 +18,6 @@ namespace Projeto_Acelera_2023
         public string Telefone { get; set; }
         public string Endereco { get; set; }
     }
-
     public class SalvarDados
     {
         public List<Usuario> ListaUsuarios { get; set; }
@@ -26,14 +25,13 @@ namespace Projeto_Acelera_2023
         public static Usuario CoordenadorLogado { get; set; }
         public static Usuario EmpresaLogado { get; set; }
 
-
         public SalvarDados()
         {
             ListaUsuarios = new List<Usuario>();
             var usuarioPreRegistrado = new Usuario
             {
                 Nome = "João",
-                Email = "teste@gmail.com",
+                Email = "vanderjr29@gmail.com",
                 Senha = "123",
                 ConfirmaSenha = "123",
                 Cargo = "Coordenador",
@@ -47,7 +45,7 @@ namespace Projeto_Acelera_2023
             var usuarioPreRegistrado2 = new Usuario
             {
                 Nome = "teste",
-                Email = "teste@gmail.com",
+                Email = "vanderjr29@gmail.com",
                 Senha = "123",
                 ConfirmaSenha = "1234",
                 Telefone = "none",
@@ -59,7 +57,7 @@ namespace Projeto_Acelera_2023
             var usuarioPreRegistrado3 = new Usuario
             {
                 Nome = "Pedro",
-                Email = "teste@gmail.com",
+                Email = "vanderjr29@gmail.com",
                 Senha = "123",
                 ConfirmaSenha = "123",
                 Cargo = "Aluno",
@@ -70,8 +68,6 @@ namespace Projeto_Acelera_2023
             };
             ListaUsuarios.Add(usuarioPreRegistrado3);
         }
-
-
     }
 
     public class Vaga
@@ -82,30 +78,37 @@ namespace Projeto_Acelera_2023
         public string Area { get; set; }
         public string Formato { get; set; }
         public string Aprovacao { get; set; }
-
-        public List<String> Candidatos { get; set; }
+        public string id { get; set; }
+        public string Empresa { get; set; }
     }
-
     public class SalvarVagas
     {
         public List<Vaga> ListaVagas { get; set; }
-
+        public List<Candidatos> ListaCandidatos { get; set; }
         public SalvarVagas()
         {
             ListaVagas = new List<Vaga>();
+            ListaCandidatos = new List<Candidatos>();
         }
     }
 
     public class Candidatos
     {
         public string Nome { get; set; }
+        public string Email { get; set; }
         public string Semestre { get; set; }
         public string Curso { get; set; }
         public string Aprovacao { get; set; }
+        public string IdVaga { get; set; }
+        public string Empresa { get; set; }
+        public string numero { get; set; }
+        public string descricao { get; set; }
+        public string formato { get; set; }
     }
     public class SalvarCandidatos
     {
         public List<Candidatos> ListaCandidatos { get; set; }
+
         public SalvarCandidatos()
         {
             ListaCandidatos = new List<Candidatos>();

@@ -26,12 +26,23 @@ namespace Projeto_Acelera_2023
 
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
-
+            SalvarCandidatos.ListaCandidatos = listaCandidatos;
 
         }
         public SalvarVagas SalvarVagas = new SalvarVagas();
+
+        public string GerarRandomId(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var random = new Random();
+            var id = new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+            return id;
+        }
+
         public void CadastrarVaga()
         {
+            string randomId = GerarRandomId(8);
 
             var vaga = new Vaga
             {
@@ -41,8 +52,16 @@ namespace Projeto_Acelera_2023
                 Area = campoArea.Text,
                 Formato = campoFormato.Text,
                 Aprovacao = "Em análise",
-
+                id = randomId,
+                Empresa = SalvarDados.EmpresaLogado.Nome
             };
+
+            var candidatosAssociados = SalvarCandidatos.ListaCandidatos.Where(c => c.IdVaga == vaga.id).ToList();
+
+            foreach (var candidato in candidatosAssociados)
+            {
+                SalvarCandidatos.ListaCandidatos.Remove(candidato);
+            }
 
             SalvarVagas.ListaVagas.Add(vaga);
             MessageBox.Show("Vaga cadastrada com sucesso!");

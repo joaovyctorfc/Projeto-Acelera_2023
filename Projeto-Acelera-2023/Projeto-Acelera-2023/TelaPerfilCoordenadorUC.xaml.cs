@@ -26,6 +26,7 @@ namespace Projeto_Acelera_2023
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
+            SalvarCandidatos.ListaCandidatos = listaCandidatos;
             if (SalvarDados.CoordenadorLogado != null)
             {
                 var usuarioLogado = SalvarDados.CoordenadorLogado;
@@ -96,6 +97,11 @@ namespace Projeto_Acelera_2023
         }
 
         private void Campo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
 
         }

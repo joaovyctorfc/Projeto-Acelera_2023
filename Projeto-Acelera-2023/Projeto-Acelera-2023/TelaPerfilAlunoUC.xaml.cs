@@ -27,7 +27,7 @@ namespace Projeto_Acelera_2023
             //  campoSemestre.DropDownStyle = ComboBoxStyle.DropDownList;
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
-
+            SalvarCandidatos.ListaCandidatos = listaCandidatos;
             if (SalvarDados.AlunoLogado != null)
             {
                 var usuarioLogado = SalvarDados.AlunoLogado;
@@ -141,6 +141,11 @@ namespace Projeto_Acelera_2023
         }
 
         private void CampoNome_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
 
         }
