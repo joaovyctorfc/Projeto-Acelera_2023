@@ -47,7 +47,7 @@ namespace Projeto_Acelera_2023
             }
             else
             {
-                if (!campoSenha.Text.Equals(campoConfirmarSenha.Text))
+                if (!campoSenha.Password.Equals(campoConfirmarSenha.Password))
                 {
                     MessageBox.Show("Senhas não são iguais.");
                     return;
@@ -58,8 +58,8 @@ namespace Projeto_Acelera_2023
                     {
                         Nome = campoNome.Text,
                         Email = campoEmail.Text,
-                        Senha = campoSenha.Text,
-                        ConfirmaSenha = campoConfirmarSenha.Text,
+                        Senha = campoSenha.Password,
+                        ConfirmaSenha = campoConfirmarSenha.Password,
                         Cargo = campoCargo.Text,
                         Semestre = "none",
                         Telefone = "none",
@@ -100,5 +100,11 @@ namespace Projeto_Acelera_2023
         {
            
         }
+
+        private void campoSenha_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
     }
 }

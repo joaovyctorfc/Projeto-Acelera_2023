@@ -28,6 +28,12 @@ namespace Projeto_Acelera_2023
             SalvarVagas.ListaVagas = listaVagas;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;
 
+            campoNome.VerticalContentAlignment = VerticalAlignment.Center;
+            campoArea.VerticalContentAlignment = VerticalAlignment.Center;
+            campoDescricao.VerticalContentAlignment = VerticalAlignment.Center;
+            campoFormato.VerticalContentAlignment = VerticalAlignment.Center;
+            campoSalario.VerticalContentAlignment = VerticalAlignment.Center;
+
         }
         public SalvarVagas SalvarVagas = new SalvarVagas();
 
@@ -78,6 +84,11 @@ namespace Projeto_Acelera_2023
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             CadastrarVaga();
+        }
+
+        private void campoNome_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

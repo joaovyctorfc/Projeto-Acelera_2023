@@ -23,12 +23,19 @@ namespace Projeto_Acelera_2023
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
+
         public TelaPerfilEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
         {
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;
+
+            campoNome.VerticalContentAlignment = VerticalAlignment.Center;
+            campoTelefone.VerticalContentAlignment = VerticalAlignment.Center;
+            campoEndereco.VerticalContentAlignment = VerticalAlignment.Center;
+            campoEmail.VerticalContentAlignment = VerticalAlignment.Center;
+
             if (SalvarDados.EmpresaLogado != null)
             {
                 var usuarioLogado = SalvarDados.EmpresaLogado;
@@ -122,6 +129,11 @@ namespace Projeto_Acelera_2023
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void campoNome_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

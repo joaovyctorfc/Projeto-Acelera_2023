@@ -30,6 +30,10 @@ namespace Projeto_Acelera_2023
             SalvarVagas.ListaVagas = listaVagas;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;
             //campoCodigo.Enabled = false;
+            campoCodigo.VerticalContentAlignment = VerticalAlignment.Center;
+            campoEmail.VerticalContentAlignment = VerticalAlignment.Center;
+            campoSenha.VerticalContentAlignment = VerticalAlignment.Center;
+  
         }
 
         public void Email()
@@ -70,7 +74,7 @@ namespace Projeto_Acelera_2023
 
         private void botaoRedefinir_Click(object sender, RoutedEventArgs e)
         {
-            if (campoEmail.Text.Equals("") || campoSenha.Text.Equals(""))
+            if (campoEmail.Text.Equals("") || campoSenha.Password.Equals(""))
             {
                 MessageBox.Show("Email ou Senha em branco");
             }
@@ -81,7 +85,7 @@ namespace Projeto_Acelera_2023
                 {
                     if (campoEmail.Text.Equals(usuario.Email) && campoCodigo.Text.Equals(codigoVerificacao))
                     {
-                        usuario.Senha = campoSenha.Text;
+                        usuario.Senha = campoSenha.Password;
                         encontrado = true;
                         break;
                     }
@@ -127,7 +131,9 @@ namespace Projeto_Acelera_2023
             this.Hide();
         }
 
+        private void campoEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-
+        }
     }
 }

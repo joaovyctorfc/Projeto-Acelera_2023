@@ -52,7 +52,7 @@ namespace Projeto_Acelera_2023
 
         private void botaoLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (campoEmail.Text.Equals("") || campoSenha.Text.Equals(""))
+            if (campoEmail.Text.Equals("") || campoSenha.Password.Equals(""))
             {
                 MessageBox.Show("Login ou senha em branco");
             }
@@ -61,7 +61,7 @@ namespace Projeto_Acelera_2023
                 bool encontrado = false;
                 foreach (var usuario in SalvarDados.ListaUsuarios)
                 {
-                    if (campoEmail.Text.Equals(usuario.Email) && campoSenha.Text.Equals(usuario.Senha))
+                    if (campoEmail.Text.Equals(usuario.Email) && campoSenha.Password.Equals(usuario.Senha))
                     {
                         MessageBox.Show("Login com Sucesso !!!" + usuario.Cargo);
                         encontrado = true;

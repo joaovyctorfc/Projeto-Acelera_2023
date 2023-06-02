@@ -148,24 +148,66 @@
                 </MultiTrigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="PasswordBoxStyle1" TargetType="{x:Type PasswordBox}">
+            <Setter Property="PasswordChar" Value="●"/>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border x:Name="border" CornerRadius="6" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
     <Grid>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="267,145,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FF3A3A3A"/>
         <Label Content="Senha" HorizontalAlignment="Left" Margin="267,197,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FF3A3A3A"/>
-        <Button x:Name="botaoLogin"  TabIndex="2" Content="Login" HorizontalAlignment="Left" Margin="337,273,0,0" VerticalAlignment="Top" Width="148" Height="40" Click="botaoLogin_Click" Style="{DynamicResource botaoLogin}" BorderBrush="{x:Null}" Foreground="White" Background="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBlock x:Name="linkRedefinir" HorizontalAlignment="Left" Margin="427,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" FontFamily="Yu Gothic UI Semibold">
+        <Button x:Name="botaoLogin"  TabIndex="2" Content="Login" HorizontalAlignment="Left" Margin="341,280,0,0" VerticalAlignment="Top" Width="148" Height="40" Click="botaoLogin_Click" Style="{DynamicResource botaoLogin}" BorderBrush="{x:Null}" Foreground="White" Background="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBlock x:Name="linkRedefinir" HorizontalAlignment="Left" Margin="431,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" FontFamily="Yu Gothic UI Semibold">
                 <Hyperlink Click="linkRedefinir_Click">
         Esqueceu sua Senha?
     </Hyperlink>
         </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="305,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" FontFamily="Yu Gothic UI Semibold">
+        <TextBlock HorizontalAlignment="Left" Margin="309,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" FontFamily="Yu Gothic UI Semibold">
                 <Hyperlink Click="linkCadastrar_Click">
         Cadastrar-se
     </Hyperlink>
         </TextBlock>
         <TextBox x:Name="campoEmail"  TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="339,142,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource boxEmail}" BorderBrush="{x:Null}" Background="Gainsboro" TextChanged="campoEmail_TextChanged_1" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoSenha" TabIndex="1" HorizontalAlignment="Left" Height="29" Margin="339,197,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Login" HorizontalAlignment="Left" Margin="366,36,0,0" VerticalAlignment="Top" Width="146" Height="54" FontSize="30" Foreground="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
+        <PasswordBox x:Name="campoSenha" TabIndex="1" HorizontalAlignment="Left" Margin="341,197,0,0" VerticalAlignment="Top" Height="29" Width="146" Style="{DynamicResource PasswordBoxStyle1}" BorderBrush="{x:Null}" Background="Gainsboro"/>
 
     </Grid>
 </Window>

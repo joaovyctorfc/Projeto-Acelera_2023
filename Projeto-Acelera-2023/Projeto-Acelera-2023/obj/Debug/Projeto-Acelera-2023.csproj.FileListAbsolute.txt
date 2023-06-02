@@ -225,3 +225,7 @@ C:\Users\aluno\Pictures\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Aceler
 C:\Users\aluno\Pictures\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\Projeto-Acelera-2023.csproj.CoreCompileInputs.cache
 C:\Users\aluno\Pictures\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\Projeto-Acelera-2023.exe
 C:\Users\aluno\Pictures\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\Projeto-Acelera-2023.pdb
+C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaCandidatosCoordenadorUC.g.cs
+C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaCandidatosEmpresaUC.g.cs
+C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaCandidatosCoordenadorUC.baml
+C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaCandidatosEmpresaUC.baml

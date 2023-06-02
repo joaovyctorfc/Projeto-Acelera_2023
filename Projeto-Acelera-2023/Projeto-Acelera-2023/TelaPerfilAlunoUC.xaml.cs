@@ -28,6 +28,14 @@ namespace Projeto_Acelera_2023
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;
+
+            campoNome.VerticalContentAlignment = VerticalAlignment.Center;
+            campoCurso.VerticalContentAlignment = VerticalAlignment.Center;
+            campoEmail.VerticalContentAlignment = VerticalAlignment.Center;
+            campoSemestre.VerticalContentAlignment = VerticalAlignment.Center;
+            campoTelefone.VerticalContentAlignment = VerticalAlignment.Center;
+
+
             if (SalvarDados.AlunoLogado != null)
             {
                 var usuarioLogado = SalvarDados.AlunoLogado;
@@ -146,6 +154,11 @@ namespace Projeto_Acelera_2023
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void campoNome_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
         }
