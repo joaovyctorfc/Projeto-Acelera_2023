@@ -35,10 +35,10 @@ namespace Projeto_Acelera_2023
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-           if(hidden)
+            if (hidden)
             {
                 sidePanel.Width += 1;
-                if(sidePanel.Width >= panelWidth)
+                if (sidePanel.Width >= panelWidth)
                 {
                     timer.Stop();
                     hidden = false;
@@ -65,10 +65,12 @@ namespace Projeto_Acelera_2023
 
 
 
-    
+
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
-
+            painelTelas.Children.Clear();
+            TelaCandidatosEmpresaUC CadastroVagas = new TelaCandidatosEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            painelTelas.Children.Add(CadastroVagas);
         }
 
         private void Panel_Header(object sender, MouseButtonEventArgs e)
@@ -78,7 +80,7 @@ namespace Projeto_Acelera_2023
 
         private void PanelHeader_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if(e.LeftButton == MouseButtonState.Pressed)
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
             }
@@ -112,9 +114,9 @@ namespace Projeto_Acelera_2023
 
         private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
         {
-            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            Login.Show();
-            this.Hide();
+            painelTelas.Children.Clear();
+            TelaCandidatosEmpresaUC CadastroVagas = new TelaCandidatosEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            painelTelas.Children.Add(CadastroVagas);
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)

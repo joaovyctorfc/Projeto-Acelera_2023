@@ -59,7 +59,7 @@ namespace Projeto_Acelera_2023
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
-       
+
 
         private void botaoVagasAnalise_Click(object sender, RoutedEventArgs e)
         {

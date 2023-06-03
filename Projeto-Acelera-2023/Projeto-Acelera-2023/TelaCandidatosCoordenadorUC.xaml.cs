@@ -20,9 +20,43 @@ namespace Projeto_Acelera_2023
     /// </summary>
     public partial class TelaCandidatosCoordenadorUC : UserControl
     {
-        public TelaCandidatosCoordenadorUC()
+        public SalvarVagas SalvarVagas = new SalvarVagas();
+        public SalvarDados SalvarDados = new SalvarDados();
+        public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
+        public TelaCandidatosCoordenadorUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
         {
             InitializeComponent();
+            SalvarDados.ListaUsuarios = listaUsuarios;
+            SalvarVagas.ListaVagas = listaVagas;
+            SalvarCandidatos.ListaCandidatos = listaCandidatos;
+            adicionarDadosTabela();
+        }
+
+        private void adicionarDadosTabela()
+        {
+            foreach (var candidato in SalvarCandidatos.ListaCandidatos)
+            {
+                var vaga = SalvarVagas.ListaVagas.FirstOrDefault(v => v.id == candidato.IdVaga);
+
+                if (vaga != null)
+                {
+                    tabelaCoordenador.Items.Add(new
+                    {
+                        Nome = candidato.Nome,
+                        Curso = candidato.Curso,
+                        Empresa = vaga.Empresa,
+                        Salario = vaga.Salario,
+                        Descricao = vaga.Descricao,
+                        Formato = vaga.Formato,
+                        Aprovacao = candidato.Aprovacao
+                    });
+                }
+            }
+        }
+
+        private void tabelaEmpresa_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

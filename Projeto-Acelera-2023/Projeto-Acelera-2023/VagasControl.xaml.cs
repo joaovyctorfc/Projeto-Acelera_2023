@@ -18,26 +18,21 @@ namespace Projeto_Acelera_2023
     public partial class VagasControl : UserControl
     {
         private Vaga vaga;
-        private SalvarVagas SalvarVagas = new SalvarVagas();
+        public SalvarVagas SalvarVagas = new SalvarVagas();
+        public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
+        public SalvarDados SalvarDados = new SalvarDados();
 
         public string DadosParaPainel { get; set; }
 
         public VagasControl(Vaga vaga, List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
         {
+            SalvarVagas.ListaVagas = listaVagas;
+            SalvarCandidatos.ListaCandidatos = listaCandidatos;
+            SalvarDados.ListaUsuarios = listaUsuarios;
             InitializeComponent();
             this.vaga = vaga;
-            var usuarioLogado = SalvarDados.AlunoLogado;
+
             AtualizarCampos();
-
-            var candidato = new Candidatos
-            {
-                Nome = usuarioLogado.Nome,
-                Semestre = usuarioLogado.Semestre,
-                Curso = usuarioLogado.Curso,
-                Aprovacao = ""
-            };
-
-            listaCandidatos.Add(candidato);
         }
 
         private void AtualizarCampos()
@@ -50,7 +45,33 @@ namespace Projeto_Acelera_2023
         }
         private void botaoCandidatar_Click(object sender, RoutedEventArgs e)
         {
+            if (SalvarDados.AlunoLogado != null)
+            {
+                var usuarioLogado = SalvarDados.AlunoLogado;
 
+                var nome = usuarioLogado.Nome;
+                var curso = usuarioLogado.Curso;
+                var semestre = usuarioLogado.Semestre;
+                var email = usuarioLogado.Email;
+                var numero = usuarioLogado.Telefone;
+
+
+                var candidato = new Candidatos
+                {
+                    Nome = nome,
+                    Email = email,
+                    Semestre = semestre,
+                    Curso = curso,
+                    Aprovacao = "Incerto",
+                    IdVaga = vaga.id,
+                    Empresa = SalvarDados.EmpresaLogado.Nome,
+                    numero = numero,
+                    descricao = vaga.Descricao,
+                    formato = vaga.Formato
+                };
+                SalvarCandidatos.ListaCandidatos.Add(candidato);
+                MessageBox.Show("Cadidatado com sucesso");
+            }
         }
     }
 }

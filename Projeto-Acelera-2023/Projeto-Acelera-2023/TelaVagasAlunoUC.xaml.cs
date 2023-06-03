@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace Projeto_Acelera_2023
 {
-  
+
     public partial class TelaVagasAlunoUC : UserControl
     {
         private List<Vaga> listaVagas;
@@ -24,6 +24,7 @@ namespace Projeto_Acelera_2023
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
+            SalvarCandidatos.ListaCandidatos = listaCandidatos;
 
             this.listaVagas = listaVagas;
 
@@ -43,7 +44,7 @@ namespace Projeto_Acelera_2023
 
         private void ScrollBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            
+
         }
     }
 }

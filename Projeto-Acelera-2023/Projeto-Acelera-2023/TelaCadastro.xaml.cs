@@ -95,16 +95,10 @@ namespace Projeto_Acelera_2023
         {
             Cadastro();
         }
-        
+
         private void campoNome_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-           
-        }
-
-        private void campoSenha_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
         }
-
     }
 }

@@ -26,6 +26,8 @@ namespace Projeto_Acelera_2023
             InitializeComponent();
             SalvarVagas = new SalvarVagas();
             SalvarVagas.ListaVagas = listaVagas;
+            SalvarCandidatos.ListaCandidatos = listaCandidatos;
+            SalvarDados.ListaUsuarios = listaUsuarios;
             AdicionarDadosTabela();
         }
 
@@ -37,7 +39,6 @@ namespace Projeto_Acelera_2023
             if (selectedVaga != null)
             {
                 selectedVaga.Aprovacao = "Aprovado";
-
             }
         }
         private DataGridCell GetCell(DependencyObject depObj)
@@ -84,8 +85,6 @@ namespace Projeto_Acelera_2023
             {
                 vaga.Aprovacao = "Reprovado";
                 tabelaCoordenador.Items.Refresh();
-
-
             }
         }
 

@@ -29,7 +29,8 @@ namespace Projeto_Acelera_2023
             InitializeComponent();
             SalvarVagas = new SalvarVagas();
             SalvarVagas.ListaVagas = listaVagas;
-
+            SalvarCandidatos.ListaCandidatos = listaCandidatos;
+            SalvarDados.ListaUsuarios = listaUsuarios;
             AdicionarDadosTabela();
         }
         private void AdicionarDadosTabela()
