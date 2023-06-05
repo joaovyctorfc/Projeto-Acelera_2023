@@ -61,16 +61,11 @@ namespace Projeto_Acelera_2023
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
 
 
-
-
-
-
-
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaCandidatosEmpresaUC CadastroVagas = new TelaCandidatosEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            painelTelas.Children.Add(CadastroVagas);
+            TelaChat Chat = new TelaChat(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            painelTelas.Children.Add(Chat);
         }
 
         private void Panel_Header(object sender, MouseButtonEventArgs e)

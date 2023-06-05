@@ -64,6 +64,9 @@
     <Compile Include="TelaCadastro.xaml.cs">
       <DependentUpon>TelaCadastro.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TelaCadastroADM.xaml.cs">
+      <DependentUpon>TelaCadastroADM.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TelaCadastroVagasUC.xaml.cs">
       <DependentUpon>TelaCadastroVagasUC.xaml</DependentUpon>
     </Compile>
@@ -72,6 +75,9 @@
     </Compile>
     <Compile Include="TelaCandidatosEmpresaUC.xaml.cs">
       <DependentUpon>TelaCandidatosEmpresaUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TelaChat.xaml.cs">
+      <DependentUpon>TelaChat.xaml</DependentUpon>
     </Compile>
     <Compile Include="TelaInicio.xaml.cs">
       <DependentUpon>TelaInicio.xaml</DependentUpon>
@@ -144,6 +150,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TelaCadastroADM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TelaCadastroVagasUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TelaCandidatosEmpresaUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TelaChat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

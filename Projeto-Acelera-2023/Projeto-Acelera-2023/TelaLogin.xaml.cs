@@ -38,9 +38,7 @@ namespace Projeto_Acelera_2023
 
         private void linkCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            var TelaCadastro = new TelaCadastro(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            TelaCadastro.Show();
-            this.Hide();
+
         }
 
         private void linkRedefinir_Click(object sender, RoutedEventArgs e)
@@ -58,46 +56,55 @@ namespace Projeto_Acelera_2023
             }
             else
             {
-                bool encontrado = false;
-                foreach (var usuario in SalvarDados.ListaUsuarios)
+                if (campoEmail.Text.Equals("admin") && campoSenha.Password.Equals("123"))
                 {
-                    if (campoEmail.Text.Equals(usuario.Email) && campoSenha.Password.Equals(usuario.Senha))
+                    var TelaCadastroADM = new TelaCadastroADM(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                    TelaCadastroADM.Show();
+                    this.Hide();
+                }
+                else
+                { bool encontrado = false;
+                    foreach (var usuario in SalvarDados.ListaUsuarios)
                     {
-                        MessageBox.Show("Login com Sucesso !!!" + usuario.Cargo);
-                        encontrado = true;
-
-                        var cargo = usuario.Cargo;
-                        if (cargo == "Aluno")
+                        if (campoEmail.Text.Equals(usuario.Email) && campoSenha.Password.Equals(usuario.Senha))
                         {
+                            MessageBox.Show("Login com Sucesso !!!" + usuario.Cargo);
+                            encontrado = true;
 
-                            var TelaPrincipal = new TelaPrincipalAluno(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-                            SalvarDados.AlunoLogado = usuario;
-                            TelaPrincipal.Show();
+                            var cargo = usuario.Cargo;
+                            if (cargo == "Aluno")
+                            {
+
+                                var TelaPrincipal = new TelaPrincipalAluno(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                                SalvarDados.AlunoLogado = usuario;
+                                TelaPrincipal.Show();
+
+                            }
+
+                            if (cargo == "Empresa")
+                            {
+                                var TelaPrincipal = new TelaPrincipalEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                                SalvarDados.EmpresaLogado = usuario;
+                                TelaPrincipal.Show();
+
+                            }
+
+                            if (cargo == "Coordenador")
+                            {
+                                var TelaPrincipal = new TelaPrincipalCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                                SalvarDados.CoordenadorLogado = usuario;
+                                TelaPrincipal.Show();
+
+                            }
 
                         }
-
-                        if (cargo == "Empresa")
-                        {
-                            var TelaPrincipal = new TelaPrincipalEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-                            SalvarDados.EmpresaLogado = usuario;
-                            TelaPrincipal.Show();
-
-                        }
-
-                        if (cargo == "Coordenador")
-                        {
-                            var TelaPrincipal = new TelaPrincipalCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-                            SalvarDados.CoordenadorLogado = usuario;
-                            TelaPrincipal.Show();
-
-                        }
-
+                    }
+                    if (!encontrado)
+                    {
+                        MessageBox.Show("Login ou senha errado");
                     }
                 }
-                if (!encontrado)
-                {
-                    MessageBox.Show("Login ou senha errado");
-                }
+
             }
         }
 

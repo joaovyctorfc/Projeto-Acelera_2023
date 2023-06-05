@@ -75,8 +75,8 @@ namespace Projeto_Acelera_2023
         private void ListViewItem_Selected_3(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaVagasCoordenadorUC Vagas = new TelaVagasCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            painelTelas.Children.Add(Vagas);
+            TelaChat Chat = new TelaChat(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            painelTelas.Children.Add(Chat);
         }
 
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)

@@ -57,7 +57,7 @@ namespace Projeto_Acelera_2023 {
         #line hidden
         
         
-        #line 46 "..\..\TelaPrincipalAluno.xaml"
+        #line 52 "..\..\TelaPrincipalAluno.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.WrapPanel painelTelas;
         
@@ -141,12 +141,20 @@ namespace Projeto_Acelera_2023 {
             case 7:
             
             #line 36 "..\..\TelaPrincipalAluno.xaml"
-            ((System.Windows.Controls.ListViewItem)(target)).Selected += new System.Windows.RoutedEventHandler(this.ListViewItem_Selected_4);
+            ((System.Windows.Controls.ListViewItem)(target)).Selected += new System.Windows.RoutedEventHandler(this.ListViewItem_Selected);
             
             #line default
             #line hidden
             return;
             case 8:
+            
+            #line 42 "..\..\TelaPrincipalAluno.xaml"
+            ((System.Windows.Controls.ListViewItem)(target)).Selected += new System.Windows.RoutedEventHandler(this.ListViewItem_Selected_4);
+            
+            #line default
+            #line hidden
+            return;
+            case 9:
             this.painelTelas = ((System.Windows.Controls.WrapPanel)(target));
             return;
             }
