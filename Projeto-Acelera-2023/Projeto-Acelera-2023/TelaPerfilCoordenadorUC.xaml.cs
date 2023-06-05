@@ -40,32 +40,6 @@ namespace Projeto_Acelera_2023
                 campoTelefone.AppendText(usuarioLogado.Telefone);
             }
         }
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (SalvarDados.CoordenadorLogado != null)
-            {
-                var usuarioLogado = SalvarDados.CoordenadorLogado;
-
-                usuarioLogado.Nome = campoNome.Text;
-                usuarioLogado.Email = campoEmail.Text;
-                usuarioLogado.Telefone = campoTelefone.Text;
-
-                foreach (var usuario in SalvarDados.ListaUsuarios)
-                {
-                    if (usuario.Email == usuarioLogado.Email)
-                    {
-                        // atualiza as propriedades do usuário
-                        usuario.Nome = usuarioLogado.Nome;
-                        usuario.Email = usuarioLogado.Email;
-                        usuario.Telefone = usuarioLogado.Telefone;
-
-                        // exibe uma mensagem confirmando a atualização
-                        MessageBox.Show("Dados atualizados com sucesso!");
-                        break;
-                    }
-                }
-            }
-        }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -108,7 +82,29 @@ namespace Projeto_Acelera_2023
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
+            if (SalvarDados.CoordenadorLogado != null)
+            {
+                var usuarioLogado = SalvarDados.CoordenadorLogado;
 
+                usuarioLogado.Nome = campoNome.Text;
+                usuarioLogado.Email = campoEmail.Text;
+                usuarioLogado.Telefone = campoTelefone.Text;
+
+                foreach (var usuario in SalvarDados.ListaUsuarios)
+                {
+                    if (usuario.Email == usuarioLogado.Email)
+                    {
+                        // atualiza as propriedades do usuário
+                        usuario.Nome = usuarioLogado.Nome;
+                        usuario.Email = usuarioLogado.Email;
+                        usuario.Telefone = usuarioLogado.Telefone;
+
+                        // exibe uma mensagem confirmando a atualização
+                        MessageBox.Show("Dados atualizados com sucesso!");
+                        break;
+                    }
+                }
+            }
         }
 
         private void campoNome_TextChanged(object sender, TextChangedEventArgs e)

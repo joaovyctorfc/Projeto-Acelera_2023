@@ -114,7 +114,19 @@ namespace Projeto_Acelera_2023
         {
 
         }
-        private void btnEdit_Click_1(object sender, RoutedEventArgs e)
+       
+
+        private void botaoPerfil_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CampoNome_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             if (SalvarDados.AlunoLogado != null)
             {
@@ -141,21 +153,6 @@ namespace Projeto_Acelera_2023
                     }
                 }
             }
-        }
-
-        private void botaoPerfil_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CampoNome_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void campoNome_TextChanged_1(object sender, TextChangedEventArgs e)

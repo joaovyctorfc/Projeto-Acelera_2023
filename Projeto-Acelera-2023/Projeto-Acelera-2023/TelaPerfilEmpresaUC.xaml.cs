@@ -95,7 +95,12 @@ namespace Projeto_Acelera_2023
 
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void campoEndereco_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             if (SalvarDados.EmpresaLogado != null)
             {
@@ -122,15 +127,6 @@ namespace Projeto_Acelera_2023
                     }
                 }
             }
-        }
-        private void campoEndereco_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void campoNome_TextChanged(object sender, TextChangedEventArgs e)
