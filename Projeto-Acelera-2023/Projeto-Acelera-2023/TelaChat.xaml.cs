@@ -26,5 +26,14 @@ namespace Projeto_Acelera_2023
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
 
+        private void botaoLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void campoEmail_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

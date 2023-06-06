@@ -69,26 +69,28 @@ namespace Projeto_Acelera_2023
 
         private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
         {
-
+            painelTelas.Children.Clear();
+            TelaCandidatosCoordenadorUC Vagas = new TelaCandidatosCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            painelTelas.Children.Add(Vagas);
         }
 
         private void ListViewItem_Selected_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
             TelaChat Chat = new TelaChat(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
             painelTelas.Children.Add(Chat);
         }
 
-        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
         {
-            painelTelas.Children.Clear();
-            TelaCandidatosCoordenadorUC Vagas = new TelaCandidatosCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            painelTelas.Children.Add(Vagas);
+            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            telaLogin.Show();
+            this.Hide();
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
