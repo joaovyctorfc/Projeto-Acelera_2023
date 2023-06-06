@@ -24,7 +24,7 @@ namespace Projeto_Acelera_2023
         public SalvarVagas SalvarVagas;
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
-        public TelaVagasEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaVagasEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
             SalvarVagas = new SalvarVagas();

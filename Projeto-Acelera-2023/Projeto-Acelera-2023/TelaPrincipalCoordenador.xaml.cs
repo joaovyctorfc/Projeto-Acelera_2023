@@ -20,7 +20,7 @@ namespace Projeto_Acelera_2023
         DispatcherTimer timer;
         double panelWidth;
         bool hidden;
-        public TelaPrincipalCoordenador(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaPrincipalCoordenador(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
@@ -63,21 +63,21 @@ namespace Projeto_Acelera_2023
         private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaPerfilCoordenadorUC Perfil = new TelaPerfilCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaPerfilCoordenadorUC Perfil = new TelaPerfilCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             painelTelas.Children.Add(Perfil);
         }
 
         private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaCandidatosCoordenadorUC Vagas = new TelaCandidatosCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaCandidatosCoordenadorUC Vagas = new TelaCandidatosCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             painelTelas.Children.Add(Vagas);
         }
 
         private void ListViewItem_Selected_3(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaVagasCoordenadorUC Vagas = new TelaVagasCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaVagasCoordenadorUC Vagas = new TelaVagasCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             painelTelas.Children.Add(Vagas);
         }
 
@@ -100,7 +100,7 @@ namespace Projeto_Acelera_2023
         private void ListViewItem_Selected_5(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaVagasCoordenadorUC Vagas = new TelaVagasCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaVagasCoordenadorUC Vagas = new TelaVagasCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             painelTelas.Children.Add(Vagas);
         }
     }

@@ -20,7 +20,7 @@ namespace Projeto_Acelera_2023
         DispatcherTimer timer;
         double panelWidth;
         bool hidden;
-        public TelaPrincipalAluno(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaPrincipalAluno(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
@@ -69,14 +69,14 @@ namespace Projeto_Acelera_2023
         private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaPerfilAlunoUC PerfilAluno = new TelaPerfilAlunoUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaPerfilAlunoUC PerfilAluno = new TelaPerfilAlunoUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             painelTelas.Children.Add(PerfilAluno);
         }
 
         private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaVagasAlunoUC VagasAluno = new TelaVagasAlunoUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaVagasAlunoUC VagasAluno = new TelaVagasAlunoUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             painelTelas.Children.Add(VagasAluno);
         }
 
@@ -103,6 +103,13 @@ namespace Projeto_Acelera_2023
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ListViewItem_Selected_5(object sender, RoutedEventArgs e)
+        {
+            painelTelas.Children.Clear();
+            TelaMensagensAlunoUC Mensagem = new TelaMensagensAlunoUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
+            painelTelas.Children.Add(Mensagem);
         }
     }
 }

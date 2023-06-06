@@ -24,7 +24,7 @@ namespace Projeto_Acelera_2023
 
         public string DadosParaPainel { get; set; }
 
-        public VagasControl(Vaga vaga, List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public VagasControl(Vaga vaga, List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             SalvarVagas.ListaVagas = listaVagas;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;

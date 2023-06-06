@@ -83,12 +83,29 @@ namespace Projeto_Acelera_2023
     }
     public class SalvarVagas
     {
-        public List<Vaga> ListaVagas { get; set; }
+        public static List<Vaga> ListaVagas { get; set; }
         public List<Candidatos> ListaCandidatos { get; set; }
         public SalvarVagas()
         {
             ListaVagas = new List<Vaga>();
             ListaCandidatos = new List<Candidatos>();
+        }
+    }
+
+    public class Mensagem
+    {
+        public string Nome { get; set; }
+        public string Assunto { get; set; }
+        public string Conteudo { get; set; }
+
+        public string Visibilidade { get; set; }
+    }
+    public class SalvarMensagem
+    {
+        public static List<Mensagem> ListaMensagem { get; set; }
+        public SalvarMensagem()
+        {
+            ListaMensagem = new List<Mensagem>();
         }
     }
 

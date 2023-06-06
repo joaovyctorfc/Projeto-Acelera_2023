@@ -21,7 +21,7 @@ namespace Projeto_Acelera_2023
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
-        public TelaPerfilCoordenadorUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaPerfilCoordenadorUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;

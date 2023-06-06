@@ -43,7 +43,7 @@ namespace Projeto_Acelera_2023
 
         private void linkRedefinir_Click(object sender, RoutedEventArgs e)
         {
-            var Redefinir = new TelaRedefinirSenha(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            var Redefinir = new TelaRedefinirSenha(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             Redefinir.Show();
             this.Hide();
         }
@@ -58,7 +58,7 @@ namespace Projeto_Acelera_2023
             {
                 if (campoEmail.Text.Equals("admin") && campoSenha.Password.Equals("123"))
                 {
-                    var TelaCadastroADM = new TelaCadastroADM(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                    var TelaCadastroADM = new TelaCadastroADM(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                     TelaCadastroADM.Show();
                     this.Hide();
                 }
@@ -75,7 +75,7 @@ namespace Projeto_Acelera_2023
                             if (cargo == "Aluno")
                             {
 
-                                var TelaPrincipal = new TelaPrincipalAluno(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                                var TelaPrincipal = new TelaPrincipalAluno(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                                 SalvarDados.AlunoLogado = usuario;
                                 TelaPrincipal.Show();
 
@@ -83,7 +83,7 @@ namespace Projeto_Acelera_2023
 
                             if (cargo == "Empresa")
                             {
-                                var TelaPrincipal = new TelaPrincipalEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                                var TelaPrincipal = new TelaPrincipalEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                                 SalvarDados.EmpresaLogado = usuario;
                                 TelaPrincipal.Show();
 
@@ -91,7 +91,7 @@ namespace Projeto_Acelera_2023
 
                             if (cargo == "Coordenador")
                             {
-                                var TelaPrincipal = new TelaPrincipalCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                                var TelaPrincipal = new TelaPrincipalCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                                 SalvarDados.CoordenadorLogado = usuario;
                                 TelaPrincipal.Show();
 

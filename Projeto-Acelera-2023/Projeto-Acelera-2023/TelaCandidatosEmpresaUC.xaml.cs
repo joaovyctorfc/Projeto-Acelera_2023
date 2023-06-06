@@ -20,7 +20,7 @@ namespace Projeto_Acelera_2023
     /// </summary>
     public partial class TelaCandidatosEmpresaUC : UserControl
     {
-        public TelaCandidatosEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaCandidatosEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> listamensagem)
         {
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;

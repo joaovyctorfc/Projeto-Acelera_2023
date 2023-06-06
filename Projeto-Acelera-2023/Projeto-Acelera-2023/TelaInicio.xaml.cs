@@ -20,6 +20,7 @@ namespace Projeto_Acelera_2023
         {
             InitializeComponent();
         }
+
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();

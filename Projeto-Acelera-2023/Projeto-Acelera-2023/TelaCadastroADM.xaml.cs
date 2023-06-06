@@ -21,7 +21,7 @@ namespace Projeto_Acelera_2023
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
 
-        public TelaCadastroADM(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaCadastroADM(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
             //campoCargo.DropDownStyle = ComboBoxStyle.DropDownList;

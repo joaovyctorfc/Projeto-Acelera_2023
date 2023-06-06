@@ -20,7 +20,7 @@ namespace Projeto_Acelera_2023
         DispatcherTimer timer;
         double panelWidth;
         bool hidden;
-        public TelaPrincipalEmpresa(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaPrincipalEmpresa(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
@@ -81,28 +81,28 @@ namespace Projeto_Acelera_2023
         private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaPerfilEmpresaUC Perfil = new TelaPerfilEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaPerfilEmpresaUC Perfil = new TelaPerfilEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             painelTelas.Children.Add(Perfil);
         }
 
         private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaVagasEmpresaUC Vagas = new TelaVagasEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaVagasEmpresaUC Vagas = new TelaVagasEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             painelTelas.Children.Add(Vagas);
         }
 
         private void ListViewItem_Selected_3(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaCadastroVagasUC CadastroVagas = new TelaCadastroVagasUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaCadastroVagasUC CadastroVagas = new TelaCadastroVagasUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             painelTelas.Children.Add(CadastroVagas);
         }
 
         private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
         {
             painelTelas.Children.Clear();
-            TelaCandidatosEmpresaUC CadastroVagas = new TelaCandidatosEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            TelaCandidatosEmpresaUC CadastroVagas = new TelaCandidatosEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             painelTelas.Children.Add(CadastroVagas);
         }
 
@@ -114,6 +114,13 @@ namespace Projeto_Acelera_2023
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ListViewItem_Selected_5(object sender, RoutedEventArgs e)
+        {
+            painelTelas.Children.Clear();
+            TelaCadastroMensagemEmpresaUC CadastroMensagem= new TelaCadastroMensagemEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
+            painelTelas.Children.Add(CadastroMensagem);
         }
     }
 }

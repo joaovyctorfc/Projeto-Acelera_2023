@@ -19,12 +19,13 @@ namespace Projeto_Acelera_2023
     public partial class TelaVagasAlunoUC : UserControl
     {
         private List<Vaga> listaVagas;
-        public TelaVagasAlunoUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaVagasAlunoUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> listaMensagem)
         {
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;
+            SalvarMensagem.ListaMensagem = listaMensagem;
 
             this.listaVagas = listaVagas;
 
@@ -32,7 +33,7 @@ namespace Projeto_Acelera_2023
             {
                 if (vaga.Aprovacao.Equals("Aprovado"))
                 {
-                    var vagaControl = new VagasControl(vaga, SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                    var vagaControl = new VagasControl(vaga, SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                     tabelaVagas.Children.Add(vagaControl);
                 }
             }

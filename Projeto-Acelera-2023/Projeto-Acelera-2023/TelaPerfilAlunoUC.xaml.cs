@@ -20,7 +20,7 @@ namespace Projeto_Acelera_2023
     /// </summary>
     public partial class TelaPerfilAlunoUC : UserControl
     {
-        public TelaPerfilAlunoUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaPerfilAlunoUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
             // campoCurso.DropDownStyle = ComboBoxStyle.DropDownList;

@@ -23,7 +23,7 @@ namespace Projeto_Acelera_2023
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
         private string codigoVerificacao;
         Random rnd = new Random();
-        public TelaRedefinirSenha(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaRedefinirSenha(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;

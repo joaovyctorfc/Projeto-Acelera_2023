@@ -61,11 +61,17 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BandoDeDados.cs" />
+    <Compile Include="MensagemControl.xaml.cs">
+      <DependentUpon>MensagemControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TelaCadastro.xaml.cs">
       <DependentUpon>TelaCadastro.xaml</DependentUpon>
     </Compile>
     <Compile Include="TelaCadastroADM.xaml.cs">
       <DependentUpon>TelaCadastroADM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCadastroMensagemEmpresaUC.xaml.cs">
+      <DependentUpon>TelaCadastroMensagemEmpresaUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="TelaCadastroVagasUC.xaml.cs">
       <DependentUpon>TelaCadastroVagasUC.xaml</DependentUpon>
@@ -81,6 +87,9 @@
     </Compile>
     <Compile Include="TelaLogin.xaml.cs">
       <DependentUpon>TelaLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TelaMensagensAlunoUC.xaml.cs">
+      <DependentUpon>TelaMensagensAlunoUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="TelaPerfilAlunoUC.xaml.cs">
       <DependentUpon>TelaPerfilAlunoUC.xaml</DependentUpon>
@@ -143,11 +152,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="MensagemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TelaCadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TelaCadastroADM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TelaCadastroMensagemEmpresaUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,6 +185,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TelaLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TelaMensagensAlunoUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -225,6 +246,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icons\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\Mensagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\EnviarMensagem.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

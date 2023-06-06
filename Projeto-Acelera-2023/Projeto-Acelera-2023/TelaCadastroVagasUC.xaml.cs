@@ -20,7 +20,7 @@ namespace Projeto_Acelera_2023
     {
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
-        public TelaCadastroVagasUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaCadastroVagasUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
 
