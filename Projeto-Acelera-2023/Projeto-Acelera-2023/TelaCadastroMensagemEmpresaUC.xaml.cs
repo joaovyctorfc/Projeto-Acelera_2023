@@ -21,6 +21,9 @@ namespace Projeto_Acelera_2023
         public TelaCadastroMensagemEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
+            campoNome.VerticalContentAlignment = VerticalAlignment.Center;
+            campoAssunto.VerticalContentAlignment = VerticalAlignment.Center;
+            campoConteudo.VerticalContentAlignment = VerticalAlignment.Center;
         }
         public SalvarMensagem SalvarMensagem = new SalvarMensagem();
         private void Button_Click(object sender, RoutedEventArgs e)
