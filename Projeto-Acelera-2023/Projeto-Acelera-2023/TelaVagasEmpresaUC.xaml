@@ -64,20 +64,14 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <DataGrid x:Name="tabelaEmpresa" AutoGenerateColumns="False"  Margin="100,4,0,10" SelectionChanged="tabelaEmpresa_SelectionChanged" >
+        <DataGrid x:Name="tabelaEmpresa" AutoGenerateColumns="False"  Margin="100,0,0,14" SelectionChanged="tabelaEmpresa_SelectionChanged" ItemsSource="{Binding ListaVagas}">
             <DataGrid.Resources>
                 <Style TargetType="DataGridCell">
-
                 </Style>
-
                 <Style TargetType="DataGridColumnHeader">
-          
                     <Setter Property="Margin" Value="0 0 30 0" />
                 </Style>
-
             </DataGrid.Resources>
-
-
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
                 <DataGridTextColumn Header="Área" Binding="{Binding Area}" />
@@ -85,9 +79,25 @@
                 <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" />
                 <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" />
                 <DataGridTextColumn Header="Status" Binding="{Binding Aprovacao}" />
+                <DataGridTemplateColumn Header="Candidatos">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="+" Click="btnAdicionarCandidato_Click" Style="{StaticResource botaoLogin}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <StackPanel x:Name="stackPanelCandidatos" HorizontalAlignment="Left" Height="200" Margin="100,0,0,0" VerticalAlignment="Top" Width="700" Visibility="Collapsed">
+            <DataGrid x:Name="tabelaCandidatos" AutoGenerateColumns="False" ItemsSource="{Binding ListaCandidatos}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
+                    <DataGridTextColumn Header="Curso" Binding="{Binding Curso}" />
+                    <DataGridTextColumn Header="Semestre" Binding="{Binding Semestre}" />
+                    <DataGridTextColumn Header="Aprovação" Binding="{Binding Aprovacao}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
         <Button x:Name="botaoAtualizar"  TabIndex="2" Content="Atualizar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="85" Height="38" Click="botaoAtualizar_Click" Style="{DynamicResource botaoLogin}" BorderBrush="{x:Null}" Foreground="White" Background="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
-
     </Grid>
 </UserControl>

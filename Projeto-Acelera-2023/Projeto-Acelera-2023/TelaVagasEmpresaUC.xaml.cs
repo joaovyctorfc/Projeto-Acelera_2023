@@ -33,8 +33,47 @@ namespace Projeto_Acelera_2023
             SalvarDados.ListaUsuarios = listaUsuarios;
             AdicionarDadosTabela();
         }
+
+        private void btnAdicionarCandidato_Click(object sender, RoutedEventArgs e)
+        {
+            tabelaEmpresa.Visibility = Visibility.Collapsed;
+            Button btnAdicionarCandidato = (Button)sender;
+            var dataGridRow = FindParent<DataGridRow>(btnAdicionarCandidato);
+
+            if (dataGridRow != null)
+            {
+                Vaga vaga = (Vaga)dataGridRow.Item;
+
+                tabelaCandidatos.ItemsSource = null; // Limpa a coleção de itens existente
+                tabelaCandidatos.Items.Clear();
+
+                foreach (var candidato in SalvarCandidatos.ListaCandidatos)
+                {
+                    if (candidato.IdVaga == vaga.id && candidato.Empresa == vaga.Empresa)
+                    {
+                        tabelaCandidatos.Items.Add(candidato);
+                    }
+                }
+
+                stackPanelCandidatos.Visibility = Visibility.Visible;
+            }
+        }
+
+
+        private static T FindParent<T>(DependencyObject child) where T : DependencyObject
+        {
+            DependencyObject parent = VisualTreeHelper.GetParent(child);
+
+            if (parent == null)
+                return null;
+
+            T parentT = parent as T;
+            return parentT ?? FindParent<T>(parent);
+        }
         private void AdicionarDadosTabela()
         {
+            tabelaEmpresa.ItemsSource = null; // Limpa a coleção de itens existente
+            tabelaEmpresa.Items.Clear();
             tabelaEmpresa.ItemsSource = SalvarVagas.ListaVagas;
         }
 

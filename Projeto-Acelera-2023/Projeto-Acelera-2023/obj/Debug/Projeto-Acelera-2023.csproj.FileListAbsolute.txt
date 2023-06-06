@@ -241,3 +241,11 @@ C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera
 C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaCadastroMensagemEmpresaUC.baml
 C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\MensagemControl.g.cs
 C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\MensagemControl.baml
+C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\MensagemControl.g.cs
+C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaCadastroADM.g.cs
+C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaCadastroMensagemEmpresaUC.g.cs
+C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaMensagensAlunoUC.g.cs
+C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\MensagemControl.baml
+C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaCadastroADM.baml
+C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaCadastroMensagemEmpresaUC.baml
+C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaMensagensAlunoUC.baml
