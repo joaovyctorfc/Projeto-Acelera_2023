@@ -43,7 +43,6 @@ namespace Projeto_Acelera_2023
             if (dataGridRow != null)
             {
                 Vaga vaga = (Vaga)dataGridRow.Item;
-
                 tabelaCandidatos.ItemsSource = null; // Limpa a coleção de itens existente
                 tabelaCandidatos.Items.Clear();
 
@@ -72,9 +71,11 @@ namespace Projeto_Acelera_2023
         }
         private void AdicionarDadosTabela()
         {
-            tabelaEmpresa.ItemsSource = null; // Limpa a coleção de itens existente
-            tabelaEmpresa.Items.Clear();
-            tabelaEmpresa.ItemsSource = SalvarVagas.ListaVagas;
+
+            foreach (var vaga in SalvarVagas.ListaVagas)
+            {
+                tabelaEmpresa.Items.Add(vaga);
+            }
         }
 
         private void tabelaEmpresa_SelectionChanged(object sender, SelectionChangedEventArgs e)

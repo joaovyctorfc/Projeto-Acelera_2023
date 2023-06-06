@@ -253,5 +253,8 @@
   <ItemGroup>
     <Resource Include="icons\EnviarMensagem.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\Candidatos.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
