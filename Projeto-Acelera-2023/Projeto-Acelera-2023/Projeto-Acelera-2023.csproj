@@ -76,9 +76,6 @@
     <Compile Include="TelaCandidatosEmpresaUC.xaml.cs">
       <DependentUpon>TelaCandidatosEmpresaUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TelaChat.xaml.cs">
-      <DependentUpon>TelaChat.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TelaInicio.xaml.cs">
       <DependentUpon>TelaInicio.xaml</DependentUpon>
     </Compile>
@@ -163,10 +160,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TelaCandidatosEmpresaUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TelaChat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

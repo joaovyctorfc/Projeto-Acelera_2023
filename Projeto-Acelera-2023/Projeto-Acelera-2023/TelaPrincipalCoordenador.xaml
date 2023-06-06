@@ -33,16 +33,10 @@
                             <TextBlock Text="Verificação" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="30" Selected="ListViewItem_Selected">
+                    <ListViewItem Height="30" Selected="ListViewItem_Selected_5">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="icons/Analise.png" VerticalAlignment="Center"/>
-                            <TextBlock Text="Candidatos" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="30" Selected="ListViewItem_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="icons/chat.png" VerticalAlignment="Center"/>
-                            <TextBlock Text=" Chat" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
+                            <TextBlock Text="Análise" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="30" Selected="ListViewItem_Selected_4" Margin="0,18,14,10">

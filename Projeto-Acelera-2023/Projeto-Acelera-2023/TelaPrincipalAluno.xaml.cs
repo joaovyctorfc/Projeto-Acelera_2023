@@ -85,13 +85,6 @@ namespace Projeto_Acelera_2023
 
         }
 
-        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
-        {
-            painelTelas.Children.Clear();
-            TelaChat Chat = new TelaChat(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
-            painelTelas.Children.Add(Chat);
-        }
-
         private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
         {
             var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
@@ -103,6 +96,11 @@ namespace Projeto_Acelera_2023
             timer.Start();
         }
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
 
         }
