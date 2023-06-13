@@ -65,8 +65,6 @@ namespace Projeto_Acelera_2023
 
                 itensTabela.Add(item);
             }
-
-            tabelaEmpresa.ItemsSource = itensTabela;
         }
 
         private class ItemTabela

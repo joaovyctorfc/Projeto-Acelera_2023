@@ -95,6 +95,7 @@ namespace Projeto_Acelera_2023
     public class Mensagem
     {
         public string Nome { get; set; }
+
         public string Assunto { get; set; }
         public string Conteudo { get; set; }
 

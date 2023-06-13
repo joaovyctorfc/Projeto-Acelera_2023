@@ -102,7 +102,7 @@
     </UserControl.Resources>
     <Grid Background="White" Margin="0,0,10,10">
         <Border BorderBrush="Black" BorderThickness="1" Background="#FF0677FF" CornerRadius="10"/>
-        <Button x:Name="botaoCandidatar" Content="Candidatar" HorizontalAlignment="Left" Margin="305,73,0,0" VerticalAlignment="Top" Width="75" Click="botaoCandidatar_Click" Style="{DynamicResource ButtonStyle1}" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0677FF"/>
+        <Button x:Name="botaoCandidatar" Content="Candidatar" HorizontalAlignment="Left" Margin="305,63,0,0" VerticalAlignment="Top" Width="75" Click="botaoCandidatar_Click" Style="{DynamicResource ButtonStyle1}" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0677FF" Background="White"/>
         <Label x:Name="labelDescricao" Content="Label" HorizontalAlignment="Left" Margin="83,118,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
         <Label x:Name="labelSalario" Content="Label" HorizontalAlignment="Left" Margin="67,54,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
         <Label x:Name="labelNome" Content="Label" HorizontalAlignment="Left" Margin="64,19,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>

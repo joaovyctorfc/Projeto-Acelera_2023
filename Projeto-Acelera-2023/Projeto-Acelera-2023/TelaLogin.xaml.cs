@@ -38,7 +38,9 @@ namespace Projeto_Acelera_2023
 
         private void linkCadastrar_Click(object sender, RoutedEventArgs e)
         {
-
+            var Cadastro = new TelaCadastro(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            Cadastro.Show();
+            this.Hide();
         }
 
         private void linkRedefinir_Click(object sender, RoutedEventArgs e)

@@ -200,7 +200,7 @@
         Esqueceu sua Senha?
     </Hyperlink>
         </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="309,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" FontFamily="Yu Gothic UI Semibold">
+        <TextBlock x:Name="linkCadastrar"  HorizontalAlignment="Left" Margin="309,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" FontFamily="Yu Gothic UI Semibold">
                 <Hyperlink Click="linkCadastrar_Click">
         Cadastrar-se
     </Hyperlink>
