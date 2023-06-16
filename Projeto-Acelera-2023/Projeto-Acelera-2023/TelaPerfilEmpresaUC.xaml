@@ -148,16 +148,14 @@
     </UserControl.Resources>
     <Grid>
         <Label Content="Nome da Empresa
-" HorizontalAlignment="Left" Margin="141,117,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
-        <Label Content="Telefone" HorizontalAlignment="Left" Margin="198,204,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
-        <Label Content="E-mail" HorizontalAlignment="Left" Margin="198,163,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,1.885" FontFamily="Yu Gothic UI Semibold"/>
-        <Label Content="Perfil&#xA;" HorizontalAlignment="Left" Margin="320,34,0,0" VerticalAlignment="Top" Width="87" Height="54" FontSize="30" Foreground="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
-        <Label Content="Endereço" HorizontalAlignment="Left" Margin="198,245,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
-        <Button x:Name="btnEdit"  TabIndex="3"  Click="btnEdit_Click" Content="Editar" HorizontalAlignment="Left" Margin="289,298,0,0" VerticalAlignment="Top" Width="148" Height="40" Style="{DynamicResource botaoLogin}" BorderBrush="{x:Null}" Foreground="White" Background="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoNome" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,117,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold" TextChanged="campoNome_TextChanged"/>
-        <TextBox x:Name="campoEmail" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,163,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoTelefone" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoEndereco" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,245,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+" HorizontalAlignment="Left" Margin="138,160,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Content="Telefone" HorizontalAlignment="Left" Margin="195,248,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Margin="195,206,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,1.885" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Content="Perfil&#xA;" HorizontalAlignment="Left" Margin="317,78,0,0" VerticalAlignment="Top" Width="87" Height="54" FontSize="30" Foreground="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
+        <Button x:Name="btnEdit"  TabIndex="3"  Click="btnEdit_Click" Content="Editar" HorizontalAlignment="Left" Margin="286,310,0,0" VerticalAlignment="Top" Width="148" Height="40" Style="{DynamicResource botaoLogin}" BorderBrush="{x:Null}" Foreground="White" Background="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoNome" TabIndex="0" HorizontalAlignment="Left" Height="30" Margin="286,160,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold" TextChanged="campoNome_TextChanged"/>
+        <TextBox x:Name="campoEmail" TabIndex="0" HorizontalAlignment="Left" Height="30" Margin="286,206,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoTelefone" Text="" TabIndex="0" HorizontalAlignment="Left" Height="28" Margin="286,248,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
 
     </Grid>
 </UserControl>

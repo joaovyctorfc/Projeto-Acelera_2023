@@ -70,7 +70,7 @@ namespace Projeto_Acelera_2023
                 ConfirmaSenha = "123",
                 Cargo = "Coordenador",
                 Semestre = "none",
-                Telefone = "none",
+                Telefone = "",
                 Curso = "none",
                 Endereco = "none"
             };
@@ -83,7 +83,7 @@ namespace Projeto_Acelera_2023
                 Email = "teste@gmail.com",
                 Senha = "123",
                 ConfirmaSenha = "1234",
-                Telefone = "none",
+                Telefone = "",
                 Cargo = "Empresa",
                 Endereco = "none"
             };
@@ -98,7 +98,7 @@ namespace Projeto_Acelera_2023
                 ConfirmaSenha = "123",
                 Cargo = "Aluno",
                 Semestre = "none",
-                Telefone = "none",
+                Telefone = "",
                 Curso = "none",
                 Endereco = "none"
             };

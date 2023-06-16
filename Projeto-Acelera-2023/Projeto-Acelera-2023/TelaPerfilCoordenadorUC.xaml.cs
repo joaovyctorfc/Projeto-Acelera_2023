@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Text.RegularExpressions;
 namespace Projeto_Acelera_2023
 {
 
@@ -110,6 +110,24 @@ namespace Projeto_Acelera_2023
         private void campoNome_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void campoTelefone_TextChanged_2(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+
+                string input = new string(textBox.Text.Where(char.IsDigit).ToArray());
+
+
+                string formattedInput = Regex.Replace(input, @"(\d{2})(\d{4,5})(\d{4})", "($1) $2-$3");
+
+
+                textBox.Text = formattedInput;
+
+
+                textBox.CaretIndex = formattedInput.Length;
+            }
         }
     }
 }

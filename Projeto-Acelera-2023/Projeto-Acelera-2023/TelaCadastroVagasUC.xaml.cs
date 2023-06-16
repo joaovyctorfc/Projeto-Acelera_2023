@@ -90,5 +90,23 @@ namespace Projeto_Acelera_2023
         {
 
         }
+
+        private void campoSalario_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+              
+                string value = new string(textBox.Text.Where(char.IsDigit).ToArray());
+
+               
+                if (!string.IsNullOrEmpty(value))
+                {
+                  
+                    decimal salary = decimal.Parse(value) / 100;
+
+                    textBox.Text = salary.ToString("C");
+                }
+            }
+        }
     }
 }
