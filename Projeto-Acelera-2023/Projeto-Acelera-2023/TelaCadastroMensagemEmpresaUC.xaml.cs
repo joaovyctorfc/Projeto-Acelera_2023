@@ -18,12 +18,15 @@ namespace Projeto_Acelera_2023
 
     public partial class TelaCadastroMensagemEmpresaUC : UserControl
     {
-        public TelaCadastroMensagemEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
+
+        public string IdUsuario { get; set; }
+        public TelaCadastroMensagemEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem, string idUsuario)
         {
             InitializeComponent();
             campoNome.VerticalContentAlignment = VerticalAlignment.Center;
             campoAssunto.VerticalContentAlignment = VerticalAlignment.Center;
             campoConteudo.VerticalContentAlignment = VerticalAlignment.Center;
+            IdUsuario = idUsuario;
         }
         public SalvarMensagem SalvarMensagem = new SalvarMensagem();
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -53,7 +56,7 @@ namespace Projeto_Acelera_2023
                 Nome = campoNome.Text,
                 Assunto = campoAssunto.Text,
                 Conteudo = campoConteudo.Text,
-                Visibilidade = "1",
+                Visibilidade = IdUsuario,
             };
             try
             {

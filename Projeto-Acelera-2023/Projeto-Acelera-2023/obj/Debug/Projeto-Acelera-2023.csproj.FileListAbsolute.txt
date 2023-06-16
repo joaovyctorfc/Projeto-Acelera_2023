@@ -312,3 +312,5 @@ C:\Users\aluno\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2
 C:\Users\aluno\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaCadastroMensagemEmpresaUC.baml
 C:\Users\aluno\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaChatUC.baml
 C:\Users\aluno\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaMensagensAlunoUC.baml
+C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaChatUC.g.cs
+C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaChatUC.baml

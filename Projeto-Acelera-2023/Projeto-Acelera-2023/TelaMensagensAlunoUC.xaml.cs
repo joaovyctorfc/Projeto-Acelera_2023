@@ -25,15 +25,20 @@ namespace Projeto_Acelera_2023
             InitializeComponent();
             SalvarMensagem.ListaMensagem = listaMensagem;
 
-            foreach (var mensagem in listaMensagem)
+            var usuarioLogado = SalvarDados.AlunoLogado;
+            string id = usuarioLogado.Id;
+            if (listaMensagem != null)
             {
-                if (mensagem.Visibilidade.Equals("1"))
+                foreach (var mensagem in listaMensagem)
                 {
-                    var mensagemControl = new MensagemControl(mensagem, SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
-                    tabelaMensagem.Children.Add(mensagemControl);
-                }
+                    if (mensagem.Visibilidade.Equals(id))
+                    {
+                        var mensagemControl = new MensagemControl(mensagem, SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
+                        tabelaMensagem.Children.Add(mensagemControl);
+                    }
                 }
             }
+        }
 
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarDados SalvarDados = new SalvarDados();

@@ -34,6 +34,7 @@ namespace Projeto_Acelera_2023
 
         private void AdicionarDadosTabela()
         {
+
             var candidatos = SalvarCandidatos.ListaCandidatos.Where(c => c.Empresa == SalvarDados.EmpresaLogado.Nome).ToList();
             var vagas = SalvarVagas.ListaVagas.Where(v => v.Empresa == SalvarDados.EmpresaLogado.Nome).ToList();
 
@@ -48,8 +49,8 @@ namespace Projeto_Acelera_2023
                 string curso = i < candidatos.Count ? candidatos[i].Curso : string.Empty;
                 string aprovacao = i < candidatos.Count ? candidatos[i].Aprovacao : string.Empty;
 
-                string descricao = i < candidatos.Count ? vagas[i].Descricao : string.Empty;
-                string formato = i < candidatos.Count ? vagas[i].Formato : string.Empty;
+                string descricao = i < vagas.Count ? vagas[i].Descricao : string.Empty;
+                string formato = i < vagas.Count ? vagas[i].Formato : string.Empty;
                 string salario = i < candidatos.Count ? vagas[i].Salario : string.Empty;
 
                 ItemTabela item = new ItemTabela
@@ -65,6 +66,7 @@ namespace Projeto_Acelera_2023
 
                 itensTabela.Add(item);
             }
+            tabelaEmpresa.ItemsSource = itensTabela;
         }
 
         private class ItemTabela

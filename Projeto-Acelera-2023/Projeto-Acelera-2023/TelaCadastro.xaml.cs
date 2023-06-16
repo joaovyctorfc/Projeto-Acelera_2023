@@ -56,6 +56,7 @@ namespace Projeto_Acelera_2023
                 {
                     var usuario = new Usuario
                     {
+                        Id = SalvarDados.GerarNovoId(campoCargo.Text),
                         Nome = campoNome.Text,
                         Email = campoEmail.Text,
                         Senha = campoSenha.Password,

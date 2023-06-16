@@ -20,10 +20,12 @@ namespace Projeto_Acelera_2023
     /// </summary>
     public partial class TelaVagasEmpresaUC : UserControl
     {
-
         public SalvarVagas SalvarVagas;
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
+        public SalvarMensagem SalvarMensagem = new SalvarMensagem(); // Adicionado
+        private string selectedUserId;
+
         public TelaVagasEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace Projeto_Acelera_2023
             SalvarVagas.ListaVagas = listaVagas;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;
             SalvarDados.ListaUsuarios = listaUsuarios;
+            SalvarMensagem.ListaMensagem = mensagem; // Adicionado
             AdicionarDadosTabela();
         }
 
@@ -58,7 +61,6 @@ namespace Projeto_Acelera_2023
             }
         }
 
-
         private static T FindParent<T>(DependencyObject child) where T : DependencyObject
         {
             DependencyObject parent = VisualTreeHelper.GetParent(child);
@@ -69,9 +71,9 @@ namespace Projeto_Acelera_2023
             T parentT = parent as T;
             return parentT ?? FindParent<T>(parent);
         }
+
         private void AdicionarDadosTabela()
         {
-
             foreach (var vaga in SalvarVagas.ListaVagas)
             {
                 tabelaEmpresa.Items.Add(vaga);
@@ -87,6 +89,39 @@ namespace Projeto_Acelera_2023
         {
             tabelaEmpresa.Items.Refresh();
         }
+
+        private void btnChat_Click(object sender, RoutedEventArgs e)
+        {
+            Button btnChat = (Button)sender;
+            var dataGridRow = FindParent<DataGridRow>(btnChat);
+
+            if (dataGridRow != null)
+            {
+                Candidatos candidato = (Candidatos)dataGridRow.Item;
+                string nomeCandidato = candidato.Nome;
+
+                // Encontrar o ID do usuário com base no nome do candidato
+                string idUsuario = SalvarDados.ListaUsuarios
+                    .Where(usuario => usuario.Nome == nomeCandidato)
+                    .Select(usuario => usuario.Id)
+                    .FirstOrDefault();
+
+                if (!string.IsNullOrEmpty(idUsuario))
+                {
+                    // Agora você tem o ID do usuário correspondente ao nome do candidato selecionado
+                    // Faça o que desejar com o ID, como salvá-lo em uma variável ou passá-lo para outra tela
+
+                    // Exemplo de como passar o ID para outra tela
+                    mainGrid.Children.Clear();
+                    TelaCadastroMensagemEmpresaUC CadastroMensagem = new TelaCadastroMensagemEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem, idUsuario);
+                    mainGrid.Children.Add(CadastroMensagem);
+                }
+                else
+                {
+                    MessageBox.Show("Usuário não encontrado.");
+                }
+            }
+        }
+
     }
 }
-
