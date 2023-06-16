@@ -196,7 +196,8 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
             <ComboBoxItem Content="ADS"/>
-            <ComboBoxItem Content="Gestão"/>
+            <ComboBoxItem Content="Gestão Empresarial"/>
+            <ComboBoxItem Content="Gestão de Produção"/>
             <ComboBoxItem Content="Eventos"/>
         </ComboBox>
         <ComboBox x:Name="campoFormato" HorizontalAlignment="Left"  Height="29" Margin="289,295,0,0" VerticalAlignment="Top" Width="147" FontFamily="Yu Gothic UI Semibold">
@@ -218,7 +219,7 @@
         <Label Content="Cadastrar Vaga&#xD;&#xA;" HorizontalAlignment="Left" Margin="255,38,0,0" VerticalAlignment="Top" Width="221" Height="54" FontSize="30" Foreground="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
         <TextBox x:Name="campoNome" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="288,115,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold" TextChanged="campoNome_TextChanged"/>
         <TextBox x:Name="campoDescricao" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,160,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoSalario" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="campoSalario" TabIndex="0" HorizontalAlignment="Left" Height="29" Margin="289,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold" TextChanged="campoSalario_TextChanged_1"/>
         <Button x:Name="botaoCadastrarVaga"  TabIndex="3"  Click="Button_Click" Content="Cadastrar" HorizontalAlignment="Left" Margin="288,351,0,0" VerticalAlignment="Top" Width="148" Height="40" Style="{DynamicResource botaoLogin}" BorderBrush="{x:Null}" Foreground="White" Background="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
     </Grid>
 </UserControl>
