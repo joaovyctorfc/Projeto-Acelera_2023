@@ -20,13 +20,14 @@ namespace Projeto_Acelera_2023
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
-
-        public TelaCadastro(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public SalvarMensagem SalvarMensagem = new SalvarMensagem();
+        public TelaCadastro(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem>listaMensagem)
         {
             InitializeComponent();
             //campoCargo.DropDownStyle = ComboBoxStyle.DropDownList;
-            SalvarDados.ListaUsuarios = listaUsuarios;
+            SalvarMensagem.ListaMensagem = listaMensagem;
             SalvarVagas.ListaVagas = listaVagas;
+            SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;
             campoNome.VerticalContentAlignment = VerticalAlignment.Center;
             campoEmail.VerticalContentAlignment = VerticalAlignment.Center;
@@ -70,7 +71,7 @@ namespace Projeto_Acelera_2023
 
                     SalvarDados.ListaUsuarios.Add(usuario);
                     MessageBox.Show("Usuário salvo com sucesso!");
-                    var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                    var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                     Login.Show();
                     this.Hide();
                 }
@@ -79,7 +80,7 @@ namespace Projeto_Acelera_2023
 
         private void linkLogin_Click(object sender, RoutedEventArgs e)
         {
-            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             Login.Show();
             this.Hide();
         }

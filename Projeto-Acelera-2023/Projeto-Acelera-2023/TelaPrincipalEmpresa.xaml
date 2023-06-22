@@ -40,10 +40,7 @@
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="30" Selected="ListViewItem_Selected_5">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="icons/EnviarMensagem.png" VerticalAlignment="Center"/>
-                            <TextBlock Text="Mensagem" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
-                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"/>
                     </ListViewItem>
                     <ListViewItem Height="30" Selected="ListViewItem_Selected_4" Margin="0,18,14,10">
                         <StackPanel Orientation="Horizontal">

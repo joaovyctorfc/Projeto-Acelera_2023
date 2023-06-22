@@ -27,12 +27,6 @@
                             <TextBlock Text="Vagas" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="30" Selected="ListViewItem_Selected_3">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="icons/CriarVaga.png" VerticalAlignment="Center"/>
-                            <TextBlock Text="Verificação" Margin="15 0 0 0" FontFamily="Yu Gothic UI Semibold" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
                     <ListViewItem Height="30" Selected="ListViewItem_Selected_5">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="icons/Analise.png" VerticalAlignment="Center"/>

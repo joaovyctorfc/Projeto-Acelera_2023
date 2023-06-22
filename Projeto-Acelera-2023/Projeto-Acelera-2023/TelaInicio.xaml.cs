@@ -27,14 +27,14 @@ namespace Projeto_Acelera_2023
 
         private void botaoLogin_Click(object sender, RoutedEventArgs e)
         {
-            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             Login.Show();
             this.Hide();
         }
 
         private void botaoCadastrar_Click_1(object sender, RoutedEventArgs e)
         {
-            var TelaCadastro = new TelaCadastro(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            var TelaCadastro = new TelaCadastro(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             TelaCadastro.Show();
             this.Hide();
         }

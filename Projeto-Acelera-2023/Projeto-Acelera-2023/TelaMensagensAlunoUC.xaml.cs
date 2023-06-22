@@ -24,7 +24,9 @@ namespace Projeto_Acelera_2023
         {
             InitializeComponent();
             SalvarMensagem.ListaMensagem = listaMensagem;
-
+            SalvarVagas.ListaVagas = listaVagas;
+            SalvarDados.ListaUsuarios = listaUsuarios;
+            SalvarCandidatos.ListaCandidatos = listaCandidatos;
             var usuarioLogado = SalvarDados.AlunoLogado;
             string id = usuarioLogado.Id;
             if (listaMensagem != null)

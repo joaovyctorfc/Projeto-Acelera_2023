@@ -21,13 +21,14 @@ namespace Projeto_Acelera_2023
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
 
-        public TelaCadastroADM(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
+        public TelaCadastroADM(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> listaMensagem)
         {
             InitializeComponent();
             //campoCargo.DropDownStyle = ComboBoxStyle.DropDownList;
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;
+            SalvarMensagem.ListaMensagem = listaMensagem;
             campoNome.VerticalContentAlignment = VerticalAlignment.Center;
             campoEmail.VerticalContentAlignment = VerticalAlignment.Center;
             campoSenha.VerticalContentAlignment = VerticalAlignment.Center;
@@ -69,7 +70,7 @@ namespace Projeto_Acelera_2023
 
                     SalvarDados.ListaUsuarios.Add(usuario);
                     MessageBox.Show("Usuário salvo com sucesso!");
-                    var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+                    var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                     Login.Show();
                     this.Hide();
                 }
@@ -78,7 +79,7 @@ namespace Projeto_Acelera_2023
 
         private void linkLogin_Click(object sender, RoutedEventArgs e)
         {
-            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             Login.Show();
             this.Hide();
         }

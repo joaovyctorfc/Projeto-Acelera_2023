@@ -119,14 +119,14 @@ namespace Projeto_Acelera_2023
 
         private void linkCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            var TelaCadastro = new TelaCadastro(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            var TelaCadastro = new TelaCadastro(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             TelaCadastro.Show();
             this.Hide();
         }
 
         private void linkLogin_Click(object sender, RoutedEventArgs e)
         {
-            var TelaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            var TelaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             TelaLogin.Show();
             this.Hide();
         }

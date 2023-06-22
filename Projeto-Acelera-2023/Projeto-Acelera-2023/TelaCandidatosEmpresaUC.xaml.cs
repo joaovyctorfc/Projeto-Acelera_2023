@@ -38,35 +38,50 @@ namespace Projeto_Acelera_2023
             var candidatos = SalvarCandidatos.ListaCandidatos.Where(c => c.Empresa == SalvarDados.EmpresaLogado.Nome).ToList();
             var vagas = SalvarVagas.ListaVagas.Where(v => v.Empresa == SalvarDados.EmpresaLogado.Nome).ToList();
 
-            int totalItens = Math.Max(candidatos.Count, vagas.Count);
+            int totalItens = Math.Min(candidatos.Count, vagas.Count);
 
             List<ItemTabela> itensTabela = new List<ItemTabela>();
 
             for (int i = 0; i < totalItens; i++)
             {
-                string nome = i < candidatos.Count ? candidatos[i].Nome : string.Empty;
-                string semestre = i < candidatos.Count ? candidatos[i].Semestre : string.Empty;
-                string curso = i < candidatos.Count ? candidatos[i].Curso : string.Empty;
-                string aprovacao = i < candidatos.Count ? candidatos[i].Aprovacao : string.Empty;
+                bool candidatoDisponivel = i < candidatos.Count;
+                bool vagaDisponivel = i < vagas.Count;
+                
+                if (candidatoDisponivel && vagaDisponivel &&
+                            !string.IsNullOrEmpty(candidatos[i].Nome) &&
+                            !string.IsNullOrEmpty(candidatos[i].Semestre) &&
+                            !string.IsNullOrEmpty(candidatos[i].Curso) &&
+                            !string.IsNullOrEmpty(candidatos[i].Aprovacao) &&
+                            !string.IsNullOrEmpty(vagas[i].Descricao) &&
+                            !string.IsNullOrEmpty(vagas[i].Formato) &&
+                            !string.IsNullOrEmpty(vagas[i].Salario))
 
-                string descricao = i < vagas.Count ? vagas[i].Descricao : string.Empty;
-                string formato = i < vagas.Count ? vagas[i].Formato : string.Empty;
-                string salario = i < candidatos.Count ? vagas[i].Salario : string.Empty;
-
-                ItemTabela item = new ItemTabela
                 {
-                    Nome = nome,
-                    Curso = curso,
-                    Semestre = semestre,
-                    Aprovacao = aprovacao,
-                    Descricao = descricao,
-                    Formato = formato,
-                    Salario = salario,
-                };
+                    string nome = candidatos[i].Nome;
+                    string semestre = candidatos[i].Semestre;
+                    string curso = candidatos[i].Curso;
+                    string aprovacao = candidatos[i].Aprovacao;
 
-                itensTabela.Add(item);
+                    string descricao = vagas[i].Descricao;
+                    string formato = vagas[i].Formato;
+                    string salario = vagas[i].Salario;
+
+                    ItemTabela item = new ItemTabela
+                    {
+                        Nome = nome,
+                        Curso = curso,
+                        Semestre = semestre,
+                        Aprovacao = aprovacao,
+                        Descricao = descricao,
+                        Formato = formato,
+                        Salario = salario,
+                    };
+
+                    itensTabela.Add(item);
+                }
+
+                tabelaEmpresa.ItemsSource = itensTabela;
             }
-            tabelaEmpresa.ItemsSource = itensTabela;
         }
 
         private class ItemTabela

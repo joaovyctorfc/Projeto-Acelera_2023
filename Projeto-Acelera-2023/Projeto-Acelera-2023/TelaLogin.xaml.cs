@@ -17,12 +17,13 @@ namespace Projeto_Acelera_2023
     public partial class TelaLogin : Window
     {
 
-        public TelaLogin(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos)
+        public TelaLogin(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem>listaMensagem)
         {
             InitializeComponent();
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarVagas.ListaVagas = listaVagas;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;
+            SalvarMensagem.ListaMensagem = listaMensagem;
             campoEmail.VerticalContentAlignment = VerticalAlignment.Center;
             campoSenha.VerticalContentAlignment = VerticalAlignment.Center;
         }
@@ -38,7 +39,7 @@ namespace Projeto_Acelera_2023
 
         private void linkCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            var Cadastro = new TelaCadastro(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            var Cadastro = new TelaCadastro(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             Cadastro.Show();
             this.Hide();
         }

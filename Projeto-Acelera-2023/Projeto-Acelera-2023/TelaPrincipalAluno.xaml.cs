@@ -87,7 +87,7 @@ namespace Projeto_Acelera_2023
 
         private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
         {
-            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos);
+            var telaLogin = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
             telaLogin.Show();
             this.Hide();
         }
