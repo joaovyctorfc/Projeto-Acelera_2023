@@ -43,7 +43,7 @@
             </StackPanel>
 
         </Grid>
-        <WrapPanel x:Name="painelTelas" HorizontalAlignment="Left" Height="450" Margin="150,0,0,0" VerticalAlignment="Top"  Width="650"/>
+        <WrapPanel x:Name="painelTelas" HorizontalAlignment="Left" Height="450" Margin="150,0,0,-29" VerticalAlignment="Top"  Width="644"/>
 
     </Grid>
 </Window>

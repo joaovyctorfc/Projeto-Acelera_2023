@@ -194,13 +194,13 @@
     <Grid>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="267,145,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FF3A3A3A"/>
         <Label Content="Senha" HorizontalAlignment="Left" Margin="267,197,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FF3A3A3A"/>
-        <Button x:Name="botaoLogin"  TabIndex="2" Content="Login" HorizontalAlignment="Left" Margin="341,280,0,0" VerticalAlignment="Top" Width="148" Height="40" Click="botaoLogin_Click" Style="{DynamicResource botaoLogin}" BorderBrush="{x:Null}" Foreground="White" Background="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBlock x:Name="linkRedefinir" HorizontalAlignment="Left" Margin="431,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" FontFamily="Yu Gothic UI Semibold">
+        <Button x:Name="botaoLogin"  TabIndex="2" Content="Login" HorizontalAlignment="Left" Margin="341,262,0,0" VerticalAlignment="Top" Width="148" Height="40" Click="botaoLogin_Click" Style="{DynamicResource botaoLogin}" BorderBrush="{x:Null}" Foreground="White" Background="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBlock x:Name="linkRedefinir" HorizontalAlignment="Left" Margin="431,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" FontFamily="Yu Gothic UI Semibold">
                 <Hyperlink Click="linkRedefinir_Click">
         Esqueceu sua Senha?
     </Hyperlink>
         </TextBlock>
-        <TextBlock x:Name="linkCadastrar"  HorizontalAlignment="Left" Margin="309,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" FontFamily="Yu Gothic UI Semibold">
+        <TextBlock x:Name="linkCadastrar"  HorizontalAlignment="Left" Margin="309,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF0A15F5" FontFamily="Yu Gothic UI Semibold">
                 <Hyperlink Click="linkCadastrar_Click">
         Cadastrar-se
     </Hyperlink>

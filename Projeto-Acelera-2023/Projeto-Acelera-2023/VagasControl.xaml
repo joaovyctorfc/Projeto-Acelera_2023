@@ -101,17 +101,17 @@
         </Style>
     </UserControl.Resources>
     <Grid Background="White" Margin="0,0,10,10">
-        <Border BorderBrush="Black" BorderThickness="1" Background="#FF0677FF" CornerRadius="10"/>
+        <Border BorderThickness="1" Background="#FF0677FF" CornerRadius="10"/>
         <Button x:Name="botaoCandidatar" Content="Candidatar" HorizontalAlignment="Left" Margin="305,63,0,0" VerticalAlignment="Top" Width="75" Click="botaoCandidatar_Click" Style="{DynamicResource ButtonStyle1}" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0677FF" Background="White"/>
         <Label x:Name="labelDescricao" Content="Label" HorizontalAlignment="Left" Margin="83,118,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
         <Label x:Name="labelSalario" Content="Label" HorizontalAlignment="Left" Margin="69,54,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
         <Label x:Name="labelNome" Content="Label" HorizontalAlignment="Left" Margin="64,19,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
-        <Label x:Name="labelFormato" Content="Label" HorizontalAlignment="Left" Margin="76,87,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
-        <Label x:Name="labelArea" Content="Label" HorizontalAlignment="Left" Margin="196,88,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
-        <Label x:Name="labelNome_Copy" Content="Salário:" HorizontalAlignment="Left" Margin="19,54,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
-        <Label x:Name="labelNome_Copy1" Content="Descrição:" HorizontalAlignment="Left" Margin="19,118,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
-        <Label x:Name="labelNome_Copy2" Content="Área:" HorizontalAlignment="Left" Margin="159,87,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
-        <Label x:Name="labelNome_Copy3" Content="Formato:" HorizontalAlignment="Left" Margin="19,87,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
+        <Label x:Name="labelFormato" Content="Label" HorizontalAlignment="Left" Margin="231,19,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
+        <Label x:Name="labelArea" Content="Label" HorizontalAlignment="Left" Margin="69,85,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
+        <Label x:Name="labelNome_Copy" Content="Salário:" HorizontalAlignment="Left" Margin="15,54,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
+        <Label x:Name="labelNome_Copy1" Content="Descrição:" HorizontalAlignment="Left" Margin="13,116,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
+        <Label x:Name="labelNome_Copy2" Content="Área:" HorizontalAlignment="Left" Margin="26,85,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold" RenderTransformOrigin="0.693,-0.551"/>
+        <Label x:Name="labelNome_Copy3" Content="Formato:" HorizontalAlignment="Left" Margin="173,19,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
         <Label x:Name="labelNome_Copy4" Content="Nome:" HorizontalAlignment="Left" Margin="19,19,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
     </Grid>
 </UserControl>

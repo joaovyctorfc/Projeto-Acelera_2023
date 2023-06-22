@@ -149,5 +149,12 @@ namespace Projeto_Acelera_2023
                 textBox.CaretIndex = formattedInput.Length;
             }
         }
+
+        private void campoTelefone_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            var formattedText = FormatarTelefone(campoTelefone.Text);
+            campoTelefone.Text = formattedText;
+            campoTelefone.SelectionStart = formattedText.Length;
+        }
     }
 }

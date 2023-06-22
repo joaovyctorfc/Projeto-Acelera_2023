@@ -24,7 +24,7 @@ namespace Projeto_Acelera_2023
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
         public SalvarMensagem SalvarMensagem = new SalvarMensagem(); // Adicionado
-        private string selectedUserId;
+        
         
         public TelaVagasEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
@@ -37,7 +37,10 @@ namespace Projeto_Acelera_2023
             AdicionarDadosTabela();
         }
 
-        private void btnAdicionarCandidato_Click(object sender, RoutedEventArgs e)
+        private void btnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+        }
+            private void btnAdicionarCandidato_Click(object sender, RoutedEventArgs e)
         {
             tabelaEmpresa.Visibility = Visibility.Collapsed;
             Button btnAdicionarCandidato = (Button)sender;
@@ -126,5 +129,9 @@ namespace Projeto_Acelera_2023
             }
         }
 
+        private void tabelaEmpresa_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
