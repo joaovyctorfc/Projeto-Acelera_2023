@@ -64,7 +64,13 @@
         </Style>
     </UserControl.Resources>
     <Grid x:Name="mainGrid">
-        <DataGrid x:Name="tabelaEmpresa" AutoGenerateColumns="False" Margin="100,10,0,4" SelectionChanged="tabelaEmpresa_SelectionChanged" ItemsSource="{Binding ListaVagas}">
+        <DataGrid x:Name="tabelaEmpresa" AutoGenerateColumns="False" Margin="100,10,0,4" SelectionChanged="tabelaEmpresa_SelectionChanged" ItemsSource="{Binding ListaVagas}" Background="White">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderBrush" Value="Transparent" />
+                </Style>
+            </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
                 <DataGridTextColumn Header="Área" Binding="{Binding Area}" />
@@ -85,6 +91,7 @@
         </DataGrid>
         <StackPanel x:Name="stackPanelCandidatos" HorizontalAlignment="Left" Height="200" Margin="100,0,0,0" VerticalAlignment="Top" Width="700" Visibility="Collapsed">
             <DataGrid x:Name="tabelaCandidatos" AutoGenerateColumns="False" ItemsSource="{Binding ListaCandidatos}">
+                
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
                     <DataGridTextColumn Header="Curso" Binding="{Binding Curso}" />
