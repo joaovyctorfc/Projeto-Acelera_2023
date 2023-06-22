@@ -77,11 +77,9 @@ namespace Projeto_Acelera_2023
                             var cargo = usuario.Cargo;
                             if (cargo == "Aluno")
                             {
-
                                 var TelaPrincipal = new TelaPrincipalAluno(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                                 SalvarDados.AlunoLogado = usuario;
                                 TelaPrincipal.Show();
-
                             }
 
                             if (cargo == "Empresa")
@@ -89,7 +87,6 @@ namespace Projeto_Acelera_2023
                                 var TelaPrincipal = new TelaPrincipalEmpresa(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                                 SalvarDados.EmpresaLogado = usuario;
                                 TelaPrincipal.Show();
-
                             }
 
                             if (cargo == "Coordenador")
@@ -97,7 +94,6 @@ namespace Projeto_Acelera_2023
                                 var TelaPrincipal = new TelaPrincipalCoordenador(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                                 SalvarDados.CoordenadorLogado = usuario;
                                 TelaPrincipal.Show();
-
                             }
 
                         }

@@ -82,7 +82,7 @@ namespace Projeto_Acelera_2023
                 Nome = "teste",
                 Email = "teste@gmail.com",
                 Senha = "123",
-                ConfirmaSenha = "1234",
+                ConfirmaSenha = "123",
                 Telefone = "",
                 Cargo = "Empresa",
                 Endereco = "none"

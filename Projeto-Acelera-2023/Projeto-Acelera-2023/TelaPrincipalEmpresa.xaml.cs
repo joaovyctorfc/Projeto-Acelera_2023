@@ -101,9 +101,8 @@ namespace Projeto_Acelera_2023
 
         private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
         {
-            painelTelas.Children.Clear();
-            TelaCandidatosEmpresaUC CadastroVagas = new TelaCandidatosEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
-            painelTelas.Children.Add(CadastroVagas);
+            var Login = new TelaLogin(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
+            this.Hide();
             SalvarDados.EmpresaLogado = null;
         }
 

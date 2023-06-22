@@ -25,7 +25,7 @@ namespace Projeto_Acelera_2023
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
         public SalvarMensagem SalvarMensagem = new SalvarMensagem(); // Adicionado
         private string selectedUserId;
-
+        
         public TelaVagasEmpresaUC(List<Usuario> listaUsuarios, List<Vaga> listaVagas, List<Candidatos> listaCandidatos, List<Mensagem> mensagem)
         {
             InitializeComponent();
@@ -76,7 +76,10 @@ namespace Projeto_Acelera_2023
         {
             foreach (var vaga in SalvarVagas.ListaVagas)
             {
-                tabelaEmpresa.Items.Add(vaga);
+                if (vaga.Empresa == SalvarDados.EmpresaLogado.Nome)
+                {
+                    tabelaEmpresa.Items.Add(vaga);
+                }
             }
         }
 
