@@ -45,6 +45,7 @@ namespace Projeto_Acelera_2023
                         Nome = candidato.Nome,
                         Curso = candidato.Curso,
                         Empresa = vaga.Empresa,
+                        Vaga = vaga.Nome,
                         Salario = vaga.Salario,
                         Descricao = vaga.Descricao,
                         Formato = vaga.Formato,

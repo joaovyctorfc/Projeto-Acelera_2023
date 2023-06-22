@@ -25,6 +25,7 @@
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
                 <DataGridTextColumn Header="Curso" Binding="{Binding Curso}" />
                 <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa}" />
+                <DataGridTextColumn Header="Vaga" Binding="{Binding Vaga}" />
                 <DataGridTextColumn Header="Salario" Binding="{Binding Salario}" />
                 <DataGridTextColumn Header="Descricao" Binding="{Binding Descricao}" />
                 <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" />

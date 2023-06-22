@@ -104,10 +104,16 @@ namespace Projeto_Acelera_2023
                 if (candidato != null)
                 {
                     candidato.Aprovacao = "Aprovado";
-                    tabelaEmpresa.Items.Refresh();
+
+                    var itensTabelaAtualizados = tabelaEmpresa.ItemsSource.Cast<ItemTabela>().ToList();
+                    itensTabelaAtualizados.RemoveAll(c => c.Nome == candidato.Nome && c.Semestre == candidato.Semestre && c.Curso == candidato.Curso);
+
+                    tabelaEmpresa.ItemsSource = itensTabelaAtualizados;
+                    MessageBox.Show("Candidato aprovado!");
                 }
             }
         }
+
 
         private void Reprovar_Click(object sender, RoutedEventArgs e)
         {
@@ -117,10 +123,16 @@ namespace Projeto_Acelera_2023
                 if (candidato != null)
                 {
                     candidato.Aprovacao = "Reprovado";
-                    tabelaEmpresa.Items.Refresh();
+
+                    var itensTabelaAtualizados = tabelaEmpresa.ItemsSource.Cast<ItemTabela>().ToList();
+                    itensTabelaAtualizados.RemoveAll(c => c.Nome == candidato.Nome && c.Semestre == candidato.Semestre && c.Curso == candidato.Curso);
+
+                    tabelaEmpresa.ItemsSource = itensTabelaAtualizados;
+                    MessageBox.Show("Candidato reprovado!");
                 }
             }
         }
+
 
         private void tabelaCoordenador_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
