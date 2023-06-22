@@ -154,9 +154,9 @@
                     <GradientStop Color="#FFACACAC" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
-            <ComboBoxItem Content="ADS"/>
+            <ComboBoxItem Content="Análise e Desenvolvimento de Sistemas"/>
             <ComboBoxItem Content="Gestão Empresarial"/>
-            <ComboBoxItem Content="Gestão de Produção"/>
+            <ComboBoxItem Content="Gestão da Produção Industrial"/>
             <ComboBoxItem Content="Eventos"/>
         </ComboBox>
         <ComboBox x:Name="campoSemestre" HorizontalAlignment="Left" TabIndex="4" Height="29" Margin="289,295,0,0" VerticalAlignment="Top" Width="147" FontFamily="Yu Gothic UI Semibold">
