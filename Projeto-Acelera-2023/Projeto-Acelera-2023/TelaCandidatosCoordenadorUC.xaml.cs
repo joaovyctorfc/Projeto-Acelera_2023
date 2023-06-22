@@ -59,5 +59,10 @@ namespace Projeto_Acelera_2023
         {
 
         }
+
+        private void tabelaCoordenador_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

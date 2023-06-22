@@ -7,30 +7,24 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid x:Name="tabelaEmpresa" AutoGenerateColumns="False" Margin="20,0,0,10" SelectionChanged="tabelaCoordenador_SelectionChanged">
+        <DataGrid x:Name="tabelaEmpresa" AutoGenerateColumns="False" BorderThickness="1" GridLinesVisibility="All" Padding="10" Margin="10">
 
             <DataGrid.Resources>
-                <Style TargetType="DataGridCell">
-
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
                 </Style>
-
-                <Style TargetType="DataGridColumnHeader">
-
-                    <Setter Property="Margin" Value="0 0 30 0" />
-                </Style>
-
             </DataGrid.Resources>
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
-                <DataGridTextColumn Header="Curso" Binding="{Binding Curso}" />
-                <DataGridTextColumn Header="Semestre" Binding="{Binding Semestre}" />
-                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" />
-                <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" />
-                <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" />
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*" />
+                <DataGridTextColumn Header="Curso" Binding="{Binding Curso}" Width="*" />
+                <DataGridTextColumn Header="Semestre" Binding="{Binding Semestre}" Width="*" />
+                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="*" />
+                <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" Width="*"/>
+                <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" Width="*" />
 
 
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Aprovar" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Aprovar" Click="Aprovar_Click" Tag="{Binding}" />
@@ -38,7 +32,7 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Reprovar" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Reprovar" Click="Reprovar_Click" Tag="{Binding}" />
