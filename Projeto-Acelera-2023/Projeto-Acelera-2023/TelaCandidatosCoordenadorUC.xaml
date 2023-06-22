@@ -9,18 +9,6 @@
     <Grid>
         <DataGrid x:Name="tabelaCoordenador" AutoGenerateColumns="False"  Margin="23,0,67,10" SelectionChanged="tabelaEmpresa_SelectionChanged" >
 
-            <DataGrid.Resources>
-                <Style TargetType="DataGridCell">
-
-                </Style>
-
-                <Style TargetType="DataGridColumnHeader">
-
-                    <Setter Property="Margin" Value="0 0 30 0" />
-                </Style>
-
-            </DataGrid.Resources>
-
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
                 <DataGridTextColumn Header="Curso" Binding="{Binding Curso}" />
