@@ -29,8 +29,15 @@ namespace Projeto_Acelera_2023
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
             timer.Tick += Timer_Tick;
-
             panelWidth = sidePanel.Width;
+            if (SalvarDados.CoordenadorLogado != null)
+            {
+                var usuarioLogado = SalvarDados.CoordenadorLogado;
+                if (usuarioLogado.Telefone.Equals("") && usuarioLogado.Curso.Equals("none") && usuarioLogado.Semestre.Equals("none"))
+                {
+                    MessageBox.Show("Finalize o Cadastro na aba Perfil antes de continuar");
+                }
+            }
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -62,16 +69,24 @@ namespace Projeto_Acelera_2023
 
         private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
         {
-            painelTelas.Children.Clear();
-            TelaPerfilCoordenadorUC Perfil = new TelaPerfilCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
-            painelTelas.Children.Add(Perfil);
+                painelTelas.Children.Clear();
+                TelaPerfilCoordenadorUC Perfil = new TelaPerfilCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
+                painelTelas.Children.Add(Perfil);
         }
 
         private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
         {
-            painelTelas.Children.Clear();
-            TelaCandidatosCoordenadorUC Vagas = new TelaCandidatosCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
-            painelTelas.Children.Add(Vagas);
+            var usuarioLogado = SalvarDados.CoordenadorLogado;
+            if (usuarioLogado.Telefone.Equals("") && usuarioLogado.Curso.Equals("none") && usuarioLogado.Semestre.Equals("none"))
+            {
+                MessageBox.Show("Finalize o Cadastro na aba Perfil antes de continuar");
+            }
+            else {
+                painelTelas.Children.Clear();
+                TelaCandidatosCoordenadorUC Vagas = new TelaCandidatosCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
+                painelTelas.Children.Add(Vagas);
+            }
+            
         }
 
         private void ListViewItem_Selected_3(object sender, RoutedEventArgs e)
@@ -99,9 +114,17 @@ namespace Projeto_Acelera_2023
 
         private void ListViewItem_Selected_5(object sender, RoutedEventArgs e)
         {
-            painelTelas.Children.Clear();
-            TelaVagasCoordenadorUC Vagas = new TelaVagasCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
-            painelTelas.Children.Add(Vagas);
+            var usuarioLogado = SalvarDados.CoordenadorLogado;
+            if (usuarioLogado.Telefone.Equals("") && usuarioLogado.Curso.Equals("none") && usuarioLogado.Semestre.Equals("none"))
+            {
+                MessageBox.Show("Finalize o Cadastro na aba Perfil antes de continuar");
+            }
+            else
+            {
+                painelTelas.Children.Clear();
+                TelaVagasCoordenadorUC Vagas = new TelaVagasCoordenadorUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
+                painelTelas.Children.Add(Vagas);
+            }
         }
     }
 }

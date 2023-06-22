@@ -29,8 +29,15 @@ namespace Projeto_Acelera_2023
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             timer.Tick += Timer_Tick;
-
             panelWidth = sidePanel.Width;
+            if (SalvarDados.EmpresaLogado != null)
+            {
+                var usuarioLogado = SalvarDados.EmpresaLogado;
+                if (usuarioLogado.Telefone.Equals("") && usuarioLogado.Curso.Equals("none") && usuarioLogado.Semestre.Equals("none"))
+                {
+                    MessageBox.Show("Finalize o Cadastro na aba Perfil antes de continuar");
+                }
+            }
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -87,16 +94,33 @@ namespace Projeto_Acelera_2023
 
         private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
         {
-            painelTelas.Children.Clear();
-            TelaVagasEmpresaUC Vagas = new TelaVagasEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
-            painelTelas.Children.Add(Vagas);
+            var usuarioLogado = SalvarDados.EmpresaLogado;
+
+            if (usuarioLogado.Telefone.Equals(""))
+            {
+                MessageBox.Show("Finalize o Cadastro na aba Perfil antes de continuar");
+            }
+            else
+            {
+                painelTelas.Children.Clear();
+                TelaVagasEmpresaUC Vagas = new TelaVagasEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
+                painelTelas.Children.Add(Vagas);
+            }
         }
 
         private void ListViewItem_Selected_3(object sender, RoutedEventArgs e)
         {
-            painelTelas.Children.Clear();
-            TelaCadastroVagasUC CadastroVagas = new TelaCadastroVagasUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
-            painelTelas.Children.Add(CadastroVagas);
+            var usuarioLogado = SalvarDados.EmpresaLogado;
+            if (usuarioLogado.Telefone.Equals(""))
+            {
+                MessageBox.Show("Finalize o Cadastro na aba Perfil antes de continuar");
+            }
+            else
+            {
+                painelTelas.Children.Clear();
+                TelaCadastroVagasUC CadastroVagas = new TelaCadastroVagasUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
+                painelTelas.Children.Add(CadastroVagas);
+            }
         }
 
         private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
@@ -113,9 +137,17 @@ namespace Projeto_Acelera_2023
 
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
-            painelTelas.Children.Clear();
-            TelaCandidatosEmpresaUC Candidatos = new TelaCandidatosEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
-            painelTelas.Children.Add(Candidatos);
+            var usuarioLogado = SalvarDados.EmpresaLogado;
+            if (usuarioLogado.Telefone.Equals(""))
+            {
+                MessageBox.Show("Finalize o Cadastro na aba Perfil antes de continuar");
+            }
+            else
+            {
+                painelTelas.Children.Clear();
+                TelaCandidatosEmpresaUC Candidatos = new TelaCandidatosEmpresaUC(SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
+                painelTelas.Children.Add(Candidatos);
+            }
         }
 
         private void ListViewItem_Selected_5(object sender, RoutedEventArgs e)
