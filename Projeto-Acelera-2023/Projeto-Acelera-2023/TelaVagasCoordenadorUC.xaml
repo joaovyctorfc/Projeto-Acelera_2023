@@ -7,25 +7,28 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid x:Name="tabelaCoordenador" AutoGenerateColumns="False" Margin="0,0,0,10" SelectionChanged="tabelaCoordenador_SelectionChanged">
-
+        <DataGrid x:Name="tabelaCoordenador" AutoGenerateColumns="False" BorderThickness="0" GridLinesVisibility="None" Padding="10" Margin="10">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Style>
+            </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
-                <DataGridTextColumn Header="Área" Binding="{Binding Area}" />
-                <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" />
-                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" />
-                <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" />
-                <DataGridTextColumn Header="Status" Binding="{Binding Aprovacao}" />
-
-                <DataGridTemplateColumn>
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*" />
+                <DataGridTextColumn Header="Área" Binding="{Binding Area}" Width="*" />
+                <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" Width="*" />
+                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="*" />
+                <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" Width="*" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*" />
+                <DataGridTemplateColumn Header="Aprovar" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Aprovar" Click="Aprovar_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Reprovar" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Reprovar" Click="Reprovar_Click"/>
@@ -34,6 +37,5 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-
     </Grid>
 </UserControl>

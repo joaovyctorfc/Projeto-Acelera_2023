@@ -7,19 +7,24 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid x:Name="tabelaCoordenador" AutoGenerateColumns="False"  Margin="23,0,67,10" SelectionChanged="tabelaEmpresa_SelectionChanged" >
-
+        <DataGrid x:Name="tabelaCoordenador" AutoGenerateColumns="False" BorderThickness="0" GridLinesVisibility="None" Padding="10" Margin="10">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Style>
+            </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
-                <DataGridTextColumn Header="Curso" Binding="{Binding Curso}" />
-                <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa}" />
-                <DataGridTextColumn Header="Vaga" Binding="{Binding Vaga}" />
-                <DataGridTextColumn Header="Salario" Binding="{Binding Salario}" />
-                <DataGridTextColumn Header="Descricao" Binding="{Binding Descricao}" />
-                <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" />
-                <DataGridTextColumn Header="Aprovacao" Binding="{Binding Aprovacao}" />
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*" />
+                <DataGridTextColumn Header="Curso" Binding="{Binding Curso}" Width="*" />
+                <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa}" Width="*" />
+                <DataGridTextColumn Header="Vaga" Binding="{Binding Vaga}" Width="*" />
+                <DataGridTextColumn Header="Salário" Binding="{Binding Salário}" Width="*" />
+                <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" Width="*" />
+                <DataGridTextColumn Header="Aprovação" Binding="{Binding Aprovacao}" Width="*" />
+                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="*" />
+
             </DataGrid.Columns>
         </DataGrid>
-
     </Grid>
 </UserControl>

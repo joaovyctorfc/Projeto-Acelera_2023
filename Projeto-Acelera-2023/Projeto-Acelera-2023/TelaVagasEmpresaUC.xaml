@@ -65,7 +65,7 @@
     </UserControl.Resources>
     <Grid x:Name="mainGrid">
         <DataGrid x:Name="tabelaEmpresa" AutoGenerateColumns="False" Margin="100,10,0,4" SelectionChanged="tabelaEmpresa_SelectionChanged" ItemsSource="{Binding ListaVagas}" Background="White">
-            
+
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
                 <DataGridTextColumn Header="Área" Binding="{Binding Area}" />
