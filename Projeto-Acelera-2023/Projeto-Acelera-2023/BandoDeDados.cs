@@ -116,6 +116,7 @@ namespace Projeto_Acelera_2023
         public string Aprovacao { get; set; }
         public string id { get; set; }
         public string Empresa { get; set; }
+        public string Visibilidade { get; set; }
     }
     public class SalvarVagas
     {

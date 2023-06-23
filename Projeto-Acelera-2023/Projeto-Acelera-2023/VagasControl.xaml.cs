@@ -31,7 +31,7 @@ namespace Projeto_Acelera_2023
             SalvarDados.ListaUsuarios = listaUsuarios;
             InitializeComponent();
             this.vaga = vaga;
-
+            vaga.Visibilidade = "1";
             AtualizarCampos();
         }
 
@@ -72,6 +72,7 @@ namespace Projeto_Acelera_2023
                 };
                 SalvarCandidatos.ListaCandidatos.Add(candidato);
                 MessageBox.Show("Cadidatado com sucesso");
+                
             }
         }
     }

@@ -26,7 +26,7 @@ namespace Projeto_Acelera_2023
             SalvarVagas.ListaVagas = listaVagas;
             SalvarCandidatos.ListaCandidatos = listaCandidatos;
             SalvarMensagem.ListaMensagem = listaMensagem;
-
+            
             this.listaVagas = listaVagas;
 
             foreach (var vaga in listaVagas)

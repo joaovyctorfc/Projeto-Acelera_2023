@@ -20,6 +20,7 @@ namespace Projeto_Acelera_2023
     /// </summary>
     public partial class MensagemControl : UserControl
     {
+
         private Mensagem mensagem;
         public SalvarVagas SalvarVagas = new SalvarVagas();
         public SalvarCandidatos SalvarCandidatos = new SalvarCandidatos();
@@ -32,7 +33,7 @@ namespace Projeto_Acelera_2023
             SalvarDados.ListaUsuarios = listaUsuarios;
             SalvarMensagem.ListaMensagem = listaMensagem;
             this.mensagem = mensagem;
-
+   
             AtualizarCampos();
         }
 
