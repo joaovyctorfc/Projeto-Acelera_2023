@@ -42,6 +42,7 @@ namespace Projeto_Acelera_2023
             labelSalario.Content = vaga.Salario;
             labelArea.Content = vaga.Area;
             labelFormato.Content = vaga.Formato;
+            labelEmpresa.Content = vaga.Empresa;
         }
         private void botaoCandidatar_Click(object sender, RoutedEventArgs e)
         {

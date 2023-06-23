@@ -155,7 +155,7 @@
         <Button x:Name="btnEdit"  TabIndex="3"  Click="btnEdit_Click" Content="Editar" HorizontalAlignment="Left" Margin="286,310,0,0" VerticalAlignment="Top" Width="148" Height="40" Style="{DynamicResource botaoLogin}" BorderBrush="{x:Null}" Foreground="White" Background="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
         <TextBox x:Name="campoNome" TabIndex="0" HorizontalAlignment="Left" Height="30" Margin="286,160,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold" TextChanged="campoNome_TextChanged"/>
         <TextBox x:Name="campoEmail" TabIndex="0" HorizontalAlignment="Left" Height="30" Margin="286,206,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold"/>
-        <TextBox x:Name="campoTelefone" Text="" TabIndex="0" HorizontalAlignment="Left" Height="28" Margin="286,248,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold" TextChanged="campoTelefone_TextChanged_1"/>
+        <TextBox x:Name="campoTelefone" MaxLength="11" Text="" TabIndex="0" HorizontalAlignment="Left" Height="28" Margin="286,248,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Style="{DynamicResource campoSenha}" BorderBrush="{x:Null}" Background="Gainsboro" FontFamily="Yu Gothic UI Semibold" TextChanged="campoTelefone_TextChanged_1"/>
 
     </Grid>
 </UserControl>
