@@ -39,6 +39,15 @@ namespace Projeto_Acelera_2023
 
         private void btnExcluir_Click(object sender, RoutedEventArgs e)
         {
+            Button btnExcluir = (Button)sender;
+            var dataGridRow = FindParent<DataGridRow>(btnExcluir);
+
+            if (dataGridRow != null)
+            {
+                Vaga vaga = (Vaga)dataGridRow.Item;
+                SalvarVagas.ListaVagas.Remove(vaga);
+                tabelaEmpresa.Items.Remove(vaga);
+            }
         }
             private void btnAdicionarCandidato_Click(object sender, RoutedEventArgs e)
         {
