@@ -101,7 +101,11 @@
         </Style>
     </UserControl.Resources>
     <Grid Background="White" Margin="0,0,10,10">
-        <Border BorderThickness="1" Background="#FF0677FF" CornerRadius="10"/>
+        <Border BorderThickness="1" Background="#FF0677FF" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" Direction="315" ShadowDepth="5" Opacity="0.8" BlurRadius="10"/>
+            </Border.Effect>
+        </Border>
         <Button x:Name="botaoCandidatar" Content="Candidatar" HorizontalAlignment="Left" Margin="380,60,0,0" VerticalAlignment="Top" Width="75" Click="botaoCandidatar_Click" Style="{DynamicResource ButtonStyle1}" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0677FF" Background="White"/>
         <Label x:Name="labelDescricao" Content="Label" HorizontalAlignment="Left" Margin="73,111,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
         <Label x:Name="labelSalario" Content="Label" HorizontalAlignment="Left" Margin="73,88,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>

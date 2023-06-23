@@ -129,6 +129,11 @@ namespace Projeto_Acelera_2023
                 textBox.CaretIndex = formattedInput.Length;
             }
         }
+
+        private void campoEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
 

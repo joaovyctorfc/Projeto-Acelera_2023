@@ -63,7 +63,11 @@
         </Style>
     </UserControl.Resources>
     <Grid Margin="0,0,10,10">
-        <Border BorderThickness="1" Background="#FF0677FF" CornerRadius="10" Margin="0,0,212,16"/>
+        <Border BorderThickness="1" Background="#FF0677FF" CornerRadius="10" Margin="0,0,212,16">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" Direction="315" ShadowDepth="5" Opacity="0.8" BlurRadius="10"/>
+            </Border.Effect>
+        </Border>
         <Button x:Name="botaoCandidatar" Content="Excluir" HorizontalAlignment="Left" Margin="308,70,0,0" VerticalAlignment="Top" Width="75" Click="botaoCandidatar_Click" Style="{DynamicResource ButtonStyle1}" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI Semibold" Foreground="White" Background="#FFEC2323"/>
         <Label x:Name="labelAssunto" Content="Label" HorizontalAlignment="Left" Margin="76,61,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
         <Label x:Name="labelNome" Content="Label" HorizontalAlignment="Left" Margin="132,27,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>

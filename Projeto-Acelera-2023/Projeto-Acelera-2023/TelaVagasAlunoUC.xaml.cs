@@ -31,7 +31,7 @@ namespace Projeto_Acelera_2023
 
             foreach (var vaga in listaVagas)
             {
-                if (vaga.Aprovacao.Equals("Aprovado"))
+                if (vaga.Aprovacao.Equals("Aprovado") && vaga.Area.Equals(SalvarDados.AlunoLogado.Curso))
                 {
                     var vagaControl = new VagasControl(vaga, SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                     tabelaVagas.Children.Add(vagaControl);
