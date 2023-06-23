@@ -32,111 +32,58 @@ namespace Projeto_Acelera_2023
         public SalvarDados SalvarDados = new SalvarDados();
         public SalvarVagas SalvarVagas = new SalvarVagas();
 
-        private void AdicionarDadosTabela()
+
+        private DataGridCell GetCell(DependencyObject depObj)
         {
-
-            var candidatos = SalvarCandidatos.ListaCandidatos.Where(c => c.Empresa == SalvarDados.EmpresaLogado.Nome).ToList();
-            var vagas = SalvarVagas.ListaVagas.Where(v => v.Empresa == SalvarDados.EmpresaLogado.Nome).ToList();
-
-            int totalItens = Math.Min(candidatos.Count, vagas.Count);
-
-            List<ItemTabela> itensTabela = new List<ItemTabela>();
-
-            for (int i = 0; i < totalItens; i++)
+            // Encontra a célula do DataGrid a partir do elemento de origem
+            while (depObj != null && !(depObj is DataGridCell))
             {
-                bool candidatoDisponivel = i < candidatos.Count;
-                bool vagaDisponivel = i < vagas.Count;
-                
-                if (candidatoDisponivel && vagaDisponivel &&
-                            !string.IsNullOrEmpty(candidatos[i].Nome) &&
-                            !string.IsNullOrEmpty(candidatos[i].Semestre) &&
-                            !string.IsNullOrEmpty(candidatos[i].Curso) &&
-                            !string.IsNullOrEmpty(candidatos[i].Aprovacao) &&
-                            !string.IsNullOrEmpty(vagas[i].Descricao) &&
-                            !string.IsNullOrEmpty(vagas[i].Formato) &&
-                            !string.IsNullOrEmpty(vagas[i].Salario))
-
-                {
-                    string nome = candidatos[i].Nome;
-                    string semestre = candidatos[i].Semestre;
-                    string curso = candidatos[i].Curso;
-                    string aprovacao = candidatos[i].Aprovacao;
-
-                    string descricao = vagas[i].Descricao;
-                    string formato = vagas[i].Formato;
-                    string salario = vagas[i].Salario;
-
-                    ItemTabela item = new ItemTabela
-                    {
-                        Nome = nome,
-                        Curso = curso,
-                        Semestre = semestre,
-                        Aprovacao = aprovacao,
-                        Descricao = descricao,
-                        Formato = formato,
-                        Salario = salario,
-                    };
-
-                    itensTabela.Add(item);
-                }
-
-                tabelaEmpresa.ItemsSource = itensTabela;
+                depObj = VisualTreeHelper.GetParent(depObj);
             }
+
+            return depObj as DataGridCell;
         }
 
-        private class ItemTabela
+        private FrameworkElement GetCellContent(DataGridColumn column, DataGridRow row)
         {
-            public string Nome { get; set; }
-            public string Semestre { get; set; }
-            public string Curso { get; set; }
-            public string Aprovacao { get; set; }
-            public string Descricao { get; set; }
-            public string Formato { get; set; }
-            public string Salario { get; set; }
+            if (column.GetCellContent(row) is FrameworkElement cellContent)
+            {
+                return cellContent;
+            }
 
+            return null;
+        }
+
+        private void AdicionarDadosTabela()
+        {
+            foreach (var candidato in SalvarCandidatos.ListaCandidatos)
+            {
+                tabelaEmpresa.Items.Add(candidato);
+            }
         }
 
         private void Aprovar_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button button && button.Tag is ItemTabela item)
+            if (sender is Button button && button.DataContext is Candidatos candidatos)
             {
-                var candidato = SalvarCandidatos.ListaCandidatos.FirstOrDefault(c => c.Nome == item.Nome && c.Semestre == item.Semestre && c.Curso == item.Curso);
-                if (candidato != null)
-                {
-                    candidato.Aprovacao = "Aprovado";
-
-                    var itensTabelaAtualizados = tabelaEmpresa.ItemsSource.Cast<ItemTabela>().ToList();
-                    itensTabelaAtualizados.RemoveAll(c => c.Nome == candidato.Nome && c.Semestre == candidato.Semestre && c.Curso == candidato.Curso);
-
-                    tabelaEmpresa.ItemsSource = itensTabelaAtualizados;
-                    MessageBox.Show("Candidato aprovado!");
-                }
+                candidatos.Aprovacao = "Aprovado";
+                tabelaEmpresa.Items.Refresh();
             }
         }
-
 
         private void Reprovar_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button button && button.Tag is ItemTabela item)
+            if (sender is Button button && button.DataContext is Candidatos candidatos)
             {
-                var candidato = SalvarCandidatos.ListaCandidatos.FirstOrDefault(c => c.Nome == item.Nome && c.Semestre == item.Semestre && c.Curso == item.Curso);
-                if (candidato != null)
-                {
-                    candidato.Aprovacao = "Reprovado";
-
-                    var itensTabelaAtualizados = tabelaEmpresa.ItemsSource.Cast<ItemTabela>().ToList();
-                    itensTabelaAtualizados.RemoveAll(c => c.Nome == candidato.Nome && c.Semestre == candidato.Semestre && c.Curso == candidato.Curso);
-
-                    tabelaEmpresa.ItemsSource = itensTabelaAtualizados;
-                    MessageBox.Show("Candidato reprovado!");
-                }
+                candidatos.Aprovacao = "Reprovado";
+                tabelaEmpresa.Items.Refresh();
             }
         }
 
-
-        private void tabelaCoordenador_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void tabelaEmpresa_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
     }
 }
+

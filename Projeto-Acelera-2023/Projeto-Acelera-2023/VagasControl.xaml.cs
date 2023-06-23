@@ -67,11 +67,12 @@ namespace Projeto_Acelera_2023
                     IdVaga = vaga.id,
                     Empresa = SalvarDados.EmpresaLogado.Nome,
                     numero = numero,
-                    descricao = vaga.Descricao,
-                    formato = vaga.Formato
+                    Descricao = vaga.Descricao,
+                    Formato = vaga.Formato,
+                    Salario = vaga.Salario
                 };
                 SalvarCandidatos.ListaCandidatos.Add(candidato);
-                MessageBox.Show("Cadidatado com sucesso");
+                MessageBox.Show("Cadidatado com sucesso !");
                 
             }
         }

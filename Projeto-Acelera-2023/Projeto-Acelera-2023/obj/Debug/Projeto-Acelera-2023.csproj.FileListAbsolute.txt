@@ -317,3 +317,4 @@ C:\Users\vande\OneDrive\Documentos\GitHub\Projeto-Acelera_2023\Projeto-Acelera-2
 C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaChatUC.g.cs
 C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\TelaChatUC.baml
 C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\App.baml
+C:\Users\Cliente\Music\Projeto-Acelera_2023\Projeto-Acelera-2023\Projeto-Acelera-2023\obj\Debug\GeneratedInternalTypeHelper.g.cs

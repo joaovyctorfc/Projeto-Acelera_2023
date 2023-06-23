@@ -65,7 +65,7 @@ namespace Projeto_Acelera_2023
             {
                 Id = "01",
                 Nome = "João",
-                Email = "teste@gmail.com",
+                Email = "joao@gmail.com",
                 Senha = "123",
                 ConfirmaSenha = "123",
                 Cargo = "Coordenador",
@@ -79,8 +79,8 @@ namespace Projeto_Acelera_2023
             var usuarioPreRegistrado2 = new Usuario
             {
                 Id = "02",
-                Nome = "teste",
-                Email = "teste@gmail.com",
+                Nome = "Leadware",
+                Email = "ledware@gmail.com",
                 Senha = "123",
                 ConfirmaSenha = "123",
                 Telefone = "",
@@ -92,8 +92,8 @@ namespace Projeto_Acelera_2023
             var usuarioPreRegistrado3 = new Usuario
             {
                 Id = "03",
-                Nome = "Pedro",
-                Email = "teste@gmail.com",
+                Nome = "Vandeco",
+                Email = "vandeco@gmail.com",
                 Senha = "123",
                 ConfirmaSenha = "123",
                 Cargo = "Aluno",
@@ -117,6 +117,7 @@ namespace Projeto_Acelera_2023
         public string id { get; set; }
         public string Empresa { get; set; }
         public string Visibilidade { get; set; }
+        public string Excluido { get; set; } = "1";
     }
     public class SalvarVagas
     {
@@ -155,8 +156,9 @@ namespace Projeto_Acelera_2023
         public string IdVaga { get; set; }
         public string Empresa { get; set; }
         public string numero { get; set; }
-        public string descricao { get; set; }
-        public string formato { get; set; }
+        public string Descricao { get; set; }
+        public string Salario { get; set; }
+        public string Formato { get; set; }
     }
     public class SalvarCandidatos
     {

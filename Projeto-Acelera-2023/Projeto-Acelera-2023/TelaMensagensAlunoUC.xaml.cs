@@ -33,7 +33,7 @@ namespace Projeto_Acelera_2023
             {
                 foreach (var mensagem in listaMensagem)
                 {
-                    if (mensagem.Visibilidade.Equals(id))
+                    if (mensagem.Visibilidade.Equals(id) && mensagem.Visibilidade != "0")
                     {
                         var mensagemControl = new MensagemControl(mensagem, SalvarDados.ListaUsuarios, SalvarVagas.ListaVagas, SalvarCandidatos.ListaCandidatos, SalvarMensagem.ListaMensagem);
                         tabelaMensagem.Children.Add(mensagemControl);
