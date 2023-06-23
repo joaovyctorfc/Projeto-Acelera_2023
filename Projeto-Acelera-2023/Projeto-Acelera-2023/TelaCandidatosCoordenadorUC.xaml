@@ -20,7 +20,13 @@
                 <DataGridTextColumn Header="Curso" Binding="{Binding Curso}" Width="*" />
                 <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa}" Width="*" />
                 <DataGridTextColumn Header="Vaga" Binding="{Binding Vaga}" Width="*" />
-                <DataGridTextColumn Header="Salário" Binding="{Binding Salário}" Width="*" />
+                <DataGridTextColumn Header="Salário" Binding="{Binding Salário}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
                 <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" Width="*" />
                 <DataGridTextColumn Header="Aprovação" Binding="{Binding Aprovacao}" Width="*" />
                 <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="*" />

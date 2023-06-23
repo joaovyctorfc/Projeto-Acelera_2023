@@ -18,16 +18,28 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*" />
                 <DataGridTextColumn Header="Curso" Binding="{Binding Curso}" Width="*" />
-                <DataGridTextColumn Header="Semestre" Binding="{Binding Semestre}" Width="*" />
+                <DataGridTextColumn Header="Semestre" Binding="{Binding Semestre}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
                 <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="*" />
                 <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" Width="*"/>
-                <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" Width="*" />
+                <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
 
 
                 <DataGridTemplateColumn Header="Aprovar" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Aprovar" Click="Aprovar_Click" Tag="{Binding}" />
+                            <Button Background="Green" Content="✔" Click="Aprovar_Click" Tag="{Binding}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -35,7 +47,7 @@
                 <DataGridTemplateColumn Header="Reprovar" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Reprovar" Click="Reprovar_Click" Tag="{Binding}" />
+                            <Button Background="Red" Content="❌" Click="Reprovar_Click" Tag="{Binding}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

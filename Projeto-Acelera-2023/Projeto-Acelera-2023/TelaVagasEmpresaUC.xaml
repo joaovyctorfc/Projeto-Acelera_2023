@@ -75,15 +75,22 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"  Width="*" />
                 <DataGridTextColumn Header="Área" Binding="{Binding Area}"  Width="*"/>
-                <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" Width="*"/>
+                <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
                 <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="*" />
                 <DataGridTextColumn Header="Formato" Binding="{Binding Formato}" Width="*" />
                 <DataGridTextColumn Header="Status" Binding="{Binding Aprovacao}" Width="*" />
                 <DataGridTemplateColumn Header="Candidatos">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button  Click="btnAdicionarCandidato_Click" Style="{StaticResource botaoLogin}">
-                                <Image Source="icons/Candidatos.png" />
+                            <Button Background="Turquoise" Content="📑"  Click="btnAdicionarCandidato_Click" Style="{StaticResource botaoLogin}">
+                         
                             </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -91,8 +98,8 @@
                 <DataGridTemplateColumn Header="Excluir">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button  Click="btnExcluir_Click" Style="{StaticResource botaoLogin}">
-                                <Image Source="icons/Candidatos.png" />
+                            <Button Background="Red" Content="❌" Click="btnExcluir_Click" Style="{StaticResource botaoLogin}">
+                                
                             </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -115,8 +122,7 @@
                         </DataGridTemplateColumn.Header>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Click="btnChat_Click" Style="{StaticResource botaoLogin}">
-                                    <Image Source="icons/Chat.png" />
+                                <Button Content="📧" Background="Turquoise" Click="btnChat_Click" Style="{StaticResource botaoLogin}">
                                 </Button>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>

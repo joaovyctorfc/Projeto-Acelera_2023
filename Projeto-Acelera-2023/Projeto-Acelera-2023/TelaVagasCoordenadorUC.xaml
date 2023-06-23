@@ -18,7 +18,14 @@
                 <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa}" Width="*" />
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*" />
                 <DataGridTextColumn Header="Área" Binding="{Binding Area}" Width="*" />
-                <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" Width="*" />
+                <DataGridTextColumn Header="Salário" Binding="{Binding Salario}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
                 <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="*" />
                 <DataGridTextColumn Header="Formato" Binding="{Binding Formato}"  Width="*"/>
                 <DataGridTextColumn Header="Status" Binding="{Binding Aprovacao}" Width="*" />
@@ -26,7 +33,7 @@
                 <DataGridTemplateColumn Header="Aprovar" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Aprovar" Click="Aprovar_Click"/>
+                            <Button Background="Green" Content="✔" Click="Aprovar_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -34,7 +41,7 @@
                 <DataGridTemplateColumn Header="Reprovar" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Reprovar" Click="Reprovar_Click"/>
+                            <Button Background="Red" Content="❌" Click="Reprovar_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
