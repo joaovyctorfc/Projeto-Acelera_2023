@@ -108,7 +108,7 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Label Content="Nome" HorizontalAlignment="Left" Margin="197,157,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Content="Nome Remetente " HorizontalAlignment="Left" Margin="155,157,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Conteúdo" HorizontalAlignment="Left" Margin="197,243,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Assunto" HorizontalAlignment="Left" Margin="197,199,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,1.885" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Mensagem" HorizontalAlignment="Left" Margin="288,41,0,0" VerticalAlignment="Top" Width="221" Height="54" FontSize="30" Foreground="#FF018CFF" FontFamily="Yu Gothic UI Semibold"/>
